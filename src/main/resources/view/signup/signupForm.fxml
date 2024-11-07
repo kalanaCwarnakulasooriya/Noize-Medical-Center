@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="signupPane" prefHeight="500.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.noize.medicalcenter.controller.SignupFormController">
+   <children>
+      <ImageView fitHeight="566.0" fitWidth="1000.0" layoutY="-66.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../asset/image/signup_page.jpeg" />
+         </image>
+      </ImageView>
+      <AnchorPane id="paneForm" layoutX="200.0" layoutY="28.0" prefHeight="437.0" prefWidth="600.0" stylesheets="@../../asset/style/style.css">
+         <children>
+            <ImageView fitHeight="38.0" fitWidth="38.0" layoutX="288.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../asset/icon/app_logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="252.0" layoutY="65.0" text="Welcome" textFill="#009432">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="168.0" layoutY="102.0" text="Hey enter your details to create your account">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="214.0" layoutY="424.0" text="Already have an account ? " />
+            <Hyperlink fx:id="hyperLogin" layoutX="355.0" layoutY="421.0" onAction="#hyperLogin" text="Login" textFill="#0eb0e5" />
+            <JFXTextField fx:id="txtName" labelFloat="true" layoutX="52.0" layoutY="159.0" prefHeight="28.0" prefWidth="212.0" promptText="Enter your Name" />
+            <JFXTextField fx:id="txtUname" labelFloat="true" layoutX="340.0" layoutY="159.0" prefHeight="28.0" prefWidth="212.0" promptText="Enter your Username" />
+            <JFXTextField fx:id="txtPhone" labelFloat="true" layoutX="52.0" layoutY="207.0" prefHeight="28.0" prefWidth="212.0" promptText="Enter your Phone" />
+            <JFXTextField fx:id="txtAddress" labelFloat="true" layoutX="340.0" layoutY="254.0" prefHeight="28.0" prefWidth="212.0" promptText="Address" />
+            <JFXPasswordField fx:id="txtPwd" labelFloat="true" layoutX="53.0" layoutY="254.0" prefHeight="28.0" prefWidth="212.0" promptText="Create Password" />
+            <JFXPasswordField fx:id="txtConformPwd" labelFloat="true" layoutX="52.0" layoutY="301.0" prefHeight="28.0" prefWidth="212.0" promptText="Conform Password" />
+            <ImageView fitHeight="18.0" fitWidth="23.0" layoutX="242.0" layoutY="164.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../asset/icon/person.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="18.0" fitWidth="23.0" layoutX="529.0" layoutY="166.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../asset/icon/person.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="18.0" fitWidth="23.0" layoutX="242.0" layoutY="213.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../asset/icon/phone.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="18.0" fitWidth="23.0" layoutX="241.0" layoutY="307.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../asset/icon/password.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="btnSignup" layoutX="227.0" layoutY="375.0" onAction="#btnSignup" prefHeight="37.0" prefWidth="159.0" style="-fx-background-color: #009432; -fx-background-radius: 10;" text="Sign Up" textFill="#f9f9f9">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="18.0" fitWidth="23.0" layoutX="241.0" layoutY="261.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../asset/icon/password.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="18.0" fitWidth="23.0" layoutX="530.0" layoutY="262.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../asset/icon/location.png" />
+               </image>
+            </ImageView>
+            <JFXTextField fx:id="txtEmail" labelFloat="true" layoutX="340.0" layoutY="207.0" prefHeight="28.0" prefWidth="212.0" promptText="Enter your Email" />
+            <ImageView fitHeight="18.0" fitWidth="23.0" layoutX="529.0" layoutY="217.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../asset/icon/email.png" />
+               </image>
+            </ImageView>
+            <JFXComboBox fx:id="comRole" layoutX="340.0" layoutY="302.0" prefHeight="28.0" prefWidth="212.0" promptText="Role" />
+         </children>
+      </AnchorPane>
+      <ImageView fx:id="back" fitHeight="38.0" fitWidth="38.0" layoutX="930.0" layoutY="28.0" onMouseClicked="#backOnClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../asset/icon/back.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

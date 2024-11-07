@@ -1,0 +1,106 @@
+#bar{
+    -fx-background-color: #1e293c;
+}
+
+#paneForm {
+    -fx-background-color: #dff9fb;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.75), 10, 0.5, 5, 5);
+}
+
+#paneForm > * {
+    -fx-effect: none;
+}
+
+#text {
+    -fx-prompt-text-fill: #8e8a8a;
+    -fx-text-fill: #ffffff;
+}
+
+#box{
+    -fx-prompt-text-fill: #8e8a8a;
+    -fx-font-size: 15;
+}
+.combo-box .list-cell:filled:selected .text,
+.choice-box .list-cell:filled:selected .text {
+    -fx-fill: #ffffff;
+}
+
+.Button{
+    -fx-background-size: 200 40;
+    -fx-background-color:  #fff;
+    -fx-background-radius: 20;
+    -fx-font-size: 16;
+    -fx-text-fill: #2D3250;
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+    -fx-font-style: italic;
+    -fx-font-family: "system";
+    -fx-border-color: #0D1282;
+    -fx-border-width: 2;
+    -fx-border-radius: 20;
+    -fx-border-insets: 2;
+
+}
+.Button:hover{
+    -fx-background-color: #5B8FB9;
+    -fx-text-fill: #c5c6c5;
+}
+
+ButtonPressed {
+    -fx-background-color: #1C82AD;
+    -fx-text-fill: #FFF7FC;
+    -fx-opacity: 60%;
+
+}
+.pp:hover{
+    -fx-background-color: #8B93FF;
+    -fx-text-fill: #CDE8E5;
+}
+.pp{
+    -fx-background-color:  #fff;
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+    -fx-font-family: "system";
+    -fx-border-color: #E8AA42;
+    -fx-border-width: 2;
+    -fx-border-insets: 2;
+    -fx-border-radius: 20;
+    -fx-text-fill: #2D3250;
+    -fx-font-size: 17;
+    -fx-background-radius: 25;
+}
+.bb:hover{
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #CDE8E5;
+}
+.LL{
+    -fx-background-color:  #86C4BA;
+    -fx-border-width: 2;
+    -fx-border-color: #ffffff;
+    fx-background-radius: 25;
+    -fx-border-radius: 20;
+}
+.LL:hover{
+    -fx-background-color: #ffffff;
+}
+
+.notification {
+    -fx-background-color: #2e3b4e;
+    -fx-text-fill: white;
+    -fx-padding: 10;
+    -fx-border-color: #4a90e2;
+    -fx-border-width: 2;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.notification-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+}
+
+.notification-text {
+    -fx-font-size: 14px;
+    -fx-text-fill: #d0d0d0;
+}

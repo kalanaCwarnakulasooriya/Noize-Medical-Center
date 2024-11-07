@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+
+<AnchorPane prefHeight="250.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.noize.medicalcenter.controller.LoadingFormController">
+   <children>
+      <StackPane prefHeight="250.0" prefWidth="300.0">
+         <children>
+            <ProgressIndicator />
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

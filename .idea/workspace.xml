@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a59df24e-a8bc-4d9f-9f9e-901765c53044" name="Changes" comment="first commit" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+        <option value="FxmlFile" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="main" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="kalana warnakulasooriya &lt;kalana.warnakulasooriya@gmail.com&gt;" />
+        <option value="kalanaCwarnakulasooriya" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;kalanaCwarnakulasooriya&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/kalanaCwarnakulasooriya/Noize-Medical-Center-.git&quot;,
+    &quot;accountId&quot;: &quot;89b58500-47cb-4121-8c95-29b53f4b3faa&quot;
+  }
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2mvE6NkxOaGxtMGH5xrhKVCEre8" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Launcher.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.com.noize.medicalcenter.model in medicalCenter.executor&quot;: &quot;Coverage&quot;,
+    &quot;Maven.medicalCenter [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.medicalCenter [install].executor&quot;: &quot;Run&quot;,
+    &quot;Notification.DisplayName-DoNotAsk-Vcs Important Messages&quot;: &quot;VCS important messages&quot;,
+    &quot;Notification.DoNotAsk-Vcs Important Messages&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;com.codeium.enabled&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/VivoBook/AppData/Local/SceneBuilder/SceneBuilder.exe&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.codeium.AppSettingsConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Intellij Prroject\Noize-Medical-Center-master\Noize-Medical-Center-master\src\main\resources\asset\sounds" />
+      <recent name="D:\Intellij Prroject\Noize-Medical-Center-master\Noize-Medical-Center-master\src\main\resources\view" />
+      <recent name="D:\Intellij Prroject\medicalCenter\src\main\resources\asset\sounds" />
+      <recent name="D:\Intellij Prroject\medicalCenter\src\main\resources\asset\sounds\alertSound" />
+      <recent name="D:\Intellij Prroject\medicalCenter\src\main\resources\asset\icon" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn compile" />
+      <command value="mvn install" />
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Launcher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.noize.medicalcenter.Launcher" />
+      <module name="medicalCenter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.noize.medicalcenter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Launcher" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23726.103" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23726.103" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a59df24e-a8bc-4d9f-9f9e-901765c53044" name="Changes" comment="" />
+      <created>1727948475606</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1727948475606</updated>
+      <workItem from="1727948476778" duration="1724000" />
+      <workItem from="1727961238865" duration="5270000" />
+      <workItem from="1727971471806" duration="83000" />
+      <workItem from="1727971900089" duration="968000" />
+      <workItem from="1727976802396" duration="1290000" />
+      <workItem from="1728022394703" duration="1562000" />
+      <workItem from="1728030776839" duration="7000" />
+      <workItem from="1728047256679" duration="11996000" />
+      <workItem from="1728293245403" duration="68000" />
+      <workItem from="1728311471628" duration="9685000" />
+      <workItem from="1728398705876" duration="2761000" />
+      <workItem from="1728407979173" duration="1454000" />
+      <workItem from="1728443859040" duration="118000" />
+      <workItem from="1728530263067" duration="1016000" />
+      <workItem from="1728554993199" duration="226000" />
+      <workItem from="1729235085042" duration="745000" />
+      <workItem from="1729580273700" duration="8273000" />
+      <workItem from="1729601694317" duration="6541000" />
+      <workItem from="1729622361709" duration="975000" />
+      <workItem from="1729623699130" duration="381000" />
+      <workItem from="1729653592198" duration="8184000" />
+      <workItem from="1729691034393" duration="6620000" />
+      <workItem from="1729736962506" duration="14458000" />
+      <workItem from="1729775826043" duration="12682000" />
+      <workItem from="1729794485118" duration="2866000" />
+      <workItem from="1729829146899" duration="3560000" />
+      <workItem from="1729842310746" duration="57000" />
+      <workItem from="1729842418102" duration="6846000" />
+      <workItem from="1729950690402" duration="7577000" />
+      <workItem from="1730005151445" duration="9803000" />
+      <workItem from="1730033598923" duration="17983000" />
+      <workItem from="1730093337828" duration="14326000" />
+      <workItem from="1730120025065" duration="5593000" />
+      <workItem from="1730127676795" duration="11133000" />
+      <workItem from="1730168378713" duration="11679000" />
+      <workItem from="1730183650069" duration="326000" />
+      <workItem from="1730183987286" duration="336000" />
+      <workItem from="1730184338262" duration="3601000" />
+      <workItem from="1730188681412" duration="1171000" />
+      <workItem from="1730212303279" duration="133000" />
+      <workItem from="1730212575798" duration="3210000" />
+      <workItem from="1730224004819" duration="1016000" />
+      <workItem from="1730272208823" duration="37000" />
+      <workItem from="1730815849467" duration="181000" />
+      <workItem from="1730907120319" duration="65000" />
+      <workItem from="1730907196785" duration="4212000" />
+      <workItem from="1730916354112" duration="866000" />
+      <workItem from="1730952070338" duration="14300000" />
+      <workItem from="1730987217466" duration="14789000" />
+      <workItem from="1731007732115" duration="470000" />
+    </task>
+    <task id="LOCAL-00001" summary="login and signup page view">
+      <option name="closed" value="true" />
+      <created>1729789837807</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1729789837807</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Create a login and signup page view in the project.">
+      <option name="closed" value="true" />
+      <created>1729790573193</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1729790573193</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Forget password view page">
+      <option name="closed" value="true" />
+      <created>1729797703213</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1729797703213</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Crud Util">
+      <option name="closed" value="true" />
+      <created>1729844830017</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1729844830017</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Create project file and connect DBConnection">
+      <option name="closed" value="true" />
+      <created>1729953213139</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1729953213139</updated>
+    </task>
+    <task id="LOCAL-00006" summary="first commit">
+      <option name="closed" value="true" />
+      <created>1730182956009</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1730182956009</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="login and signup page view" />
+    <MESSAGE value="Create a login and signup page view in the project." />
+    <MESSAGE value="Forget password view page" />
+    <MESSAGE value="Crud Util" />
+    <MESSAGE value="Create project file and connect DBConnection" />
+    <MESSAGE value="first commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/medicalCenter$com_noize_medicalcenter_model_in_medicalCenter.ic" NAME="com.noize.medicalcenter.model in medicalCenter Coverage Results" MODIFIED="1730172707169" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.noize.medicalcenter.model.*</FILTER>
+    </SUITE>
+  </component>
+</project>
