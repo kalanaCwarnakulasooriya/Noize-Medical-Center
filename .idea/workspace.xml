@@ -4,7 +4,46 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a59df24e-a8bc-4d9f-9f9e-901765c53044" name="Changes" comment="first commit" />
+    <list default="true" id="a59df24e-a8bc-4d9f-9f9e-901765c53044" name="Changes" comment="forget password eka hduwa">
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/AdminDashboardFormController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/OrderFormController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/PatientsFormController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/dto/tm/PatientsDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/sms/SendSMS.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/asset/icon/app_logo_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/asset/icon/appointment.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/asset/icon/dashboard.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/asset/icon/dashboard2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/asset/icon/date.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/asset/icon/medical_records.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/asset/icon/patient.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/asset/icon/refresh.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/asset/icon/reports.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/asset/icon/settings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/asset/icon/time.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/asset/style/table.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/dashboard/adminDashboardForm.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/patients/addPatientsForm.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/patients/patientsForm.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/transaction/orderForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/alert/AlertSound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/alert/AlertSound.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/DashboardFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/DashboardFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/ForgetPasswordFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/ForgetPasswordFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/LoginFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/LoginFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/OwnerDashboardFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/AddPatientsFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/email/SendGmail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/email/SendGmail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/model/AppointmentFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/model/AppointmentFormModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/model/ChangePasswordFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/model/ChangePasswordFormModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/model/DashboardFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/model/PatientsFormModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/cmd.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/cmd.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/dashboard/dashboardForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/dashboard/dashboardForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/login/forgetPasswordForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/login/forgetPasswordForm.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,8 +53,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -49,7 +88,7 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/kalanaCwarnakulasooriya/Noize-Medical-Center-.git&quot;,
+    &quot;url&quot;: &quot;https://github.com/kalanaCwarnakulasooriya/Noize-Medical-Center.git&quot;,
     &quot;accountId&quot;: &quot;89b58500-47cb-4121-8c95-29b53f4b3faa&quot;
   }
 }</component>
@@ -79,9 +118,11 @@
     &quot;Notification.DisplayName-DoNotAsk-Vcs Important Messages&quot;: &quot;VCS important messages&quot;,
     &quot;Notification.DoNotAsk-Vcs Important Messages&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;com.codeium.enabled&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/VivoBook/AppData/Local/SceneBuilder/SceneBuilder.exe&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Intellij Prroject/Noize-Medical-Center-master/Noize-Medical-Center-master/src/main/resources/asset/style&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -100,6 +141,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Intellij Prroject\Noize-Medical-Center-master\Noize-Medical-Center-master\src\main\resources\asset\style" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Intellij Prroject\Noize-Medical-Center-master\Noize-Medical-Center-master\src\main\resources\asset\sounds" />
       <recent name="D:\Intellij Prroject\Noize-Medical-Center-master\Noize-Medical-Center-master\src\main\resources\view" />
@@ -199,7 +243,14 @@
       <workItem from="1730916354112" duration="866000" />
       <workItem from="1730952070338" duration="14300000" />
       <workItem from="1730987217466" duration="14789000" />
-      <workItem from="1731007732115" duration="470000" />
+      <workItem from="1731007732115" duration="1093000" />
+      <workItem from="1731045540577" duration="4330000" />
+      <workItem from="1731051461833" duration="928000" />
+      <workItem from="1731072640709" duration="8308000" />
+      <workItem from="1731093663743" duration="1000" />
+      <workItem from="1731156655003" duration="10723000" />
+      <workItem from="1731212189204" duration="26584000" />
+      <workItem from="1731269644463" duration="20000" />
     </task>
     <task id="LOCAL-00001" summary="login and signup page view">
       <option name="closed" value="true" />
@@ -249,7 +300,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730182956009</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="forget password eka hduwa">
+      <option name="closed" value="true" />
+      <created>1731008716517</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1731008716519</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,7 +321,8 @@
     <MESSAGE value="Crud Util" />
     <MESSAGE value="Create project file and connect DBConnection" />
     <MESSAGE value="first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <MESSAGE value="forget password eka hduwa" />
+    <option name="LAST_COMMIT_MESSAGE" value="forget password eka hduwa" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

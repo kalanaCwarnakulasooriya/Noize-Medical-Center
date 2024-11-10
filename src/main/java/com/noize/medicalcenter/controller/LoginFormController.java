@@ -16,6 +16,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Hyperlink;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -64,8 +65,12 @@ public class LoginFormController {
 
         if(isLoading) {
             windows.initOwner(loginPane.getScene().getWindow());
-            windows.setFullScreen(true);
-            windows.setResizable(false);
+            windows.getIcons().add(
+                    new Image(
+                            getClass().getResourceAsStream("/asset/icon/app_logo.png")
+                    )
+            );
+            windows.setTitle("Admin Dashboard");
 
         }
 
@@ -116,10 +121,10 @@ public class LoginFormController {
 
         switch (role) {
             case 1:
-                //TODO: Add DashboardFormController path for role 1
+                //TODO: Add AdminDashboardFormController path for role 1
                 break;
             case 2:
-                loadWindow("dashboard/dashboardForm.fxml", true);
+                loadWindow("dashboard/adminDashboardForm.fxml", true);
                 break;
             default:
                 System.out.println("Invalid role");

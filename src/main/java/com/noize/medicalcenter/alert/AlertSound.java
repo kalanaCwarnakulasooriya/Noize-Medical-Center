@@ -53,7 +53,6 @@ public class AlertSound {
         }
     }
 
-    // Stops any previous sound from playing, if applicable
     private void stopPreviousSound() {
         if (mediaPlayer != null) {
             mediaPlayer.stop();

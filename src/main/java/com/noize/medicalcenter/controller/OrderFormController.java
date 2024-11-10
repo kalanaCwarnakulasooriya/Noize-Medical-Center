@@ -1,4 +1,4 @@
 package com.noize.medicalcenter.controller;
 
-public class OwnerDashboardFormController {
+public class OrderFormController {
 }

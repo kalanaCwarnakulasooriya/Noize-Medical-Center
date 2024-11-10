@@ -155,7 +155,7 @@ CREATE TABLE Role (
 );
 
 INSERT INTO doctor (Name, Email, ContactNumber, Address, UserId) VALUES
-                                                                     ('Dr.Avindu Tharushan', 'avindu@gmail.com', '0713498265', 'Galle', 1);
+                                                                     ('Dr.Kamal Gunarathna', 'kamalgunathana@gmail.com', '0713498265', 'Galle', 1);
 
 
 INSERT INTO timetable (Date, StartTime, EndTime, DoctorId) VALUES
@@ -167,7 +167,7 @@ INSERT INTO prescription (PrescriptionDate, MedicineDetails, Dosage, UserId, Doc
 
 
 INSERT INTO patient (Name, Email, ContactNumber, Address, DOB, Gender, RegistrationDate, UserId, PrescriptionId) VALUES
-    ('Michael Green', 'michael.green@example.com', '5555555555', '321 Pine St', '1985-05-20', 'Male', '2024-10-25', 1, 2);
+    ('Sugath Kumara', 'sugathkumara@gmail.com', '0782751856', 'Gampaha', '1995-05-20', 'Male', '2024-10-25', 1, 1);
 
 
 INSERT INTO appointment (AppointmentDate, Description, Status, PatientId, DoctorId, UserId) VALUES
@@ -193,4 +193,5 @@ INSERT INTO orderdetail (Quantity, Price, OrderId, ItemId) VALUES
 
 INSERT INTO Role (RoleName, Description) VALUES
                                              ('Doctor', 'Handles patient treatments and prescriptions'),
-                                             ('Admin', 'Handles administrative and other supportive roles');
+                                             ('Admin', 'Handles administrative and other supportive roles'),
+                                             ('Cashier', 'Handles patient payments and billing');

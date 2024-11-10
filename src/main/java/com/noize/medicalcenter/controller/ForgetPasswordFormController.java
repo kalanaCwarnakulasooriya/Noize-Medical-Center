@@ -1,10 +1,12 @@
 package com.noize.medicalcenter.controller;
 
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import com.noize.medicalcenter.alert.AlertSound;
 import com.noize.medicalcenter.alert.Sound;
 import com.noize.medicalcenter.dto.ForgetPasswordFormDto;
+import com.noize.medicalcenter.email.SendGmail;
 import com.noize.medicalcenter.model.ForgetPasswordFormModel;
 import com.noize.medicalcenter.notification.AlertNotification;
 import javafx.event.ActionEvent;
@@ -59,10 +61,10 @@ public class ForgetPasswordFormController {
     private JFXTextField txtOTP;
 
     @FXML
-    private JFXTextField txtNewPwd;
+    private JFXPasswordField txtNewPwd;
 
     @FXML
-    private JFXTextField txtConfirmPwd;
+    private JFXPasswordField txtConfirmPwd;
 
     @FXML
     private ImageView UImage;
@@ -122,6 +124,8 @@ public class ForgetPasswordFormController {
 
             System.out.println(forgetPwdDto.toString());
             System.out.println("otp eka yawwa");
+
+            SendGmail.sendEmail(txtFEmail.getText(), String.valueOf(forgetPwdDto.getOtp()));
 
             new AlertNotification(
                     "OTP Send Successfully ! ",

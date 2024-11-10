@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="770.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.noize.medicalcenter.controller.PatientsFormController">
+   <children>
+      <GridPane hgap="10.0" layoutX="46.0" layoutY="61.0" prefHeight="93.0" prefWidth="316.0" vgap="10.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="381.0" minWidth="10.0" prefWidth="356.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <TextField fx:id="lblSearch" onKeyReleased="#searchPatients" prefHeight="34.0" prefWidth="260.0" promptText="Search Here">
+               <font>
+                  <Font size="25.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </GridPane.margin>
+            </TextField>
+         </children>
+      </GridPane>
+      <JFXButton layoutX="922.0" layoutY="79.0" onAction="#addPatientClick" prefHeight="55.0" prefWidth="284.0" style="-fx-background-radius: 20; -fx-background-color: #18181b; -fx-border-color: #f1f1f3;" text="  Add New Patient" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../Evergreen-Zoo-master/Evergreen-Zoo-master/src/main/resources/asserts/icon/plus.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane layoutX="28.38260963713968" layoutY="185.0" prefHeight="485.0" prefWidth="1204.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="28.0" AnchorPane.topAnchor="185.0">
+         <children>
+            <TableView fx:id="tblPatient" layoutX="9.0" layoutY="9.0" prefHeight="464.0" prefWidth="1187.0" stylesheets="@../../asset/style/table.css" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="9.0">
+               <columns>
+                  <TableColumn fx:id="namCol" prefWidth="200.3478683233261" text="Name" />
+                  <TableColumn fx:id="emailCol" prefWidth="200.34783935546875" text="Email" />
+                  <TableColumn fx:id="coNumCol" minWidth="0.0" prefWidth="170.29559326171875" text="Contact Number" />
+                  <TableColumn fx:id="addressCol" prefWidth="200.23480224609375" text="Address" />
+                  <TableColumn fx:id="dobCol" prefWidth="150.7130126953125" text="Date of Birth" />
+                  <TableColumn fx:id="genderCol" prefWidth="100.2349853515625" text="Gender" />
+                  <TableColumn fx:id="registerCol" prefWidth="148.08696995178116" text="Registration Date" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <JFXButton alignment="BASELINE_CENTER" layoutX="974.0" layoutY="686.0" onAction="#takeAction" prefHeight="55.0" prefWidth="160.0" style="-fx-background-color: #009432; -fx-background-radius: 20;" text="Action" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="1153.0" layoutY="687.0" onAction="#refreshTable" prefHeight="41.0" prefWidth="52.0" text=" ">
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../asset/icon/refresh.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

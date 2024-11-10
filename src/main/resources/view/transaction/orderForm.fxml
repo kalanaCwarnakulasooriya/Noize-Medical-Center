@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="770.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.noize.medicalcenter.controller.OrderFormController">
+   <children>
+      <Label alignment="CENTER" layoutX="455.0" layoutY="61.0" prefHeight="79.0" prefWidth="333.0" text="Place Orders" textFill="#009432">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="1023.0" layoutY="44.0" prefHeight="33.0" prefWidth="80.0" text="Order Date">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="1103.0" layoutY="44.0" prefHeight="33.0" prefWidth="125.0">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
