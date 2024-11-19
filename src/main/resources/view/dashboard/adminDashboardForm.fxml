@@ -53,14 +53,14 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Button>
-                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#callAppointments" onMouseEntered="#mouseEnter" onMouseExited="#mouseExit" prefHeight="67.0" prefWidth="350.0" style="-fx-background-color: #1e293c;" text="   Appointments" textFill="WHITE">
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#callDoctors" onMouseEntered="#mouseEnter" onMouseExited="#mouseExit" prefHeight="67.0" prefWidth="350.0" style="-fx-background-color: #1e293c;" text="   Doctors" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="25.0" />
                            </font>
                            <graphic>
                               <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" smooth="false">
                                  <image>
-                                    <Image url="@../../asset/icon/appointment.png" />
+                                    <Image url="@../../asset/icon/doctor_white.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -68,7 +68,22 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Button>
-                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#callMedicalReports" onMouseEntered="#mouseEnter" onMouseExited="#mouseExit" prefHeight="67.0" prefWidth="350.0" style="-fx-background-color: #1e293c;" text="   Medical Records" textFill="WHITE">
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#callAppointments" onMouseEntered="#mouseEnter" onMouseExited="#mouseExit" prefHeight="67.0" prefWidth="350.0" style="-fx-background-color: #1e293c;" text="   Appointments" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" smooth="false">
+                                 <image>
+                                    <Image url="@../../asset/icon/appointments_white.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#callPrescription" onMouseEntered="#mouseEnter" onMouseExited="#mouseExit" prefHeight="67.0" prefWidth="350.0" style="-fx-background-color: #1e293c;" text="   Prescription" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="25.0" />
                            </font>
@@ -83,14 +98,29 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Button>
-                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#callReports" onMouseEntered="#mouseEnter" onMouseExited="#mouseExit" prefHeight="67.0" prefWidth="350.0" style="-fx-background-color: #1e293c;" text="   Reports" textFill="WHITE">
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#callMedicine" onMouseEntered="#mouseEnter" onMouseExited="#mouseExit" prefHeight="67.0" prefWidth="350.0" style="-fx-background-color: #1e293c;" text="   Medicine" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="25.0" />
                            </font>
                            <graphic>
                               <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" smooth="false">
                                  <image>
-                                    <Image url="@../../asset/icon/reports.png" />
+                                    <Image url="@../../asset/icon/medicine.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#callStock" onMouseEntered="#mouseEnter" onMouseExited="#mouseExit" prefHeight="67.0" prefWidth="350.0" style="-fx-background-color: #1e293c;" text="   Stock Medicine" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" smooth="false">
+                                 <image>
+                                    <Image url="@../../asset/icon/stock.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -113,7 +143,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                            <VBox.margin>
-                              <Insets top="345.0" />
+                              <Insets top="280.0" />
                            </VBox.margin>
                         </Button>
                      </children>
@@ -135,7 +165,7 @@
             <Font name="Cambria Math" size="36.0" />
          </font>
       </Label>
-      <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="71.0" layoutY="13.0" pickOnBounds="true" smooth="false">
+      <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="59.0" layoutY="13.0" pickOnBounds="true" smooth="false">
          <image>
             <Image url="@../../asset/icon/app_logo_white.png" />
          </image>

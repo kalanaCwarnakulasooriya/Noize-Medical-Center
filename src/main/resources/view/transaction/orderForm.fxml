@@ -1,26 +1,229 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane prefHeight="770.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.noize.medicalcenter.controller.OrderFormController">
    <children>
-      <Label alignment="CENTER" layoutX="455.0" layoutY="61.0" prefHeight="79.0" prefWidth="333.0" text="Place Orders" textFill="#009432">
+      <Label alignment="CENTER" layoutX="455.0" layoutY="20.0" prefHeight="79.0" prefWidth="333.0" text="Place Order" textFill="#009432">
          <font>
             <Font name="System Bold" size="36.0" />
          </font>
       </Label>
-      <Label layoutX="1023.0" layoutY="44.0" prefHeight="33.0" prefWidth="80.0" text="Order Date">
+      <Label layoutX="1039.0" layoutY="16.0" prefHeight="33.0" prefWidth="80.0" text="Order Date">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="1103.0" layoutY="44.0" prefHeight="33.0" prefWidth="125.0">
+      <Label fx:id="lblOrderDate" layoutX="1119.0" layoutY="16.0" prefHeight="33.0" prefWidth="125.0">
          <font>
-            <Font size="13.0" />
+            <Font name="System Bold" size="15.0" />
          </font>
       </Label>
+      <AnchorPane layoutX="37.0" layoutY="427.0" prefHeight="251.0" prefWidth="1191.0">
+         <children>
+            <TableView fx:id="tblPlaceOrder" layoutX="8.0" layoutY="4.0" prefHeight="245.0" prefWidth="1176.0" stylesheets="@../../asset/style/table.css">
+               <columns>
+                  <TableColumn fx:id="nameCol" prefWidth="368.41737365722656" text="Name" />
+                  <TableColumn fx:id="cartQtyCol" prefWidth="206.74783325195312" text="Cart Quantity" />
+                  <TableColumn fx:id="unitPriceCol" minWidth="0.0" prefWidth="201.46087646484375" text="Unit Price" />
+                  <TableColumn fx:id="totalCol" prefWidth="200.07830810546875" text="Total" />
+                  <TableColumn fx:id="actionCol" prefWidth="201.18255058649265" text="Action" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <HBox layoutX="886.0" layoutY="688.0" prefHeight="59.0" prefWidth="336.0">
+         <children>
+            <JFXButton onAction="#resetOnAction" prefHeight="37.0" prefWidth="160.0" style="-fx-background-color: #e74c3c; -fx-background-radius: 10;" text="Reset" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton onAction="#placeOrderOnAction" prefHeight="37.0" prefWidth="160.0" style="-fx-background-color: #009432; -fx-background-radius: 10;" text="Place Order" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="20.0" top="10.0" />
+               </HBox.margin>
+            </JFXButton>
+         </children>
+      </HBox>
+      <AnchorPane layoutX="267.0" layoutY="133.0" prefHeight="235.0" prefWidth="714.0" style="-fx-border-radius: 20; -fx-border-color: black;">
+         <children>
+            <VBox layoutX="24.0" layoutY="6.0" prefHeight="222.0" prefWidth="158.0">
+               <children>
+                  <Label prefHeight="34.0" prefWidth="124.0" text="Order ID">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label prefHeight="34.0" prefWidth="123.0" text="Patient ID">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label prefHeight="34.0" prefWidth="134.0" text="Medicine Name">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label prefHeight="34.0" prefWidth="123.0" text="Qty On Hand">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label prefHeight="34.0" prefWidth="123.0" text="Qty">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox layoutX="194.0" layoutY="6.0" prefHeight="222.0" prefWidth="158.0">
+               <children>
+                  <Label fx:id="lblOrderId" prefHeight="34.0" prefWidth="156.0">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ComboBox fx:id="comboMobile" onAction="#comboMobileOnAction" prefWidth="156.0">
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </ComboBox>
+                  <ComboBox fx:id="comboMediName" onAction="#comboMediNameOnAction" prefWidth="156.0">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </ComboBox>
+                  <Label fx:id="lblQoh" prefHeight="34.0" prefWidth="156.0">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <JFXTextField fx:id="txtQty" onKeyReleased="#qtyRelease" prefHeight="27.0" prefWidth="150.0">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="-8.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+               </children>
+            </VBox>
+            <VBox layoutX="372.0" layoutY="6.0" prefHeight="222.0" prefWidth="134.0">
+               <children>
+                  <Label prefHeight="34.0" prefWidth="123.0" text="Patient Name">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="55.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label prefHeight="34.0" prefWidth="134.0" text="Unit Price">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label prefHeight="34.0" prefWidth="123.0" text="Pack Size">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label prefHeight="34.0" prefWidth="134.0" text="Expire Date">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox layoutX="510.0" layoutY="6.0" prefHeight="222.0" prefWidth="195.0">
+               <children>
+                  <Label fx:id="lblPName" prefHeight="34.0" prefWidth="195.0">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="55.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="lblUPrice" prefHeight="34.0" prefWidth="194.0">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="lblPack" prefHeight="34.0" prefWidth="195.0">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="lblExpire" prefHeight="34.0" prefWidth="194.0">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <JFXButton layoutX="1019.0" layoutY="383.0" onAction="#addToCartOnAction" prefHeight="37.0" prefWidth="160.0" style="-fx-background-color: #3498db; -fx-background-radius: 10;" text="Add To Cart" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>

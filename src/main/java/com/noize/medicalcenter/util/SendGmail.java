@@ -1,6 +1,5 @@
-package com.noize.medicalcenter.email;
+package com.noize.medicalcenter.util;
 
-import com.noize.medicalcenter.notification.AlertNotification;
 import com.resend.Resend;
 import com.resend.core.exception.ResendException;
 import com.resend.services.emails.model.CreateEmailOptions;
@@ -17,7 +16,7 @@ public class SendGmail {
         Resend resend = new Resend(apiKey);
 
         CreateEmailOptions params = CreateEmailOptions.builder()
-                .from("noizehealthcare@sldatabase.ninja")
+                .from("noizehealthcare@punylk.me")
                 .to(email)
                 .subject("Your Noize Health Care Account OTP: " + otp)
                 .html("<!DOCTYPE html>" +

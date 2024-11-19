@@ -1,4 +1,4 @@
-package com.noize.medicalcenter.notification;
+package com.noize.medicalcenter.util;
 
 import javafx.application.Platform;
 import javafx.geometry.Pos;

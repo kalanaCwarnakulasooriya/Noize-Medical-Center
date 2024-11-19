@@ -5,7 +5,9 @@ import com.noize.medicalcenter.util.CrudUtil;
 
 import java.sql.ResultSet;
 
-public class LoginFormModel {
+public class
+
+LoginFormModel {
     public ResultSet btnLogin(LoginFormDto loginFormDto) throws Exception {
         String sql = "SELECT e.Name, e.Email, e.ContactNumber, e.Address, e.Role, u.Password " +
                 "FROM user u " +

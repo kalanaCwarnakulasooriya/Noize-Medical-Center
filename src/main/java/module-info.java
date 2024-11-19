@@ -17,9 +17,7 @@ module com.noize.medicalcenter {
     opens com.noize.medicalcenter.controller to javafx.fxml;
     opens com.noize.medicalcenter.model to javafx.base;
     opens com.noize.medicalcenter.dto to javafx.base;
-    opens com.noize.medicalcenter.notification to javafx.base;
-    opens com.noize.medicalcenter.alert to javafx.base;
-    opens com.noize.medicalcenter.email to javafx.base;
+    opens com.noize.medicalcenter.util.alert to javafx.base;
     opens com.noize.medicalcenter.util to javafx.base;
     opens com.noize.medicalcenter.dto.tm to javafx.base;
 

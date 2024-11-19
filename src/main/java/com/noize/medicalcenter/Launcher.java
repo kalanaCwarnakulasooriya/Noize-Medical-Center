@@ -1,7 +1,6 @@
 package com.noize.medicalcenter;
 
-import com.noize.medicalcenter.alert.AlertSound;
-import com.noize.medicalcenter.alert.Sound;
+import com.noize.medicalcenter.util.alert.AlertSound;
 import javafx.application.Application;
 import javafx.concurrent.Task;
 import javafx.fxml.FXMLLoader;

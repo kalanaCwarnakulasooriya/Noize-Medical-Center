@@ -46,8 +46,9 @@ public class AdminDashboardFormController implements Initializable {
     }
 
     @FXML
-    void callMedicalReports(ActionEvent event) {
-
+    void callMedicine(ActionEvent event) throws IOException {
+        lblTitle.setText("Medicine");
+        callPane("transaction/orderForm.fxml");
     }
 
     @FXML
@@ -57,8 +58,9 @@ public class AdminDashboardFormController implements Initializable {
     }
 
     @FXML
-    void callReports(ActionEvent event) {
-
+    void callDoctors(ActionEvent event) throws IOException {
+        lblTitle.setText("Doctors");
+        callPane("doctor/doctorForm.fxml");
     }
 
     @FXML
@@ -117,5 +119,14 @@ public class AdminDashboardFormController implements Initializable {
     void callPane(String path) throws IOException {
         AnchorPane newPane = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/view/" + path)));
         centerPane.getChildren().setAll(newPane);
+    }
+
+    public void callStock(ActionEvent actionEvent) throws IOException {
+        lblTitle.setText("Medicine");
+        callPane("transaction/itemForm.fxml");
+    }
+
+    public void callPrescription(ActionEvent actionEvent) {
+        
     }
 }

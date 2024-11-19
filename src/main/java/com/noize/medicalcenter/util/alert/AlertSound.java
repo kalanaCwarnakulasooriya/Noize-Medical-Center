@@ -1,12 +1,9 @@
-package com.noize.medicalcenter.alert;
+package com.noize.medicalcenter.util.alert;
 
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 
 import java.net.URL;
-
-import static com.noize.medicalcenter.alert.Sound.CONFIRM;
-import static com.noize.medicalcenter.alert.Sound.INVALID;
 
 public class AlertSound {
     private Media media;

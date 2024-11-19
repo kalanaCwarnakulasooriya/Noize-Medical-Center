@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -10,139 +12,131 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.noize.medicalcenter.controller.AddPatientsFormController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="700.0" style="-fx-border-color: black; -fx-border-width: 0px 2px 2px 2px;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.noize.medicalcenter.controller.AddPatientsFormController">
    <children>
-      <Label layoutX="202.0" layoutY="91.0" prefHeight="53.0" prefWidth="296.0" text="Add New Patient" textFill="#009432">
+      <Label layoutX="209.53044173300177" layoutY="74.0" prefHeight="53.0" prefWidth="316.0" text="Add New Patients" textFill="#009432" AnchorPane.leftAnchor="205.0" AnchorPane.rightAnchor="179.0">
          <font>
             <Font name="System Bold" size="36.0" />
          </font>
       </Label>
-      <VBox layoutX="70.0" layoutY="176.0" prefHeight="422.0" prefWidth="189.0" AnchorPane.leftAnchor="70.0">
-         <children>
-            <Label prefHeight="50.0" prefWidth="250.0" text="    Name">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <Label prefHeight="50.0" prefWidth="250.0" text="    Email">
-               <font>
-                  <Font size="20.0" />
-               </font>
-               <VBox.margin>
-                  <Insets top="10.0" />
-               </VBox.margin>
-            </Label>
-            <Label prefHeight="50.0" prefWidth="250.0" text="    Contact Number">
-               <font>
-                  <Font size="20.0" />
-               </font>
-               <VBox.margin>
-                  <Insets top="10.0" />
-               </VBox.margin>
-            </Label>
-            <Label prefHeight="50.0" prefWidth="250.0" text="    Address">
-               <font>
-                  <Font size="20.0" />
-               </font>
-               <VBox.margin>
-                  <Insets top="10.0" />
-               </VBox.margin>
-            </Label>
-            <Label prefHeight="50.0" prefWidth="250.0" text="    Date Of Birth">
-               <font>
-                  <Font size="20.0" />
-               </font>
-               <VBox.margin>
-                  <Insets top="10.0" />
-               </VBox.margin>
-            </Label>
-            <Label prefHeight="50.0" prefWidth="250.0" text="    Gender">
-               <font>
-                  <Font size="20.0" />
-               </font>
-               <VBox.margin>
-                  <Insets top="10.0" />
-               </VBox.margin>
-            </Label>
-            <Label prefHeight="50.0" prefWidth="250.0" text="    Registration Date">
-               <font>
-                  <Font size="20.0" />
-               </font>
-               <VBox.margin>
-                  <Insets top="10.0" />
-               </VBox.margin>
-            </Label>
-         </children>
-      </VBox>
-      <VBox layoutX="277.0" layoutY="176.0" prefHeight="422.0" prefWidth="334.0" AnchorPane.leftAnchor="277.0" AnchorPane.rightAnchor="70.26957673676793">
-         <children>
-            <JFXTextField fx:id="txtName" onKeyReleased="#nameRelease" prefWidth="408.0">
-               <VBox.margin>
-                  <Insets top="-10.0" />
-               </VBox.margin>
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </JFXTextField>
-            <JFXTextField fx:id="txtEmail" onKeyReleased="#emailRelease">
-               <VBox.margin>
-                  <Insets top="20.0" />
-               </VBox.margin>
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </JFXTextField>
-            <JFXTextField fx:id="txtCoNum" onKeyReleased="#coNumRelease">
-               <VBox.margin>
-                  <Insets top="20.0" />
-               </VBox.margin>
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </JFXTextField>
-            <JFXTextField fx:id="txtAddress" onKeyReleased="#addressRelease">
-               <VBox.margin>
-                  <Insets top="20.0" />
-               </VBox.margin>
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </JFXTextField>
-            <JFXTextField fx:id="txtDob" onKeyReleased="#dobRelease">
-               <VBox.margin>
-                  <Insets top="20.0" />
-               </VBox.margin>
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </JFXTextField>
-            <JFXTextField fx:id="txtGender" onKeyReleased="#genderRelease">
-               <VBox.margin>
-                  <Insets top="20.0" />
-               </VBox.margin>
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </JFXTextField>
-            <JFXTextField fx:id="txtRegDate" onKeyReleased="#regDateRelease">
-               <VBox.margin>
-                  <Insets top="20.0" />
-               </VBox.margin>
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </JFXTextField>
-         </children>
-      </VBox>
-      <ImageView fitHeight="53.0" fitWidth="56.0" layoutX="322.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="53.0" fitWidth="56.0" layoutX="326.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="326.0" AnchorPane.rightAnchor="321.0">
          <image>
             <Image url="@../../asset/icon/app_logo.png" />
          </image>
       </ImageView>
-      <JFXButton layoutX="525.0" layoutY="617.0" onAction="#btnSaveOnAction" prefHeight="38.0" prefWidth="104.0" style="-fx-background-color: #009432; -fx-background-radius: 10;" text="Save" textFill="WHITE">
+      <JFXButton layoutX="512.0" layoutY="621.0" onAction="#btnSaveOnAction" prefHeight="38.0" prefWidth="104.0" style="-fx-background-color: #009432; -fx-background-radius: 10;" text="Save" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </JFXButton>
+      <AnchorPane layoutX="86.81739418419197" layoutY="164.0" prefHeight="432.0" prefWidth="534.0" style="-fx-border-color: black; -fx-border-radius: 20;" AnchorPane.leftAnchor="83.0" AnchorPane.rightAnchor="83.0" />
+      <VBox layoutX="108.0" layoutY="186.0" prefHeight="402.0" prefWidth="159.0">
+         <children>
+            <Label prefHeight="56.0" prefWidth="159.0" text="Name">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label prefHeight="50.0" prefWidth="250.0" text="Email">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label prefHeight="50.0" prefWidth="250.0" text="Contact Number">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label prefHeight="50.0" prefWidth="250.0" text="Address">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label prefHeight="50.0" prefWidth="250.0" text="Gender">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label prefHeight="50.0" prefWidth="250.0" text="Date Of Birth">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label prefHeight="50.0" prefWidth="250.0" text="Registration Date">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="287.0" layoutY="186.0" prefHeight="402.0" prefWidth="304.0">
+         <children>
+            <JFXTextField fx:id="txtName" onKeyReleased="#nameRelease" prefHeight="45.0" prefWidth="305.0">
+               <VBox.margin>
+                  <Insets top="-10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtEmail" onKeyReleased="#emailRelease">
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtCoNum" onKeyReleased="#coNumRelease">
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtAddress" onKeyReleased="#addressRelease">
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXComboBox fx:id="comboGender" prefHeight="37.0" prefWidth="305.0">
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </JFXComboBox>
+            <DatePicker fx:id="dobDatePicker" onAction="#dobDatePickerOnAction" prefHeight="43.0" prefWidth="305.0" promptText=" 07/23/2002">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </DatePicker>
+            <DatePicker fx:id="regDatePicker" onAction="#regDatePickerOnAction" prefHeight="43.0" prefWidth="305.0" promptText=" 11/14-2024">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </DatePicker>
+         </children>
+      </VBox>
    </children>
 </AnchorPane>

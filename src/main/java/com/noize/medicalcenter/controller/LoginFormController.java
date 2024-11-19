@@ -3,18 +3,17 @@ package com.noize.medicalcenter.controller;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
-import com.noize.medicalcenter.alert.AlertSound;
-import com.noize.medicalcenter.alert.Sound;
+import com.noize.medicalcenter.util.alert.AlertSound;
+import com.noize.medicalcenter.util.alert.Sound;
 import com.noize.medicalcenter.dto.LoginFormDto;
 import com.noize.medicalcenter.model.LoginFormModel;
-import com.noize.medicalcenter.notification.AlertNotification;
+import com.noize.medicalcenter.util.AlertNotification;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -121,10 +120,10 @@ public class LoginFormController {
 
         switch (role) {
             case 1:
-                //TODO: Add AdminDashboardFormController path for role 1
+                loadWindow("dashboard/adminDashboardForm.fxml", true);
                 break;
             case 2:
-                loadWindow("dashboard/adminDashboardForm.fxml", true);
+                //TODO: Add AdminDashboardFormController path for role 2
                 break;
             default:
                 System.out.println("Invalid role");

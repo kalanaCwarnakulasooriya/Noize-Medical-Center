@@ -4,45 +4,64 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a59df24e-a8bc-4d9f-9f9e-901765c53044" name="Changes" comment="forget password eka hduwa">
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/AdminDashboardFormController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/OrderFormController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/PatientsFormController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/dto/tm/PatientsDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/sms/SendSMS.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/asset/icon/app_logo_white.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/asset/icon/appointment.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/asset/icon/dashboard.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/asset/icon/dashboard2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/asset/icon/date.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/asset/icon/medical_records.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/asset/icon/patient.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/asset/icon/refresh.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/asset/icon/reports.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/asset/icon/settings.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/asset/icon/time.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/asset/style/table.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/view/dashboard/adminDashboardForm.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/view/patients/addPatientsForm.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/view/patients/patientsForm.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/view/transaction/orderForm.fxml" afterDir="false" />
+    <list default="true" id="a59df24e-a8bc-4d9f-9f9e-901765c53044" name="Changes" comment="transaction hry">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/DoctorFormController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/ItemFormController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/PrescriptionFormController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/dto/AddPatientFormDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/dto/DoctorFormDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/dto/ItemFormDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/dto/OrderDetailsFormDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/dto/OrdersFormDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/dto/tm/DoctorTM.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/dto/tm/ItemTM.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/dto/tm/OrdersTM.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/model/AddPatientsFormModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/model/DashboardFormModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/model/DoctorFormModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/model/ItemFormModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/model/OrderDetailsFormModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/model/OrdersFormModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/util/CheckRegex.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/asset/icon/add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/asset/icon/appointments_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/asset/icon/delete.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/asset/icon/doctor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/asset/icon/doctor_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/asset/icon/medicine.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/asset/icon/patient_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/asset/icon/prescription.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/asset/icon/search.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/asset/icon/stock.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/doctor/doctorForm.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/prescription/prescription.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/transaction/itemForm.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/alert/AlertSound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/alert/AlertSound.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/Launcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/alert/AlertSound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/util/alert/AlertSound.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/alert/Sound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/util/alert/Sound.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/AddPatientsFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/AddPatientsFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/AdminDashboardFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/AdminDashboardFormController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/DashboardFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/DashboardFormController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/ForgetPasswordFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/ForgetPasswordFormController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/LoginFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/LoginFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/OwnerDashboardFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/AddPatientsFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/email/SendGmail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/email/SendGmail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/model/AppointmentFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/model/AppointmentFormModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/model/ChangePasswordFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/model/ChangePasswordFormModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/model/DashboardFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/model/PatientsFormModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/OrderFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/OrderFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/PatientsFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/PatientsFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/SignupFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/SignupFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/dto/tm/PatientsDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/dto/tm/PatientsTM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/email/SendGmail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/util/SendGmail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/model/LoginFormModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/model/LoginFormModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/model/PatientsFormModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/model/PatientsFormModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/notification/AlertNotification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/util/AlertNotification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/sms/SendSMS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/util/SendSMS.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/asset/icon/appointment.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/asset/icon/appointment.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/cmd.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/cmd.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/dashboard/adminDashboardForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/dashboard/adminDashboardForm.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/view/dashboard/dashboardForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/dashboard/dashboardForm.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/login/forgetPasswordForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/login/forgetPasswordForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/patients/addPatientsForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/patients/addPatientsForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/patients/patientsForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/patients/patientsForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/transaction/orderForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/transaction/orderForm.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +72,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="CSS File" />
         <option value="FxmlFile" />
         <option value="Class" />
       </list>
@@ -122,7 +142,8 @@
     &quot;com.codeium.enabled&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Intellij Prroject/Noize-Medical-Center-master/Noize-Medical-Center-master/src/main/resources/asset/style&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Intellij Prroject/Noize-Medical-Center-master/Noize-Medical-Center-master/src/main/resources/asset/icon&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -142,6 +163,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Intellij Prroject\Noize-Medical-Center-master\Noize-Medical-Center-master\src\main\resources\asset\icon" />
       <recent name="D:\Intellij Prroject\Noize-Medical-Center-master\Noize-Medical-Center-master\src\main\resources\asset\style" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -251,6 +273,26 @@
       <workItem from="1731156655003" duration="10723000" />
       <workItem from="1731212189204" duration="26584000" />
       <workItem from="1731269644463" duration="20000" />
+      <workItem from="1731269748124" duration="210000" />
+      <workItem from="1731293108787" duration="17875000" />
+      <workItem from="1731328585467" duration="20031000" />
+      <workItem from="1731353738032" duration="6000" />
+      <workItem from="1731383417864" duration="793000" />
+      <workItem from="1731426930703" duration="7079000" />
+      <workItem from="1731442624059" duration="15000" />
+      <workItem from="1731490263598" duration="5956000" />
+      <workItem from="1731522798308" duration="10894000" />
+      <workItem from="1731576039394" duration="8072000" />
+      <workItem from="1731598508515" duration="1245000" />
+      <workItem from="1731679813994" duration="19941000" />
+      <workItem from="1731735425598" duration="20472000" />
+      <workItem from="1731806478885" duration="659000" />
+      <workItem from="1731848068978" duration="19211000" />
+      <workItem from="1731900314568" duration="9214000" />
+      <workItem from="1731928518488" duration="103000" />
+      <workItem from="1731936882004" duration="11401000" />
+      <workItem from="1731997773066" duration="7112000" />
+      <workItem from="1732029681754" duration="4096000" />
     </task>
     <task id="LOCAL-00001" summary="login and signup page view">
       <option name="closed" value="true" />
@@ -308,7 +350,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731008716519</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="patient page ek hduwa">
+      <option name="closed" value="true" />
+      <created>1731269853268</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1731269853268</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -322,7 +372,8 @@
     <MESSAGE value="Create project file and connect DBConnection" />
     <MESSAGE value="first commit" />
     <MESSAGE value="forget password eka hduwa" />
-    <option name="LAST_COMMIT_MESSAGE" value="forget password eka hduwa" />
+    <MESSAGE value="patient page ek hduwa" />
+    <option name="LAST_COMMIT_MESSAGE" value="patient page ek hduwa" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

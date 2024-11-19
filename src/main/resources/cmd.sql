@@ -100,8 +100,6 @@ CREATE TABLE IF NOT EXISTS appointment (
 CREATE TABLE IF NOT EXISTS orders (
     OrderId INT AUTO_INCREMENT PRIMARY KEY,
     OrderDate DATE NOT NULL,
-    TotalAmount DECIMAL(10, 2) NOT NULL,
-    Status VARCHAR(20) NOT NULL,  -- (e.g., pending, completed, canceled)
     PatientId INT NOT NULL,
     FOREIGN KEY (PatientId) REFERENCES patient(PatientId)
     ON UPDATE CASCADE
@@ -154,8 +152,14 @@ CREATE TABLE Role (
     Description TEXT
 );
 
+CREATE TABLE Gender (
+                      GenderId INT AUTO_INCREMENT PRIMARY KEY,
+                      Gender VARCHAR(50) NOT NULL UNIQUE,
+                      Description TEXT
+);
+
 INSERT INTO doctor (Name, Email, ContactNumber, Address, UserId) VALUES
-                                                                     ('Dr.Kamal Gunarathna', 'kamalgunathana@gmail.com', '0713498265', 'Galle', 1);
+                                                                     ('Kamal Gunarathna', 'kamalgunathana@gmail.com', '0713498265', 'Galle', 1);
 
 
 INSERT INTO timetable (Date, StartTime, EndTime, DoctorId) VALUES
@@ -171,15 +175,15 @@ INSERT INTO patient (Name, Email, ContactNumber, Address, DOB, Gender, Registrat
 
 
 INSERT INTO appointment (AppointmentDate, Description, Status, PatientId, DoctorId, UserId) VALUES
-    ('2024-10-28 09:00:00', 'General Checkup', 'confirmed', 3, 1, 1);
+    ('2024-10-28 09:00:00', 'General Checkup', 'confirmed', 1, 1, 1);
 
 
-INSERT INTO orders (OrderDate, TotalAmount, Status, PatientId) VALUES
-    ('2024-10-26', 150.00, 'completed', 3);
+INSERT INTO orders (OrderDate, PatientId) VALUES
+    ('2024-10-26',1);
 
 
 INSERT INTO payment (PaymentDate, Amount, PaymentMethod, Status, OrderId, AppointmentId) VALUES
-    ('2024-10-26', 150.00, 'card', 'paid', 3, 5);
+    ('2024-10-26', 150.00, 'card', 'paid', 1, 1);
 
 
 INSERT INTO item (Name, Description, ExpireDate, PackSize, UnitPrice, StockQuantity) VALUES
@@ -188,10 +192,15 @@ INSERT INTO item (Name, Description, ExpireDate, PackSize, UnitPrice, StockQuant
 
 
 INSERT INTO orderdetail (Quantity, Price, OrderId, ItemId) VALUES
-                                                               (2, 10.00, 3, 1),
-                                                               (1, 7.50, 3, 2);
+                                                               (2, 10.00, 1, 1),
+                                                               (1, 7.50, 1, 2);
 
 INSERT INTO Role (RoleName, Description) VALUES
-                                             ('Doctor', 'Handles patient treatments and prescriptions'),
                                              ('Admin', 'Handles administrative and other supportive roles'),
+                                             ('Doctor', 'Handles patient treatments and prescriptions'),
                                              ('Cashier', 'Handles patient payments and billing');
+
+INSERT INTO Gender (Gender, Description) VALUES
+                                              ('Male', 'Male'),
+                                              ('Female', 'Female'),
+                                              ('Other', 'Other');
