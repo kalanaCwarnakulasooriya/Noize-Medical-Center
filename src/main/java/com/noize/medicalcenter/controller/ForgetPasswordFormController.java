@@ -3,6 +3,7 @@ package com.noize.medicalcenter.controller;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
+import com.noize.medicalcenter.util.CheckRegex;
 import com.noize.medicalcenter.util.alert.AlertSound;
 import com.noize.medicalcenter.util.alert.Sound;
 import com.noize.medicalcenter.dto.ForgetPasswordFormDto;
@@ -15,6 +16,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import org.mindrot.jbcrypt.BCrypt;
@@ -237,6 +239,38 @@ public class ForgetPasswordFormController {
                     "unsuccess.png",
                     "OK"
             ).start();
+        }
+    }
+
+    public void onPwd2Release(KeyEvent keyEvent) {
+        if (CheckRegex.checkRegex("password", txtConfirmPwd.getText())) {
+            txtConfirmPwd.setStyle("-fx-text-fill: green;");
+        } else {
+            txtConfirmPwd.setStyle("-fx-text-fill: red;");
+        }
+    }
+
+    public void onPwdRelease(KeyEvent keyEvent) {
+        if (CheckRegex.checkRegex("password", txtNewPwd.getText())) {
+            txtNewPwd.setStyle("-fx-text-fill: green;");
+        } else {
+            txtNewPwd.setStyle("-fx-text-fill: red;");
+        }
+    }
+
+    public void onOtpRelease(KeyEvent keyEvent) {
+        if (CheckRegex.checkRegex("password", txtOTP.getText())) {
+            txtOTP.setStyle("-fx-text-fill: green;");
+        } else {
+            txtOTP.setStyle("-fx-text-fill: red;");
+        }
+    }
+
+    public void onUnameRelease(KeyEvent keyEvent) {
+        if (CheckRegex.checkRegex("username", txtFUname.getText())) {
+            txtFUname.setStyle("-fx-text-fill: green;");
+        } else {
+            txtFUname.setStyle("-fx-text-fill: red;");
         }
     }
 }

@@ -4,6 +4,7 @@ import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
+import com.noize.medicalcenter.util.CheckRegex;
 import com.noize.medicalcenter.util.alert.Sound;
 import com.noize.medicalcenter.dto.SignupFormDto;
 import com.noize.medicalcenter.model.SignupFormModel;
@@ -16,6 +17,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Hyperlink;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import org.mindrot.jbcrypt.BCrypt;
@@ -176,6 +178,62 @@ public class SignupFormController implements Initializable {
             signupPane.getChildren().add(pane);
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+
+    public void onEmailRelease(KeyEvent keyEvent) {
+        if (CheckRegex.checkRegex("email", txtEmail.getText())) {
+            txtEmail.setStyle("-fx-text-fill: green;");
+        } else {
+            txtEmail.setStyle("-fx-text-fill: red;");
+        }
+    }
+
+    public void onNameRelease(KeyEvent keyEvent) {
+        if (CheckRegex.checkRegex("name", txtName.getText())) {
+            txtName.setStyle("-fx-text-fill: green;");
+        } else {
+            txtName.setStyle("-fx-text-fill: red;");
+        }
+    }
+
+    public void onUNameRelease(KeyEvent keyEvent) {
+        if (CheckRegex.checkRegex("username", txtUname.getText())) {
+            txtUname.setStyle("-fx-text-fill: green;");
+        } else {
+            txtUname.setStyle("-fx-text-fill: red;");
+        }
+    }
+
+    public void onMobileRelease(KeyEvent keyEvent) {
+        if (CheckRegex.checkRegex("contactNumber", txtPhone.getText())) {
+            txtPhone.setStyle("-fx-text-fill: green;");
+        } else {
+            txtPhone.setStyle("-fx-text-fill: red;");
+        }
+    }
+
+    public void onAddressRelease(KeyEvent keyEvent) {
+        if (CheckRegex.checkRegex("address", txtAddress.getText())) {
+            txtAddress.setStyle("-fx-text-fill: green;");
+        } else {
+            txtAddress.setStyle("-fx-text-fill: red;");
+        }
+    }
+
+    public void onPwdRelease(KeyEvent keyEvent) {
+        if (CheckRegex.checkRegex("password", txtPwd.getText())) {
+            txtPwd.setStyle("-fx-text-fill: green;");
+        } else {
+            txtPwd.setStyle("-fx-text-fill: red;");
+        }
+    }
+
+    public void onPwd2Release(KeyEvent keyEvent) {
+        if (CheckRegex.checkRegex("password", txtConformPwd.getText())) {
+            txtConformPwd.setStyle("-fx-text-fill: green;");
+        } else {
+            txtConformPwd.setStyle("-fx-text-fill: red;");
         }
     }
 }

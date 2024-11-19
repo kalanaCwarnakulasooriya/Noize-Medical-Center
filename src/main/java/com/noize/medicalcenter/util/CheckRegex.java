@@ -5,10 +5,10 @@ public class CheckRegex {
     static String getRegex(String type) {
         return switch (type) {
             case "email" -> "^[\\w!#$%&'*+/=?`{|}~^-]+(?:\\.[\\w!#$%&'*+/=?`{|}~^-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$";
-            case "password" -> "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}$";
+            case "password" -> "^\\d+$";
             case "name" -> "^[A-Za-z ]{2,}$";
             case "address" -> "^[a-zA-Z0-9\\s,'-]{5,}$";
-            case "username" -> "^[a-zA-Z0-9_]{3,16}$";
+            case "username" -> "^[A-Za-z][A-Za-z0-9_]{4,19}$";
             case "otp" -> "^\\d{6}$";
             case "contactNumber" -> "^(\\d{10})$";
             case "qty" -> "^[0-9]+$";

@@ -3,6 +3,7 @@ package com.noize.medicalcenter.controller;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
+import com.noize.medicalcenter.util.CheckRegex;
 import com.noize.medicalcenter.util.alert.AlertSound;
 import com.noize.medicalcenter.util.alert.Sound;
 import com.noize.medicalcenter.dto.LoginFormDto;
@@ -17,6 +18,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import org.mindrot.jbcrypt.BCrypt;
@@ -160,6 +162,22 @@ public class LoginFormController {
     public void refeshLoginForm() {
         txtUname.setText("");
         txtPwd.setText("");
+    }
+
+    public void onUnameRelease(KeyEvent keyEvent) {
+        if (CheckRegex.checkRegex("username", txtUname.getText())) {
+            txtUname.setStyle("-fx-text-fill: green;");
+        } else {
+            txtUname.setStyle("-fx-text-fill: red;");
+        }
+    }
+
+    public void onPwdRelease(KeyEvent keyEvent) {
+        if (CheckRegex.checkRegex("password", txtPwd.getText())) {
+            txtPwd.setStyle("-fx-text-fill: green;");
+        } else {
+            txtPwd.setStyle("-fx-text-fill: red;");
+        }
     }
 }
 

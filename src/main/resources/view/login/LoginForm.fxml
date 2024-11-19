@@ -30,8 +30,8 @@
                   <Image url="@../../asset/icon/app_logo.png" />
                </image>
             </ImageView>
-            <JFXTextField fx:id="txtUname" labelFloat="true" layoutX="97.0" layoutY="192.0" prefHeight="28.0" prefWidth="212.0" promptText="Username" />
-            <JFXPasswordField fx:id="txtPwd" labelFloat="true" layoutX="96.0" layoutY="249.0" prefHeight="28.0" prefWidth="212.0" promptText="Password" />
+            <JFXTextField fx:id="txtUname" labelFloat="true" layoutX="97.0" layoutY="192.0" onKeyReleased="#onUnameRelease" prefHeight="28.0" prefWidth="212.0" promptText="Username" />
+            <JFXPasswordField fx:id="txtPwd" labelFloat="true" layoutX="96.0" layoutY="249.0" onKeyReleased="#onPwdRelease" prefHeight="28.0" prefWidth="212.0" promptText="Password" />
             <ImageView fitHeight="18.0" fitWidth="23.0" layoutX="276.0" layoutY="197.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../asset/icon/person.png" />

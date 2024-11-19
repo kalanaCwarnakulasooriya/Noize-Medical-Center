@@ -37,12 +37,12 @@
             </Label>
             <Label layoutX="214.0" layoutY="424.0" text="Already have an account ? " />
             <Hyperlink fx:id="hyperLogin" layoutX="355.0" layoutY="421.0" onAction="#hyperLogin" text="Login" textFill="#0eb0e5" />
-            <JFXTextField fx:id="txtName" labelFloat="true" layoutX="52.0" layoutY="159.0" prefHeight="28.0" prefWidth="212.0" promptText="Enter your Name" />
-            <JFXTextField fx:id="txtUname" labelFloat="true" layoutX="340.0" layoutY="159.0" prefHeight="28.0" prefWidth="212.0" promptText="Enter your Username" />
-            <JFXTextField fx:id="txtPhone" labelFloat="true" layoutX="52.0" layoutY="207.0" prefHeight="28.0" prefWidth="212.0" promptText="Enter your Phone" />
-            <JFXTextField fx:id="txtAddress" labelFloat="true" layoutX="340.0" layoutY="254.0" prefHeight="28.0" prefWidth="212.0" promptText="Address" />
-            <JFXPasswordField fx:id="txtPwd" labelFloat="true" layoutX="53.0" layoutY="254.0" prefHeight="28.0" prefWidth="212.0" promptText="Create Password" />
-            <JFXPasswordField fx:id="txtConformPwd" labelFloat="true" layoutX="52.0" layoutY="301.0" prefHeight="28.0" prefWidth="212.0" promptText="Conform Password" />
+            <JFXTextField fx:id="txtName" labelFloat="true" layoutX="52.0" layoutY="159.0" onKeyReleased="#onNameRelease" prefHeight="28.0" prefWidth="212.0" promptText="Enter your Name" />
+            <JFXTextField fx:id="txtUname" labelFloat="true" layoutX="340.0" layoutY="159.0" onKeyReleased="#onUNameRelease" prefHeight="28.0" prefWidth="212.0" promptText="Enter your Username" />
+            <JFXTextField fx:id="txtPhone" labelFloat="true" layoutX="52.0" layoutY="207.0" onKeyReleased="#onMobileRelease" prefHeight="28.0" prefWidth="212.0" promptText="Enter your Phone" />
+            <JFXTextField fx:id="txtAddress" labelFloat="true" layoutX="340.0" layoutY="254.0" onKeyReleased="#onAddressRelease" prefHeight="28.0" prefWidth="212.0" promptText="Address" />
+            <JFXPasswordField fx:id="txtPwd" labelFloat="true" layoutX="53.0" layoutY="254.0" onKeyReleased="#onPwdRelease" prefHeight="28.0" prefWidth="212.0" promptText="Create Password" />
+            <JFXPasswordField fx:id="txtConformPwd" labelFloat="true" layoutX="52.0" layoutY="301.0" onKeyReleased="#onPwd2Release" prefHeight="28.0" prefWidth="212.0" promptText="Conform Password" />
             <ImageView fitHeight="18.0" fitWidth="23.0" layoutX="242.0" layoutY="164.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../asset/icon/person.png" />
@@ -78,7 +78,7 @@
                   <Image url="@../../asset/icon/location.png" />
                </image>
             </ImageView>
-            <JFXTextField fx:id="txtEmail" labelFloat="true" layoutX="340.0" layoutY="207.0" prefHeight="28.0" prefWidth="212.0" promptText="Enter your Email" />
+            <JFXTextField fx:id="txtEmail" labelFloat="true" layoutX="340.0" layoutY="207.0" onKeyReleased="#onEmailRelease" prefHeight="28.0" prefWidth="212.0" promptText="Enter your Email" />
             <ImageView fitHeight="18.0" fitWidth="23.0" layoutX="529.0" layoutY="217.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../asset/icon/email.png" />

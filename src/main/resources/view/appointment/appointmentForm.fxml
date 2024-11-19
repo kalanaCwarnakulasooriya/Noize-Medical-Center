@@ -150,7 +150,7 @@
                         <Insets />
                      </VBox.margin>
                   </ComboBox>
-                  <JFXTextField fx:id="txtAge" prefHeight="28.0" prefWidth="125.0">
+                  <JFXTextField fx:id="txtAge" onKeyReleased="#ageRelease" prefHeight="28.0" prefWidth="125.0">
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
@@ -186,7 +186,7 @@
                   </Label>
                </children>
             </VBox>
-            <JFXTextField fx:id="txtDescription" layoutX="153.0" layoutY="188.0" prefHeight="28.0" prefWidth="553.0" />
+            <JFXTextField fx:id="txtDescription" layoutX="153.0" layoutY="188.0" onKeyReleased="#descRelease" prefHeight="28.0" prefWidth="553.0" />
             <Label layoutX="291.0" layoutY="14.0" text="Add Appointments" textFill="#2c3e50">
                <font>
                   <Font name="System Bold" size="18.0" />
