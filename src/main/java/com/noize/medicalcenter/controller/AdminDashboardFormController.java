@@ -35,8 +35,9 @@ public class AdminDashboardFormController implements Initializable {
     private Label lblTitle;
 
     @FXML
-    void callAppointments(ActionEvent event) {
-
+    void callAppointments(ActionEvent event) throws IOException {
+        lblTitle.setText("Appointments");
+        callPane("appointment/appointmentForm.fxml");
     }
 
     @FXML
@@ -126,7 +127,8 @@ public class AdminDashboardFormController implements Initializable {
         callPane("transaction/itemForm.fxml");
     }
 
-    public void callPrescription(ActionEvent actionEvent) {
-        
+    public void callPrescription(ActionEvent actionEvent) throws IOException {
+        lblTitle.setText("Prescription");
+        callPane("prescription/prescriptionForm.fxml");
     }
 }
