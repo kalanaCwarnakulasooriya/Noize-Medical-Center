@@ -6,6 +6,7 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -16,16 +17,17 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="770.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.noize.medicalcenter.controller.AppointmentFormController">
    <children>
-      <AnchorPane layoutX="155.0" layoutY="377.0" prefHeight="327.0" prefWidth="938.0" AnchorPane.leftAnchor="155.0" AnchorPane.rightAnchor="156.3739233721501">
+      <AnchorPane layoutX="61.0" layoutY="417.0" prefHeight="287.0" prefWidth="1136.0" AnchorPane.leftAnchor="61.0" AnchorPane.rightAnchor="52.53043854855878">
          <children>
-            <TableView fx:id="tblAppointment" layoutX="8.0" layoutY="6.0" onMouseClicked="#onClickTable" prefHeight="315.0" prefWidth="925.0" stylesheets="@../../asset/style/table.css">
+            <TableView fx:id="tblAppointment" layoutX="8.0" layoutY="6.0" onMouseClicked="#onClickTable" prefHeight="269.0" prefWidth="1120.0" stylesheets="@../../asset/style/table.css">
                <columns>
-                  <TableColumn fx:id="descCol" prefWidth="495.0260314941406" text="Description" />
-                  <TableColumn fx:id="statusCol" minWidth="0.0" prefWidth="258.78253173828125" text="Status" />
-                  <TableColumn fx:id="ageCol" prefWidth="166.95654296875" text="Age" />
+                  <TableColumn fx:id="patientNameCol" prefWidth="265.4608612060547" text="Patient Name" />
+                  <TableColumn fx:id="ageCol" minWidth="0.0" prefWidth="147.756591796875" text="Age" />
+                  <TableColumn fx:id="statusCol" prefWidth="159.4434814453125" text="Status" />
+                  <TableColumn fx:id="descCol" prefWidth="357.2869873046875" text="Description" />
+                  <TableColumn fx:id="dateCol" prefWidth="185.32183837890625" text="Date" />
                </columns>
             </TableView>
          </children>
@@ -95,21 +97,11 @@
             <Font name="System Bold" size="36.0" />
          </font>
       </Label>
-      <Label layoutX="985.0" layoutY="26.0" prefHeight="33.0" prefWidth="118.0" text="Appointment Date">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <Label fx:id="iblAppointDate" layoutX="1115.0" layoutY="26.0" prefHeight="33.0" prefWidth="125.0">
-         <font>
-            <Font name="System Bold" size="15.0" />
-         </font>
-      </Label>
-      <AnchorPane layoutX="267.0" layoutY="128.0" prefHeight="235.0" prefWidth="714.0" style="-fx-border-radius: 20; -fx-border-color: black;">
+      <AnchorPane layoutX="298.0" layoutY="129.0" prefHeight="277.0" prefWidth="663.0" style="-fx-border-radius: 20; -fx-border-color: black;">
          <children>
-            <VBox layoutX="24.0" layoutY="51.0" prefHeight="181.0" prefWidth="124.0">
+            <VBox layoutX="24.0" layoutY="51.0" prefHeight="215.0" prefWidth="124.0">
                <children>
-                  <Label prefHeight="34.0" prefWidth="123.0" text="Patient ID">
+                  <Label prefHeight="34.0" prefWidth="123.0" text="Name">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -141,53 +133,47 @@
                         <Insets top="10.0" />
                      </VBox.margin>
                   </Label>
-               </children>
-            </VBox>
-            <VBox layoutX="152.0" layoutY="65.0" prefHeight="114.0" prefWidth="159.0">
-               <children>
-                  <ComboBox fx:id="comboPID" onAction="#comboMobileOnAction" prefWidth="156.0">
-                     <VBox.margin>
-                        <Insets />
-                     </VBox.margin>
-                  </ComboBox>
-                  <JFXTextField fx:id="txtAge" onKeyReleased="#ageRelease" prefHeight="28.0" prefWidth="125.0">
-                     <VBox.margin>
-                        <Insets top="5.0" />
-                     </VBox.margin>
-                  </JFXTextField>
-                  <ComboBox fx:id="comboStatus" onAction="#comboMobileOnAction" prefWidth="156.0">
-                     <VBox.margin>
-                        <Insets top="25.0" />
-                     </VBox.margin>
-                  </ComboBox>
-               </children>
-            </VBox>
-            <VBox layoutX="329.0" layoutY="58.0" prefHeight="38.0" prefWidth="134.0">
-               <children>
-                  <Label prefHeight="34.0" prefWidth="123.0" text="Patient Name">
+                  <Label prefHeight="34.0" prefWidth="123.0" text="Date">
                      <font>
                         <Font size="18.0" />
                      </font>
                      <VBox.margin>
-                        <Insets />
+                        <Insets top="10.0" />
                      </VBox.margin>
                   </Label>
                </children>
             </VBox>
-            <VBox layoutX="465.0" layoutY="61.0" prefHeight="39.0" prefWidth="195.0">
+            <VBox layoutX="152.0" layoutY="52.0" prefHeight="215.0" prefWidth="472.0">
                <children>
-                  <Label fx:id="lblPName" prefHeight="34.0" prefWidth="195.0">
-                     <font>
-                        <Font name="System Bold" size="18.0" />
-                     </font>
+                  <JFXTextField fx:id="txtName" onKeyReleased="#ageRelease" prefHeight="28.0" prefWidth="125.0">
                      <VBox.margin>
-                        <Insets />
+                        <Insets top="5.0" />
                      </VBox.margin>
-                  </Label>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txtAge" onKeyReleased="#descRelease" prefHeight="28.0" prefWidth="553.0">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <ComboBox fx:id="comboStatus" onAction="#comboMobileOnAction" prefHeight="27.0" prefWidth="204.0">
+                     <VBox.margin>
+                        <Insets top="25.0" />
+                     </VBox.margin>
+                  </ComboBox>
+                  <JFXTextField fx:id="txtDescription" onKeyReleased="#descRelease" prefHeight="28.0" prefWidth="553.0">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <DatePicker fx:id="datePicker" onAction="#datePickerOnAction" prefHeight="33.0" prefWidth="206.0">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </DatePicker>
                </children>
             </VBox>
-            <JFXTextField fx:id="txtDescription" layoutX="153.0" layoutY="188.0" onKeyReleased="#descRelease" prefHeight="28.0" prefWidth="553.0" />
-            <Label layoutX="291.0" layoutY="14.0" text="Add Appointments" textFill="#2c3e50">
+            <VBox layoutX="465.0" layoutY="61.0" prefHeight="39.0" prefWidth="195.0" />
+            <Label layoutX="250.0" layoutY="14.0" text="Add Appointments" textFill="#2c3e50">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>

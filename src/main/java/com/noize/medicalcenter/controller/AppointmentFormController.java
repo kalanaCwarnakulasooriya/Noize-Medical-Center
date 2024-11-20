@@ -1,6 +1,7 @@
 package com.noize.medicalcenter.controller;
 
 import com.jfoenix.controls.JFXTextField;
+import com.noize.medicalcenter.util.CheckRegex;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -44,6 +45,9 @@ public class AppointmentFormController {
     private Label lblPName;
 
     @FXML
+    private TableColumn<?, ?> patientNameCol;
+
+    @FXML
     private TableColumn<?, ?> statusCol;
 
     @FXML
@@ -54,6 +58,15 @@ public class AppointmentFormController {
 
     @FXML
     private JFXTextField txtDescription;
+
+    @FXML
+    void ageRelease(KeyEvent event) {
+        if (CheckRegex.checkRegex("password", txtAge.getText())) {
+            txtAge.setStyle("-fx-text-fill: green;");
+        } else {
+            txtAge.setStyle("-fx-text-fill: red;");
+        }
+    }
 
     @FXML
     void btnDeleteItemOnAction(ActionEvent event) {
@@ -81,6 +94,15 @@ public class AppointmentFormController {
     }
 
     @FXML
+    void descRelease(KeyEvent event) {
+        if (CheckRegex.checkRegex("desc", txtDescription.getText())) {
+            txtDescription.setStyle("-fx-text-fill: green;");
+        } else {
+            txtDescription.setStyle("-fx-text-fill: red;");
+        }
+    }
+
+    @FXML
     void onClickTable(MouseEvent event) {
 
     }
@@ -90,9 +112,6 @@ public class AppointmentFormController {
 
     }
 
-    public void ageRelease(KeyEvent keyEvent) {
-    }
-
-    public void descRelease(KeyEvent keyEvent) {
+    public void datePickerOnAction(ActionEvent event) {
     }
 }

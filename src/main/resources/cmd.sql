@@ -80,15 +80,13 @@ CREATE TABLE IF NOT EXISTS patient (
 
 CREATE TABLE IF NOT EXISTS appointment (
     AppointmentId INT AUTO_INCREMENT PRIMARY KEY,
-    AppointmentDate DATETIME NOT NULL,
+    Name VARCHAR(50) NOT NULL,
+    Age VARCHAR(10) NOT NULL,
+    Date DATE NOT NULL,
     Description TEXT NOT NULL,
-    Status VARCHAR(20) NOT NULL,  -- (e.g., confirmed, pending, completed)
-    PatientId INT NOT NULL,
+    Status VARCHAR(20) NOT NULL,
     DoctorId INT NOT NULL,
     UserId INT NOT NULL,
-    FOREIGN KEY (PatientId) REFERENCES patient(PatientId)
-    ON UPDATE CASCADE
-    ON DELETE CASCADE,
     FOREIGN KEY (DoctorId) REFERENCES doctor(DoctorId)
     ON UPDATE CASCADE
     ON DELETE CASCADE,
@@ -108,16 +106,11 @@ CREATE TABLE IF NOT EXISTS orders (
 
 CREATE TABLE IF NOT EXISTS payment (
     PaymentId INT AUTO_INCREMENT PRIMARY KEY,
-    PaymentDate DATE NOT NULL,
+    Date DATE NOT NULL,
     Amount DECIMAL(10, 2) NOT NULL,
-    PaymentMethod VARCHAR(20) NOT NULL,  -- (e.g., cash, card, digital)
-    Status VARCHAR(20) NOT NULL,  -- (e.g., paid, pending)
+    PaymentMethod VARCHAR(20) NOT NULL,
     OrderId INT NOT NULL,
-    AppointmentId INT NOT NULL,
     FOREIGN KEY (OrderId) REFERENCES orders(OrderId)
-    ON UPDATE CASCADE
-    ON DELETE CASCADE,
-    FOREIGN KEY (AppointmentId) REFERENCES appointment(AppointmentId)
     ON UPDATE CASCADE
     ON DELETE CASCADE
 );
@@ -174,33 +167,36 @@ INSERT INTO patient (Name, Email, ContactNumber, Address, DOB, Gender, Registrat
     ('Sugath Kumara', 'sugathkumara@gmail.com', '0782751856', 'Gampaha', '1995-05-20', 'Male', '2024-10-25', 1, 1);
 
 
-INSERT INTO appointment (AppointmentDate, Description, Status, PatientId, DoctorId, UserId) VALUES
-    ('2024-10-28 09:00:00', 'General Checkup', 'confirmed', 1, 1, 1);
+INSERT INTO appointment (Name, Age, Date, Description, Status, DoctorId, UserId)  VALUES
+    ('Jagath perera', '35', '2024-11-21', 'Follow-up consultation for diabetes', 'Scheduled', 1, 1),
+    ('Nimali sansala', '28', '2024-11-22', 'General health check-up', 'Scheduled', 2, 1);
 
 
 INSERT INTO orders (OrderDate, PatientId) VALUES
     ('2024-10-26',1);
 
 
-INSERT INTO payment (PaymentDate, Amount, PaymentMethod, Status, OrderId, AppointmentId) VALUES
-    ('2024-10-26', 150.00, 'card', 'paid', 1, 1);
+INSERT INTO payment (Date, Amount, PaymentMethod, OrderId) VALUES
+    ('2024-11-21', 150.00, 'Card', 1),
+    ('2024-11-22', 200.00, 'Cash', 2),
+    ('2024-11-24', 300.00, 'Online', 4);
 
 
 INSERT INTO item (Name, Description, ExpireDate, PackSize, UnitPrice, StockQuantity) VALUES
-                                                                                         ('Bandages', 'Sterile bandages', '2025-12-31', '10 pcs/pack', 5.00, 100),
-                                                                                         ('Antibiotic Cream', 'For wound care', '2025-06-30', '15g tube', 7.50, 50);
+    ('Bandages', 'Sterile bandages', '2025-12-31', '10 pcs/pack', 5.00, 100),
+    ('Antibiotic Cream', 'For wound care', '2025-06-30', '15g tube', 7.50, 50);
 
 
 INSERT INTO orderdetail (Quantity, Price, OrderId, ItemId) VALUES
-                                                               (2, 10.00, 1, 1),
-                                                               (1, 7.50, 1, 2);
+    (2, 10.00, 1, 1),
+    (1, 7.50, 1, 2);
 
 INSERT INTO Role (RoleName, Description) VALUES
-                                             ('Admin', 'Handles administrative and other supportive roles'),
-                                             ('Doctor', 'Handles patient treatments and prescriptions'),
-                                             ('Cashier', 'Handles patient payments and billing');
+    ('Admin', 'Handles administrative and other supportive roles'),
+    ('Doctor', 'Handles patient treatments and prescriptions'),
+    ('Cashier', 'Handles patient payments and billing');
 
 INSERT INTO Gender (Gender, Description) VALUES
-                                              ('Male', 'Male'),
-                                              ('Female', 'Female'),
-                                              ('Other', 'Other');
+    ('Male', 'Male'),
+    ('Female', 'Female'),
+    ('Other', 'Other');
