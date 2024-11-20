@@ -4,10 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a59df24e-a8bc-4d9f-9f9e-901765c53044" name="Changes" comment="validation part eka kara">
+    <list default="true" id="a59df24e-a8bc-4d9f-9f9e-901765c53044" name="Changes" comment="order report file">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/dto/PaymentFormDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/model/PaymentFormModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/asset/icon/logout.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/reports/Order_Report.jrxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/AppointmentFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/AppointmentFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/AdminDashboardFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/AdminDashboardFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/ItemFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/ItemFormController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/OrderFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/OrderFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/PatientsFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/PatientsFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/dto/tm/ItemTM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/dto/tm/ItemTM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/model/ItemFormModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/model/ItemFormModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/model/OrderDetailsFormModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/model/OrderDetailsFormModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/reports/orderReport.jrxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/dashboard/adminDashboardForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/dashboard/adminDashboardForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/transaction/itemForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/transaction/itemForm.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/view/transaction/orderForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/transaction/orderForm.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,6 +33,7 @@
         <option value="Enum" />
         <option value="CSS File" />
         <option value="FxmlFile" />
+        <option value="HTML File" />
         <option value="Class" />
       </list>
     </option>
@@ -79,6 +92,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Application.Launcher.executor&quot;: &quot;Run&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;JUnit.com.noize.medicalcenter.model in medicalCenter.executor&quot;: &quot;Coverage&quot;,
     &quot;Maven.medicalCenter [compile].executor&quot;: &quot;Run&quot;,
     &quot;Maven.medicalCenter [install].executor&quot;: &quot;Run&quot;,
@@ -89,7 +103,7 @@
     &quot;com.codeium.enabled&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Intellij Prroject/Noize-Medical-Center-master/Noize-Medical-Center-master/src/main/resources/asset/icon&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Intellij Prroject/Noize-Medical-Center-master/Noize-Medical-Center-master/src/main/resources/reports&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -110,6 +124,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Intellij Prroject\Noize-Medical-Center-master\Noize-Medical-Center-master\src\main\resources\reports" />
       <recent name="D:\Intellij Prroject\Noize-Medical-Center-master\Noize-Medical-Center-master\src\main\resources\asset\icon" />
       <recent name="D:\Intellij Prroject\Noize-Medical-Center-master\Noize-Medical-Center-master\src\main\resources\asset\style" />
     </key>
@@ -240,7 +255,8 @@
       <workItem from="1731936882004" duration="11401000" />
       <workItem from="1731997773066" duration="7112000" />
       <workItem from="1732029681754" duration="12265000" />
-      <workItem from="1732078393576" duration="11634000" />
+      <workItem from="1732078393576" duration="15097000" />
+      <workItem from="1732113549495" duration="11092000" />
     </task>
     <task id="LOCAL-00001" summary="login and signup page view">
       <option name="closed" value="true" />
@@ -338,7 +354,23 @@
       <option name="project" value="LOCAL" />
       <updated>1732047085120</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="payment">
+      <option name="closed" value="true" />
+      <created>1732100597870</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1732100597870</updated>
+    </task>
+    <task id="LOCAL-00014" summary="order report file">
+      <option name="closed" value="true" />
+      <created>1732100768579</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1732100768579</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -367,7 +399,9 @@
     <MESSAGE value="transaction hry" />
     <MESSAGE value="appointmentUI ekai PrescriptionUI ekai" />
     <MESSAGE value="validation part eka kara" />
-    <option name="LAST_COMMIT_MESSAGE" value="validation part eka kara" />
+    <MESSAGE value="payment" />
+    <MESSAGE value="order report file" />
+    <option name="LAST_COMMIT_MESSAGE" value="order report file" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -42,14 +42,22 @@
             </TableView>
          </children>
       </AnchorPane>
-      <HBox layoutX="882.0" layoutY="702.0" prefHeight="59.0" prefWidth="336.0">
+      <HBox layoutX="671.0" layoutY="702.0" prefHeight="59.0" prefWidth="547.0">
          <children>
-            <JFXButton onAction="#resetOnAction" prefHeight="37.0" prefWidth="160.0" style="-fx-background-color: #e74c3c; -fx-background-radius: 10;" text="Reset" textFill="WHITE">
+            <JFXButton fx:id="btnOrderReport" onAction="#orderReportOnAction" prefHeight="37.0" prefWidth="160.0" style="-fx-background-color: #7f8c8d; -fx-background-radius: 10;" text="Order Report" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
                <HBox.margin>
-                  <Insets top="10.0" />
+                  <Insets left="20.0" top="10.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="btnReset" onAction="#resetOnAction" prefHeight="37.0" prefWidth="160.0" style="-fx-background-color: #e74c3c; -fx-background-radius: 10;" text="Reset" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="20.0" top="10.0" />
                </HBox.margin>
             </JFXButton>
             <JFXButton fx:id="btnPlaceOrder" onAction="#placeOrderOnAction" prefHeight="37.0" prefWidth="160.0" style="-fx-background-color: #009432; -fx-background-radius: 10;" text="Place Order" textFill="WHITE">
@@ -257,14 +265,14 @@
                         <Insets top="10.0" />
                      </VBox.margin>
                   </Label>
-                  <ComboBox fx:id="comboMethod" prefHeight="27.0" prefWidth="198.0">
+                  <ComboBox fx:id="comboMethod" onAction="#comboMethodOnAction" prefHeight="27.0" prefWidth="198.0">
                      <VBox.margin>
                         <Insets top="30.0" />
                      </VBox.margin>
                   </ComboBox>
                </children>
             </VBox>
-            <JFXButton layoutX="256.0" layoutY="175.0" onAction="#paymentOnAction" prefHeight="37.0" prefWidth="160.0" style="-fx-background-color: #3498db; -fx-background-radius: 10;" text="Payment" textFill="WHITE">
+            <JFXButton fx:id="btnPay" layoutX="256.0" layoutY="175.0" onAction="#paymentOnAction" prefHeight="37.0" prefWidth="160.0" style="-fx-background-color: #3498db; -fx-background-radius: 10;" text="Payment" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>

@@ -2,6 +2,7 @@ package com.noize.medicalcenter.controller;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
+import com.noize.medicalcenter.db.DBConnection;
 import com.noize.medicalcenter.util.alert.AlertSound;
 import com.noize.medicalcenter.dto.ItemFormDto;
 import com.noize.medicalcenter.dto.OrderDetailsFormDto;
@@ -23,12 +24,17 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import net.sf.jasperreports.engine.*;
+import net.sf.jasperreports.view.JasperViewer;
 
 import java.net.URL;
+import java.sql.Connection;
 import java.sql.Date;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.ResourceBundle;
 
 public class OrderFormController implements Initializable {
@@ -61,11 +67,18 @@ public class OrderFormController implements Initializable {
 
     @FXML
     private JFXButton btnAddCart;
+
     @FXML
     private Label lblOrderId;
 
     @FXML
     private Label lblPName;
+
+    @FXML
+    private JFXButton btnPay;
+
+    @FXML
+    private JFXButton btnOrderReport;
 
     @FXML
     private Label lblUPrice;
@@ -84,6 +97,9 @@ public class OrderFormController implements Initializable {
 
     @FXML
     private JFXTextField txtQty;
+
+    @FXML
+    private JFXButton btnReset;
 
     @FXML
     private Label lblPack;
@@ -215,8 +231,10 @@ public class OrderFormController implements Initializable {
         orderPane.setVisible(false);
         btnAddCart.setVisible(false);
         btnPlaceOrder.setDisable(true);
-
+        btnOrderReport.setDisable(false);
         paymentPane.setVisible(true);
+        btnReset.setDisable(true);
+        btnOrderReport.setDisable(true);
     }
 
     @FXML
@@ -240,6 +258,7 @@ public class OrderFormController implements Initializable {
         setCellValues();
         try {
             refeshPage();
+            btnOrderReport.setDisable(false);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -254,6 +273,7 @@ public class OrderFormController implements Initializable {
 
         tblPlaceOrder.setItems(obList);
     }
+
     private void refeshPage() throws SQLException {
         lblOrderId.setText(String.valueOf(orderFormModel.getNewOrderId()));
         lblOrderDate.setText(LocalDate.now().toString());
@@ -264,6 +284,7 @@ public class OrderFormController implements Initializable {
 
         comboMobile.getSelectionModel().clearSelection();
         comboMediName.getSelectionModel().clearSelection();
+        comboMethod.getSelectionModel().clearSelection();
         lblPName.setText("");
         lblQoh.setText("");
         txtQty.setText("");
@@ -274,12 +295,36 @@ public class OrderFormController implements Initializable {
         obList.clear();
         tblPlaceOrder.refresh();
     }
+
+    private void refeshFieldsOnly() throws SQLException {
+        lblOrderId.setText(String.valueOf(orderFormModel.getNewOrderId()));
+        lblOrderDate.setText(LocalDate.now().toString());
+
+//        loadPatientMobile();
+        loadMediName();
+        loadPayments();
+
+//        comboMobile.getSelectionModel().clearSelection();
+        comboMediName.getSelectionModel().clearSelection();
+        comboMethod.getSelectionModel().clearSelection();
+//        lblPName.setText("");
+        lblQoh.setText("");
+        txtQty.setText("");
+        lblUPrice.setText("");
+        lblExpire.setText("");
+        lblPack.setText("");
+
+//        obList.clear();
+//        tblPlaceOrder.refresh();
+    }
+
     private void loadPatientMobile() throws SQLException {
         ArrayList<String> patientsMobile  = patientsFormModel.getAllPatientMobile();
         ObservableList<String> observableList = FXCollections.observableArrayList();
         observableList.addAll(patientsMobile);
         comboMobile.setItems(observableList);
     }
+
     private void loadMediName() throws SQLException {
         ArrayList<String> itemNames = itemFormModel.getAllItemNames();
         ObservableList<String> observableList = FXCollections.observableArrayList();
@@ -362,8 +407,11 @@ public class OrderFormController implements Initializable {
         if (isSaved) {
             paymentPane.setVisible(false);
             orderPane.setVisible(true);
-            btnPlaceOrder.setDisable(false);
-            btnAddCart.setVisible(true);
+            btnPlaceOrder.setDisable(true);
+            btnAddCart.setVisible(false);
+            btnOrderReport.setDisable(false);
+            btnPay.setDisable(true);
+            refeshPage();
             new AlertNotification(
                     "Alert Message",
                     "Order placed successfully",
@@ -382,17 +430,48 @@ public class OrderFormController implements Initializable {
         }
     }
 
-    public void backOnClicked(MouseEvent mouseEvent) {
+    public void backOnClicked(MouseEvent mouseEvent) throws SQLException {
         paymentPane.setVisible(false);
         orderPane.setVisible(true);
         btnAddCart.setVisible(true);
         btnPlaceOrder.setDisable(false);
-
+        btnOrderReport.setDisable(false);
+        btnPay.setDisable(false);
+        btnReset.setDisable(false);
+        refeshFieldsOnly();
     }
 
     void loadPayments() {
+        comboMethod.setStyle("-fx-font-weight: bold; -fx-font-size: 14px; -fx-text-fill: green;");
         ObservableList<String> observableList = FXCollections.observableArrayList();
         observableList.addAll("Card", "Cash");
         comboMethod.setItems(observableList);
+    }
+
+    public void comboMethodOnAction(ActionEvent event) {
+    }
+
+    public void orderReportOnAction(ActionEvent event) {
+        try {
+            Connection connection = DBConnection.getInstance().getConnection();
+            Map<String, Object> parameters = new HashMap<>();
+            parameters.put("TODAY", LocalDate.now().toString());
+            JasperReport jasperReport = JasperCompileManager.compileReport(
+                    getClass().getResourceAsStream("/reports/Order_Report.jrxml")
+            );
+            JasperPrint jasperPrint = JasperFillManager.fillReport(
+                    jasperReport,
+                    parameters,
+                    connection
+            );
+            JasperViewer.viewReport(jasperPrint, false);
+
+        } catch (JRException e) {
+            new Alert(Alert.AlertType.ERROR, "Fail to load report..!");
+            e.printStackTrace();
+        } catch (SQLException e) {
+            new Alert(Alert.AlertType.ERROR, "Data empty..!");
+            e.printStackTrace();
+        }
     }
 }

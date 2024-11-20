@@ -78,21 +78,7 @@ public class PatientsFormController implements Initializable {
 
     @FXML
     void addOrderClick(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/transaction/orderForm.fxml"));
-        Parent root = loader.load();
-        Stage windows = new Stage();
-        windows.centerOnScreen();
-        windows.setResizable(false);
-        windows.setTitle("  Add Patients");
-        windows.getIcons().add(
-                new Image(
-                        getClass().getResourceAsStream("/asset/icon/app_logo.png")
-                )
-        );
-        windows.initModality(Modality.APPLICATION_MODAL);
-        windows.initOwner(lblSearch.getScene().getWindow());
-        windows.setScene(new Scene(root));
-        windows.show();
+
     }
 
     @FXML

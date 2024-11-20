@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane minHeight="875.0" minWidth="1600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.noize.medicalcenter.controller.AdminDashboardFormController">
+<AnchorPane fx:id="adminPane" minHeight="875.0" minWidth="1600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.noize.medicalcenter.controller.AdminDashboardFormController">
    <children>
       <BorderPane layoutY="113.0" prefHeight="763.0" prefWidth="1600.0">
          <left>
@@ -143,7 +143,25 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                            <VBox.margin>
-                              <Insets top="280.0" />
+                              <Insets />
+                           </VBox.margin>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#callLogOut" onMouseEntered="#mouseEnter" onMouseExited="#mouseExit" prefHeight="67.0" prefWidth="350.0" style="-fx-background-color: #1e293c;" text="   Logout" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" smooth="false">
+                                 <image>
+                                    <Image url="@../../asset/icon/logout.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <VBox.margin>
+                              <Insets top="140.0" />
                            </VBox.margin>
                         </Button>
                      </children>

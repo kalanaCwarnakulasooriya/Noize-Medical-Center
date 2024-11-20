@@ -3,6 +3,7 @@ package com.noize.medicalcenter.model;
 import com.noize.medicalcenter.dto.OrderDetailsFormDto;
 import com.noize.medicalcenter.util.CrudUtil;
 
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
@@ -33,4 +34,15 @@ public class OrderDetailsFormModel {
                 orderDetailsDTO.getItemId()
         );
     }
+
+    public double getOrderTotalAmount(String orderId) throws SQLException {
+        String query = "SELECT SUM(Quantity * price) AS TotalAmount FROM orderdetail WHERE OrderId = ?";
+        ResultSet rst = CrudUtil.execute(query, orderId);
+
+        if (rst.next()) {
+            return rst.getDouble("TotalAmount");
+        }
+        return 0.0;
+    }
+
 }

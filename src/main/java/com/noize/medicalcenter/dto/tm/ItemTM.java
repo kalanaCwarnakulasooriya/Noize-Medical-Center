@@ -18,5 +18,5 @@ public class ItemTM  {
     private String packSize;
     private double unitPrice;
     private int stockQty;
-    private ImageView type;
+//    private ImageView type;
 }

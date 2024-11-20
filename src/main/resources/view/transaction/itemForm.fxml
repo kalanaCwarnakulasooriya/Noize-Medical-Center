@@ -10,6 +10,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -298,6 +299,16 @@
       <ImageView fx:id="back" fitHeight="38.0" fitWidth="38.0" layoutX="46.0" layoutY="35.0" onMouseClicked="#backOnClicked" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@../../asset/icon/back.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="lblSearch" layoutX="77.0" layoutY="78.0" onKeyReleased="#searchStock" prefHeight="34.0" prefWidth="260.0" promptText="  Search Here" style="-fx-background-radius: 30;">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="40.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../asset/icon/search.png" />
          </image>
       </ImageView>
    </children>

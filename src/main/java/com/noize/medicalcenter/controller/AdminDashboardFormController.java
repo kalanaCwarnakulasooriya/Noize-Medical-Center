@@ -1,15 +1,21 @@
 package com.noize.medicalcenter.controller;
 
+import com.noize.medicalcenter.util.AlertNotification;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.io.IOException;
@@ -27,6 +33,9 @@ public class AdminDashboardFormController implements Initializable {
 
     @FXML
     private Label lblDate;
+
+    @FXML
+    private AnchorPane adminPane;
 
     @FXML
     private Label lblTime;
@@ -131,4 +140,14 @@ public class AdminDashboardFormController implements Initializable {
         lblTitle.setText("Prescription");
         callPane("prescription/prescriptionForm.fxml");
     }
+
+    public void callLogOut(ActionEvent event) throws IOException {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(FXMLLoader.load(Objects.requireNonNull(this.getClass().getResource("/view/login/LoginForm.fxml")))));
+        stage.setTitle("Login Page");
+        stage.centerOnScreen();
+        stage.setResizable(false);
+        stage.show();
+    }
+
 }

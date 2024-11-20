@@ -3,6 +3,7 @@ package com.noize.medicalcenter.model;
 import com.noize.medicalcenter.dto.ItemFormDto;
 import com.noize.medicalcenter.dto.OrderDetailsFormDto;
 import com.noize.medicalcenter.dto.tm.ItemTM;
+import com.noize.medicalcenter.dto.tm.PatientsTM;
 import com.noize.medicalcenter.util.CrudUtil;
 
 import java.sql.ResultSet;
@@ -102,5 +103,23 @@ public class ItemFormModel {
 
     public boolean deleteItem(String name) throws SQLException {
         return CrudUtil.execute("DELETE FROM item WHERE Name = ?", name);
+    }
+
+    public ArrayList<ItemTM> searchStock(String name) throws SQLException {
+        String sql = "select * from item where Name like ?";
+        ResultSet rst = CrudUtil.execute(sql, name+"%");
+        ArrayList<ItemTM> stock = new ArrayList<>();
+        while (rst.next()) {
+            ItemTM stockItem = new ItemTM(
+                    rst.getString("Name"),
+                    rst.getString("Description"),
+                    rst.getString("ExpireDate"),
+                    rst.getString("PackSize"),
+                    rst.getDouble("UnitPrice"),
+                    rst.getInt("StockQuantity")
+            );
+            stock.add(stockItem);
+        }
+        return stock;
     }
 }

@@ -39,6 +39,9 @@ public class ItemFormController implements Initializable {
     private AnchorPane addPane;
 
     @FXML
+    private TextField lblSearch;
+
+    @FXML
     private AnchorPane updatePane;
 
     @FXML
@@ -412,5 +415,14 @@ public class ItemFormController implements Initializable {
         } else {
             isExpireValid = false;
         }
+    }
+
+    public void searchStock(KeyEvent keyEvent) throws SQLException {
+        ArrayList<ItemTM> items = itemFormModel.searchStock(lblSearch.getText());
+        ObservableList<ItemTM> itemTMS = FXCollections.observableArrayList();
+        for (ItemTM item : items) {
+            itemTMS.add(item);
+        }
+        tblItem.setItems(itemTMS);
     }
 }
