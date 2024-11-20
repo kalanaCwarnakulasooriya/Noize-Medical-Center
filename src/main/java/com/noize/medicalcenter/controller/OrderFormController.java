@@ -1,5 +1,6 @@
 package com.noize.medicalcenter.controller;
 
+import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import com.noize.medicalcenter.util.alert.AlertSound;
 import com.noize.medicalcenter.dto.ItemFormDto;
@@ -20,6 +21,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 
 import java.net.URL;
 import java.sql.Date;
@@ -42,6 +45,12 @@ public class OrderFormController implements Initializable {
     private TableColumn<OrdersTM, Integer> cartQtyCol;
 
     @FXML
+    private AnchorPane paymentPane;
+
+    @FXML
+    private AnchorPane orderPane;
+
+    @FXML
     private ComboBox<String> comboMediName;
 
     @FXML
@@ -50,6 +59,8 @@ public class OrderFormController implements Initializable {
     @FXML
     private Label lblOrderDate;
 
+    @FXML
+    private JFXButton btnAddCart;
     @FXML
     private Label lblOrderId;
 
@@ -76,6 +87,15 @@ public class OrderFormController implements Initializable {
 
     @FXML
     private Label lblPack;
+
+    @FXML
+    private Label lblTotal;
+
+    @FXML
+    private JFXButton btnPlaceOrder;
+
+    @FXML
+    private ComboBox<String> comboMethod;
 
     @FXML
     private Label lblExpire;
@@ -192,59 +212,11 @@ public class OrderFormController implements Initializable {
             ).start();
             return;
         }
-        if (comboMobile.getSelectionModel().isEmpty()) {
-            new AlertNotification(
-                    "Alert Message",
-                    "Please select Patient mobile number",
-                    "unsuccess.png",
-                    "ok"
-            ).start();
-            return;
-        }
+        orderPane.setVisible(false);
+        btnAddCart.setVisible(false);
+        btnPlaceOrder.setDisable(true);
 
-        String orderId = lblOrderId.getText();
-        Date dateOfOrder = Date.valueOf(lblOrderDate.getText());
-        String patientId = comboMobile.getValue();
-
-        ArrayList<OrderDetailsFormDto> orderDetailsDTOS = new ArrayList<>();
-
-        for (OrdersTM cartTM : obList) {
-
-            OrderDetailsFormDto orderDetailsDTO = new OrderDetailsFormDto(
-                    Integer.parseInt(orderId),
-                    cartTM.getItemId(),
-                    cartTM.getCartQty(),
-                    cartTM.getUnitPrice()
-            );
-
-            orderDetailsDTOS.add(orderDetailsDTO);
-        }
-        OrdersFormDto orderDTO = new OrdersFormDto(
-                Integer.parseInt(orderId),
-                dateOfOrder,
-                Integer.parseInt(patientId),
-                orderDetailsDTOS
-        );
-
-        boolean isSaved = orderFormModel.saveOrder(orderDTO);
-
-        if (isSaved) {
-            new AlertNotification(
-                    "Alert Message",
-                    "Order placed successfully",
-                    "success.png",
-                    "ok"
-            ).start();
-
-            refeshPage();
-        } else {
-            new AlertNotification(
-                    "Alert Message",
-                    "Failed to place order",
-                    "unsuccess.png",
-                    "ok"
-            ).start();
-        }
+        paymentPane.setVisible(true);
     }
 
     @FXML
@@ -266,7 +238,6 @@ public class OrderFormController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         setCellValues();
-
         try {
             refeshPage();
         } catch (Exception e) {
@@ -289,6 +260,7 @@ public class OrderFormController implements Initializable {
 
         loadPatientMobile();
         loadMediName();
+        loadPayments();
 
         comboMobile.getSelectionModel().clearSelection();
         comboMediName.getSelectionModel().clearSelection();
@@ -336,5 +308,91 @@ public class OrderFormController implements Initializable {
         if (patientsTM != null) {
             lblPName.setText(patientsTM.getPatientsName());
         }
+    }
+
+    public void onTotalRelease(KeyEvent keyEvent) {
+    }
+
+    public void paymentOnAction(ActionEvent actionEvent) throws SQLException {
+        if (tblPlaceOrder.getItems().isEmpty()) {
+            new AlertNotification(
+                    "Alert Message",
+                    "Please add items to cart",
+                    "unsuccess.png",
+                    "ok"
+            ).start();
+            return;
+        }
+        if (comboMobile.getSelectionModel().isEmpty()) {
+            new AlertNotification(
+                    "Alert Message",
+                    "Please select Patient mobile number",
+                    "unsuccess.png",
+                    "ok"
+            ).start();
+            return;
+        }
+
+        String orderId = lblOrderId.getText();
+        Date dateOfOrder = Date.valueOf(lblOrderDate.getText());
+        String patientId = comboMobile.getValue();
+
+        ArrayList<OrderDetailsFormDto> orderDetailsDTOS = new ArrayList<>();
+
+        for (OrdersTM cartTM : obList) {
+
+            OrderDetailsFormDto orderDetailsDTO = new OrderDetailsFormDto(
+                    Integer.parseInt(orderId),
+                    cartTM.getItemId(),
+                    cartTM.getCartQty(),
+                    cartTM.getUnitPrice()
+            );
+
+            orderDetailsDTOS.add(orderDetailsDTO);
+        }
+        OrdersFormDto orderDTO = new OrdersFormDto(
+                Integer.parseInt(orderId),
+                dateOfOrder,
+                Integer.parseInt(patientId),
+                orderDetailsDTOS
+        );
+
+        boolean isSaved = orderFormModel.saveOrder(orderDTO);
+
+        if (isSaved) {
+            paymentPane.setVisible(false);
+            orderPane.setVisible(true);
+            btnPlaceOrder.setDisable(false);
+            btnAddCart.setVisible(true);
+            new AlertNotification(
+                    "Alert Message",
+                    "Order placed successfully",
+                    "success.png",
+                    "ok"
+            ).start();
+
+            refeshPage();
+        } else {
+            new AlertNotification(
+                    "Alert Message",
+                    "Failed to place order",
+                    "unsuccess.png",
+                    "ok"
+            ).start();
+        }
+    }
+
+    public void backOnClicked(MouseEvent mouseEvent) {
+        paymentPane.setVisible(false);
+        orderPane.setVisible(true);
+        btnAddCart.setVisible(true);
+        btnPlaceOrder.setDisable(false);
+
+    }
+
+    void loadPayments() {
+        ObservableList<String> observableList = FXCollections.observableArrayList();
+        observableList.addAll("Card", "Cash");
+        comboMethod.setItems(observableList);
     }
 }

@@ -8,6 +8,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 
 public class AppointmentFormController {
@@ -89,4 +90,9 @@ public class AppointmentFormController {
 
     }
 
+    public void ageRelease(KeyEvent keyEvent) {
+    }
+
+    public void descRelease(KeyEvent keyEvent) {
+    }
 }
