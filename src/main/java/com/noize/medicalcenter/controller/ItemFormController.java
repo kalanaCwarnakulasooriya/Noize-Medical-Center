@@ -437,7 +437,7 @@ public class ItemFormController implements Initializable {
             Map<String, Object> parameters = new HashMap<>();
             parameters.put("TODAY", LocalDate.now().toString());
             JasperReport jasperReport = JasperCompileManager.compileReport(
-                    getClass().getResourceAsStream("/reports/Item   _Report.jrxml")
+                    getClass().getResourceAsStream("/reports/Item_Report.jrxml")
             );
             JasperPrint jasperPrint = JasperFillManager.fillReport(
                     jasperReport,
