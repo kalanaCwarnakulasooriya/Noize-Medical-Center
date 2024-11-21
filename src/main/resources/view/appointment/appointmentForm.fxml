@@ -10,6 +10,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -106,7 +107,7 @@
                         <Font size="18.0" />
                      </font>
                      <VBox.margin>
-                        <Insets top="10.0" />
+                        <Insets top="5.0" />
                      </VBox.margin>
                   </Label>
                   <Label prefHeight="34.0" prefWidth="134.0" text="Age">
@@ -114,7 +115,7 @@
                         <Font size="18.0" />
                      </font>
                      <VBox.margin>
-                        <Insets top="10.0" />
+                        <Insets top="5.0" />
                      </VBox.margin>
                   </Label>
                   <Label prefHeight="34.0" prefWidth="123.0" text="Status">
@@ -122,7 +123,7 @@
                         <Font size="18.0" />
                      </font>
                      <VBox.margin>
-                        <Insets top="10.0" />
+                        <Insets top="5.0" />
                      </VBox.margin>
                   </Label>
                   <Label prefHeight="34.0" prefWidth="123.0" text="Description">
@@ -130,7 +131,7 @@
                         <Font size="18.0" />
                      </font>
                      <VBox.margin>
-                        <Insets top="10.0" />
+                        <Insets top="5.0" />
                      </VBox.margin>
                   </Label>
                   <Label prefHeight="34.0" prefWidth="123.0" text="Date">
@@ -138,47 +139,84 @@
                         <Font size="18.0" />
                      </font>
                      <VBox.margin>
-                        <Insets top="10.0" />
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label prefHeight="34.0" prefWidth="123.0" text="Doctor ID">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="5.0" />
                      </VBox.margin>
                   </Label>
                </children>
             </VBox>
-            <VBox layoutX="152.0" layoutY="52.0" prefHeight="215.0" prefWidth="472.0">
+            <VBox layoutX="152.0" layoutY="52.0" prefHeight="179.0" prefWidth="472.0">
                <children>
-                  <JFXTextField fx:id="txtName" onKeyReleased="#ageRelease" prefHeight="28.0" prefWidth="125.0">
+                  <JFXTextField fx:id="txtName" onKeyReleased="#nameRelease" prefHeight="28.0" prefWidth="125.0">
+                     <VBox.margin>
+                        <Insets top="-5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txtAge" onKeyReleased="#ageRelease" prefHeight="28.0" prefWidth="553.0">
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
                   </JFXTextField>
-                  <JFXTextField fx:id="txtAge" onKeyReleased="#descRelease" prefHeight="28.0" prefWidth="553.0">
+                  <ComboBox fx:id="comboStatus" onAction="#comboStatusOnAction" prefHeight="27.0" prefWidth="204.0">
                      <VBox.margin>
-                        <Insets top="10.0" />
-                     </VBox.margin>
-                  </JFXTextField>
-                  <ComboBox fx:id="comboStatus" onAction="#comboMobileOnAction" prefHeight="27.0" prefWidth="204.0">
-                     <VBox.margin>
-                        <Insets top="25.0" />
+                        <Insets top="15.0" />
                      </VBox.margin>
                   </ComboBox>
                   <JFXTextField fx:id="txtDescription" onKeyReleased="#descRelease" prefHeight="28.0" prefWidth="553.0">
                      <VBox.margin>
-                        <Insets top="10.0" />
+                        <Insets />
                      </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
                   </JFXTextField>
                   <DatePicker fx:id="datePicker" onAction="#datePickerOnAction" prefHeight="33.0" prefWidth="206.0">
                      <VBox.margin>
-                        <Insets top="20.0" />
+                        <Insets top="10.0" />
                      </VBox.margin>
                   </DatePicker>
                </children>
             </VBox>
-            <VBox layoutX="465.0" layoutY="61.0" prefHeight="39.0" prefWidth="195.0" />
             <Label layoutX="250.0" layoutY="14.0" text="Add Appointments" textFill="#2c3e50">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
+            <ComboBox fx:id="comboDoctor" layoutX="152.0" layoutY="235.0" onAction="#comboDoctorOnAction" prefHeight="28.0" prefWidth="206.0" />
+            <Label layoutX="376.0" layoutY="236.0" prefHeight="28.0" prefWidth="95.0" text="Dr. Name">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblName" layoutX="471.0" layoutY="237.0" prefHeight="28.0" prefWidth="161.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
+      <TextField fx:id="lblSearch" layoutX="71.0" layoutY="75.0" onKeyReleased="#searchAppointment" prefHeight="34.0" prefWidth="260.0" promptText="  Search Here" style="-fx-background-radius: 30;">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="34.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../asset/icon/search.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

@@ -2,8 +2,6 @@ package com.noize.medicalcenter.dto;
 
 import lombok.*;
 
-import java.util.Date;
-
 @Getter
 @Setter
 @AllArgsConstructor
@@ -16,7 +14,7 @@ public class AppointmentFormDto {
     private String age;
     private String status;
     private String description;
-    private Date date;
+    private String date;
     private String doctorId;
-    private String userId;
+    private int userId;
 }

@@ -408,13 +408,13 @@ public class ItemFormController implements Initializable {
     }
 
     public void expirePicker(ActionEvent actionEvent) {
-        expirePicker.setStyle("-fx-font-weight: bold; -fx-font-size: 14px; -fx-text-fill: green;");
-        LocalDate expire = expirePicker.getValue();
-        if (expire != null && expire.isBefore(LocalDate.now())) {
-            isExpireValid = true;
-        } else {
-            isExpireValid = false;
-        }
+            expirePicker.setStyle("-fx-font-weight: bold; -fx-font-size: 14px; -fx-text-fill: green;");
+            LocalDate expire = expirePicker.getValue();
+            if (expire != null && expire.isBefore(LocalDate.now())) {
+                isExpireValid = true;
+            } else {
+                isExpireValid = false;
+            }
     }
 
     public void searchStock(KeyEvent keyEvent) throws SQLException {

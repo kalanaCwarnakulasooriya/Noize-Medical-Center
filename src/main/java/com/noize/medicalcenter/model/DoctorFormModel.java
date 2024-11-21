@@ -11,13 +11,13 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class DoctorFormModel {
-    public ArrayList<String> getAllDocNames() throws SQLException {
-        ResultSet rst = CrudUtil.execute("SELECT Name FROM doctor");
-        ArrayList<String> docNames = new ArrayList<>();
+    public ArrayList<String> getAllDocId() throws SQLException {
+        ResultSet rst = CrudUtil.execute("SELECT DoctorId FROM doctor");
+        ArrayList<String> docId = new ArrayList<>();
         while (rst.next()) {
-            docNames.add(rst.getString("Name"));
+            docId.add(rst.getString("DoctorId"));
         }
-        return docNames;
+        return docId;
     }
 
     public ArrayList<DoctorTM> getAllDoctors() throws SQLException {
@@ -58,7 +58,10 @@ public class DoctorFormModel {
     }
 
     public DoctorTM findById(String selectedName) throws SQLException {
-        ResultSet rst = CrudUtil.execute("SELECT * FROM doctor WHERE Name = ?", selectedName);
+        ResultSet rst = CrudUtil.execute(
+                "SELECT * FROM doctor WHERE DoctorId = ?",
+                selectedName
+        );
         if (rst.next()) {
             return new DoctorTM(
                     rst.getString("Name"),

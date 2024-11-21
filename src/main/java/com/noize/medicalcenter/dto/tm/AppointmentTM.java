@@ -15,5 +15,7 @@ public class AppointmentTM {
     private String age;
     private String status;
     private String description;
-    private Date date;
+    private String date;
+    private String doctorId;
+    private String userId;
 }
