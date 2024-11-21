@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a59df24e-a8bc-4d9f-9f9e-901765c53044" name="Changes" comment="dash board eke podi update wgyk kara">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/reports/Appointment_Report.jrxml" afterDir="false" />
+    <list default="true" id="a59df24e-a8bc-4d9f-9f9e-901765c53044" name="Changes" comment="Appointment ekt report ekk hduwa">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/reports/Item_Report.jrxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/AppointmentFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/AppointmentFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/appointmentForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/appointmentForm.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/orderForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/orderForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/ItemFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/ItemFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/itemForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/itemForm.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -248,7 +247,8 @@
       <workItem from="1732113549495" duration="15370000" />
       <workItem from="1732133225428" duration="1000" />
       <workItem from="1732133236812" duration="93000" />
-      <workItem from="1732160038064" duration="39362000" />
+      <workItem from="1732160038064" duration="39658000" />
+      <workItem from="1732209413538" duration="1333000" />
     </task>
     <task id="LOCAL-00001" summary="login and signup page view">
       <option name="closed" value="true" />
@@ -434,7 +434,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732206240414</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Appointment ekt report ekk hduwa">
+      <option name="closed" value="true" />
+      <created>1732208896747</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1732208896748</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -474,7 +482,8 @@
     <MESSAGE value="Qr code ek mail ekt yanna hduwa" />
     <MESSAGE value="Qr code eken log wenna puluwn dn" />
     <MESSAGE value="dash board eke podi update wgyk kara" />
-    <option name="LAST_COMMIT_MESSAGE" value="dash board eke podi update wgyk kara" />
+    <MESSAGE value="Appointment ekt report ekk hduwa" />
+    <option name="LAST_COMMIT_MESSAGE" value="Appointment ekt report ekk hduwa" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

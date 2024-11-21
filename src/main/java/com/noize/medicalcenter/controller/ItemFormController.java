@@ -1,6 +1,7 @@
 package com.noize.medicalcenter.controller;
 
 import com.jfoenix.controls.JFXTextField;
+import com.noize.medicalcenter.db.DBConnection;
 import com.noize.medicalcenter.dto.ItemFormDto;
 import com.noize.medicalcenter.dto.tm.ItemTM;
 import com.noize.medicalcenter.model.ItemFormModel;
@@ -17,8 +18,11 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import net.sf.jasperreports.engine.*;
+import net.sf.jasperreports.view.JasperViewer;
 
 import java.net.URL;
+import java.sql.Connection;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.*;
@@ -425,5 +429,29 @@ public class ItemFormController implements Initializable {
             itemTMS.add(item);
         }
         tblItem.setItems(itemTMS);
+    }
+
+    public void reportOnAction(ActionEvent event) {
+        try {
+            Connection connection = DBConnection.getInstance().getConnection();
+            Map<String, Object> parameters = new HashMap<>();
+            parameters.put("TODAY", LocalDate.now().toString());
+            JasperReport jasperReport = JasperCompileManager.compileReport(
+                    getClass().getResourceAsStream("/reports/Item   _Report.jrxml")
+            );
+            JasperPrint jasperPrint = JasperFillManager.fillReport(
+                    jasperReport,
+                    parameters,
+                    connection
+            );
+            JasperViewer.viewReport(jasperPrint, false);
+
+        } catch (JRException e) {
+            new Alert(Alert.AlertType.ERROR, "Fail to load report..!");
+            e.printStackTrace();
+        } catch (SQLException e) {
+            new Alert(Alert.AlertType.ERROR, "Data empty..!");
+            e.printStackTrace();
+        }
     }
 }
