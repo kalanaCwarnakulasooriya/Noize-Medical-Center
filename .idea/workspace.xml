@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a59df24e-a8bc-4d9f-9f9e-901765c53044" name="Changes" comment="Prescription ekath hry">
+    <list default="true" id="a59df24e-a8bc-4d9f-9f9e-901765c53044" name="Changes" comment="changes tikak kara">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/QrCodeFormController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/util/UserIdQrEncryption.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/qrCodeForm.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/AppointmentFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/AppointmentFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/DoctorFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/DoctorFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/ItemFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/ItemFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/OrderFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/OrderFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/PrescriptionFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/PrescriptionFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/orderForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/orderForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/SignupFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/SignupFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/util/SendGmail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/util/SendGmail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +23,8 @@
       <list>
         <option value="Enum" />
         <option value="CSS File" />
-        <option value="FxmlFile" />
         <option value="HTML File" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -250,7 +250,7 @@
       <workItem from="1732113549495" duration="15370000" />
       <workItem from="1732133225428" duration="1000" />
       <workItem from="1732133236812" duration="93000" />
-      <workItem from="1732160038064" duration="27276000" />
+      <workItem from="1732160038064" duration="28214000" />
     </task>
     <task id="LOCAL-00001" summary="login and signup page view">
       <option name="closed" value="true" />
@@ -404,7 +404,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732193217314</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="changes tikak kara">
+      <option name="closed" value="true" />
+      <created>1732194440903</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1732194440903</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -440,7 +448,8 @@
     <MESSAGE value="Appointment ekath hry" />
     <MESSAGE value="Podi changes tikak kara" />
     <MESSAGE value="Prescription ekath hry" />
-    <option name="LAST_COMMIT_MESSAGE" value="Prescription ekath hry" />
+    <MESSAGE value="changes tikak kara" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes tikak kara" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

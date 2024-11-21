@@ -12,6 +12,7 @@ module com.noize.medicalcenter {
     requires javafx.media;
     requires javax.mail.api;
     requires resend.java;
+    requires org.json;
 
 
     opens com.noize.medicalcenter.controller to javafx.fxml;

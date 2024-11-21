@@ -5,11 +5,14 @@ import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import com.noize.medicalcenter.util.CheckRegex;
+import com.noize.medicalcenter.util.SendGmail;
+import com.noize.medicalcenter.util.UserIdQrEncryption;
 import com.noize.medicalcenter.util.alert.Sound;
 import com.noize.medicalcenter.dto.SignupFormDto;
 import com.noize.medicalcenter.model.SignupFormModel;
 import com.noize.medicalcenter.util.AlertNotification;
 import com.noize.medicalcenter.util.alert.AlertSound;
+import com.resend.core.exception.ResendException;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -33,6 +36,7 @@ public class SignupFormController implements Initializable {
 
     private final SignupFormModel signupFormModel = new SignupFormModel();
     private final AlertSound alertSound = new AlertSound();
+    QrCodeFormController qrCodeController = new QrCodeFormController();
 
     @FXML
     private JFXButton btnSignup;
@@ -68,7 +72,7 @@ public class SignupFormController implements Initializable {
     private JFXComboBox<String> comRole;
 
     @FXML
-    void btnSignup(ActionEvent event) throws SQLException, IOException {
+    void btnSignup(ActionEvent event) throws Exception {
         String name = txtName.getText();
         String contactNumber = txtPhone.getText();
         String confirmPassword = txtConformPwd.getText();
@@ -118,6 +122,7 @@ public class SignupFormController implements Initializable {
 //                    "Welcome to Noize Medical Center!",
 //                    "Dear " + name + ",\n\nThank you for signing up. Your account has been created successfully.\n\nBest Regards,\nNoize Medical Center Team"
 //            );
+            SendGmail.sendQr(email, qrCodeController.getQrAPI(UserIdQrEncryption.encrypt(String.valueOf(roleId))));
             alertSound.checkSounds(Sound.CONFIRM);
             new AlertNotification(" Registration Successful",
                     "   Congratulations, " + userName + "!\n   Your account has been created. Please log in to continue.",
