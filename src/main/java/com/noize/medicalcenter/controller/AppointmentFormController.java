@@ -169,6 +169,7 @@ public class AppointmentFormController implements Initializable {
         datePicker.setValue(null);
         comboDoctor.setValue(null);
         lblName.setText("");
+        tblAppointment.getSelectionModel().clearSelection();
 
         loadDoctorsId();
 

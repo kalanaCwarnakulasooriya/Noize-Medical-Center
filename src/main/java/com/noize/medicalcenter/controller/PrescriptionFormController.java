@@ -1,6 +1,8 @@
 package com.noize.medicalcenter.controller;
 
+import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
+import com.noize.medicalcenter.db.DBConnection;
 import com.noize.medicalcenter.dto.AppointmentFormDto;
 import com.noize.medicalcenter.dto.PrescriptionFormDto;
 import com.noize.medicalcenter.dto.tm.AppointmentTM;
@@ -22,13 +24,14 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import net.sf.jasperreports.engine.*;
+import net.sf.jasperreports.view.JasperViewer;
 
 import java.net.URL;
+import java.sql.Connection;
 import java.sql.SQLException;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Optional;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class PrescriptionFormController implements Initializable {
     PrescriptionFormModel prescriptionFormModel = new PrescriptionFormModel();
@@ -84,6 +87,9 @@ public class PrescriptionFormController implements Initializable {
 
     @FXML
     private TableColumn<?, ?> mediDetailCol;
+
+    @FXML
+    private JFXButton btnReport;
 
     @FXML
     private TableView<PrescriptionTM> tblPrescription;
@@ -379,6 +385,30 @@ public class PrescriptionFormController implements Initializable {
 
         if (doctorTM != null) {
             lblDocName.setText(doctorTM.getName());
+        }
+    }
+
+    public void reportOnAction(ActionEvent event) {
+        try {
+            Connection connection = DBConnection.getInstance().getConnection();
+            Map<String, Object> parameters = new HashMap<>();
+            parameters.put("TODAY", LocalDate.now().toString());
+            JasperReport jasperReport = JasperCompileManager.compileReport(
+                    getClass().getResourceAsStream("/reports/Prescription_Report.jrxml")
+            );
+            JasperPrint jasperPrint = JasperFillManager.fillReport(
+                    jasperReport,
+                    parameters,
+                    connection
+            );
+            JasperViewer.viewReport(jasperPrint, false);
+
+        } catch (JRException e) {
+            new Alert(Alert.AlertType.ERROR, "Fail to load report..!");
+            e.printStackTrace();
+        } catch (SQLException e) {
+            new Alert(Alert.AlertType.ERROR, "Data empty..!");
+            e.printStackTrace();
         }
     }
 }
