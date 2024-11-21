@@ -84,7 +84,7 @@ public class SendGmail {
                         "        </div>" +
                         "        <div class=\"email-footer\">" +
                         "            <p>Noize Health Care</p>" +
-                        "            <p>&copy; 2024 Noize Health Care Team. All rights reserved.</p>" +
+                        "            <p>&copy; 2024 Noize Health Care (Pty) Ltd. All rights reserved.</p>" +
                         "        </div>" +
                         "    </div>" +
                         "</body>" +
@@ -93,7 +93,6 @@ public class SendGmail {
 
         try {
             CreateEmailResponse data = resend.emails().send(params);
-            System.out.println("Email sent successfully with ID: " + data.getId());
         } catch (ResendException e) {
             System.err.println("Failed to send email: " + e.getMessage());
         }
@@ -165,14 +164,15 @@ public class SendGmail {
                 "        <p>Hello,</p>\n" +
                 "        <p>You can use the QR code below to log into your account securely. Simply scan the QR code with your authentication app or mobile device to proceed.</p>\n" +
                 "        <div class=\"qr-code\">\n" +
-                "            <img src=\""+ qrImageUrl +"\" alt=\"Login QR Code\">" +
+                "        <p>Please do not share it with anyone.</p>" +
+                "        <img src=\""+ qrImageUrl +"\" alt=\"Login QR Code\">" +
                 "        </div>\n" +
                 "        <p>If you're unable to scan the QR code, you can log in manually by clicking the button below:</p>\n" +
                 "        <div class=\"btn-container\">\n" +
                 "            <a href=\"https://yourloginlink.com\" class=\"btn\">Login Here</a>\n" +
                 "        </div>\n" +
                 "        <p>If you did not request this login, please ignore this email or contact our support team.</p>\n" +
-                "        <p>Thank you,<br>Your Company Team</p>\n" +
+                "        <p>Thank you,<br>The Noize Health Care (Pvt) Ltd</p>\n" +
                 "    </div>\n" +
                 "</body>\n" +
                 "</html>\n";
@@ -183,7 +183,7 @@ public class SendGmail {
                 .build();
 
         CreateEmailOptions params = CreateEmailOptions.builder()
-                .from("Noize Health Care <noizehealthcare@punylk.me>")
+                .from("Noize Health Care (Pvt) Ltd <noizehealthcare@punylk.me>")
                 .to(email)
                 .subject("Login QR Code")
                 .attachments(att)

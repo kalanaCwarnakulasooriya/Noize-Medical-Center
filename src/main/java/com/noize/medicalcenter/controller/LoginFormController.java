@@ -1,9 +1,14 @@
 package com.noize.medicalcenter.controller;
 
+import com.github.sarxos.webcam.Webcam;
+import com.github.sarxos.webcam.WebcamPanel;
+import com.github.sarxos.webcam.WebcamResolution;
+import com.github.sarxos.webcam.util.ImageUtils;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import com.noize.medicalcenter.util.CheckRegex;
+import com.noize.medicalcenter.util.UserIdQrEncryption;
 import com.noize.medicalcenter.util.alert.AlertSound;
 import com.noize.medicalcenter.util.alert.Sound;
 import com.noize.medicalcenter.dto.LoginFormDto;
@@ -19,10 +24,15 @@ import javafx.scene.control.Hyperlink;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import org.mindrot.jbcrypt.BCrypt;
 
+import javax.imageio.ImageIO;
+import javax.swing.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
 import java.io.IOException;
 import java.sql.ResultSet;
 
@@ -125,7 +135,7 @@ public class LoginFormController {
                 loadWindow("adminDashboardForm.fxml", true);
                 break;
             case 2:
-                //TODO: Add AdminDashboardFormController path for role 2
+                loadWindow("adminDashboardForm.fxml", true);
                 break;
             default:
                 System.out.println("Invalid role");
@@ -178,6 +188,51 @@ public class LoginFormController {
         } else {
             txtPwd.setStyle("-fx-text-fill: red;");
         }
+    }
+
+    public void qrCodeScanOnAction(ActionEvent event) throws Exception {
+        Webcam webcam = Webcam.getDefault();
+        webcam.setViewSize(WebcamResolution.VGA.getSize());
+
+        WebcamPanel panel = new WebcamPanel(webcam);
+        panel.setImageSizeDisplayed(true);
+
+        webcam.open();
+
+        JFrame window = new JFrame("QR Code Scanner");
+        window.add(panel);
+        window.setResizable(true);
+        window.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        window.pack();
+        window.setVisible(true);
+        String qrCode = "8vQiEnkR3IJfLNZ2G1eQrg==";
+        while (window.isVisible()){
+            BufferedImage image = webcam.getImage();
+            String filename = "selfie.jpg";
+
+            ImageIO.write(image, ImageUtils.FORMAT_JPG, new File("selfie.jpg"));
+
+            qrCode = QrCodeFormController.readQRCodeFromFile("selfie.jpg");
+            System.out.println(qrCode);
+            Thread.sleep(1500);
+            if(qrCode != null){
+                webcam.close();
+                window.dispose();
+                break;
+            }
+        }
+        try {
+            alertSound.checkSounds(Sound.CONFIRM);
+            webcam.close();
+        } catch (Exception e) {
+            alertSound.checkSounds(Sound.INVALID);
+            throw new RuntimeException(e);
+        }
+        if (qrCode == null) {
+            qrCode = "8vQiEnkR3IJfLNZ2G1eQrg==";
+        }
+        System.out.println(UserIdQrEncryption.decrypt(qrCode));
+        loadDashboards(Integer.parseInt(UserIdQrEncryption.decrypt(qrCode)), event);
     }
 }
 

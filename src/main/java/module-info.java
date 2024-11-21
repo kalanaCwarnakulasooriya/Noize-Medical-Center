@@ -13,6 +13,7 @@ module com.noize.medicalcenter {
     requires javax.mail.api;
     requires resend.java;
     requires org.json;
+    requires webcam.capture;
 
 
     opens com.noize.medicalcenter.controller to javafx.fxml;

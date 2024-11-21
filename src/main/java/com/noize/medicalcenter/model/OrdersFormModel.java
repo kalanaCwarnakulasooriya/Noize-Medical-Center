@@ -21,7 +21,7 @@ public class OrdersFormModel {
             int newIdIndex = lastId + 1;
             return String.format("%1d", newIdIndex);
         }
-        return "O001";
+        return "1";
     }
 
     public boolean saveOrder(OrdersFormDto orderDTO) throws SQLException {

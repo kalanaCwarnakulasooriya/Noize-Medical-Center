@@ -152,7 +152,7 @@ CREATE TABLE Gender (
 );
 
 INSERT INTO doctor (Name, Email, ContactNumber, Address, UserId) VALUES
-                                                                     ('Kamal Gunarathna', 'kamalgunathana@gmail.com', '0713498265', 'Galle', 1);
+    ('Kamal Gunarathna', 'kamalgunathana@gmail.com', '0713498265', 'Galle', 1);
 
 
 INSERT INTO timetable (Date, StartTime, EndTime, DoctorId) VALUES
@@ -164,7 +164,7 @@ INSERT INTO prescription (PrescriptionDate, MedicineDetails, Dosage, UserId, Doc
 
 
 INSERT INTO patient (Name, Email, ContactNumber, Address, DOB, Gender, RegistrationDate, UserId, PrescriptionId) VALUES
-    ('Sugath Kumara', 'sugathkumara@gmail.com', '0782751856', 'Gampaha', '1995-05-20', 'Male', '2024-10-25', 1, 1);
+    ('Sugath Kumara', 'sugathkumara@gmail.com', '0782751856', 'Gampaha', '1995-05-20', '1', '2024-10-25', 1, 1);
 
 
 INSERT INTO appointment (Name, Age, Date, Description, Status, DoctorId, UserId)  VALUES

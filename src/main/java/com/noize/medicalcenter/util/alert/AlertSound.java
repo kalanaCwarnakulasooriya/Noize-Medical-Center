@@ -41,6 +41,34 @@ public class AlertSound {
                     mediaPlayer.play();
                     break;
 
+                case SUCCESS:
+                    resource = getClass().getResource("/asset/sounds/click.mp3");
+                    System.out.println("Resource URL: " + resource);
+
+                    if (resource == null) {
+                        throw new RuntimeException("Sound file not found: /sounds/wrongAnswer.mp3");
+                    }
+
+                    media = new Media(resource.toExternalForm());
+                    stopPreviousSound();
+                    mediaPlayer = new MediaPlayer(media);
+                    mediaPlayer.play();
+                    break;
+
+                case LOGOUT:
+                    resource = getClass().getResource("/asset/sounds/logout.mp3");
+                    System.out.println("Resource URL: " + resource);
+
+                    if (resource == null) {
+                        throw new RuntimeException("Sound file not found: /sounds/wrongAnswer.mp3");
+                    }
+
+                    media = new Media(resource.toExternalForm());
+                    stopPreviousSound();
+                    mediaPlayer = new MediaPlayer(media);
+                    mediaPlayer.play();
+                    break;
+
                 default:
                     System.out.println("Invalid sound selection.");
             }

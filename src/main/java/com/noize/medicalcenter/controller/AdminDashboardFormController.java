@@ -1,5 +1,6 @@
 package com.noize.medicalcenter.controller;
 
+import com.noize.medicalcenter.util.alert.AlertSound;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
@@ -14,7 +15,8 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-
+import com.noize.medicalcenter.util.alert.AlertSound;
+import com.noize.medicalcenter.util.alert.Sound;
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
@@ -24,6 +26,7 @@ import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class AdminDashboardFormController implements Initializable {
+    AlertSound alertSound = new AlertSound();
 
     @FXML
     private AnchorPane centerPane;
@@ -42,37 +45,42 @@ public class AdminDashboardFormController implements Initializable {
 
     @FXML
     void callAppointments(ActionEvent event) throws IOException {
+        alertSound.checkSounds(Sound.SUCCESS);
         lblTitle.setText("Appointments");
         callPane("appointmentForm.fxml");
     }
 
     @FXML
     void callDashboard(ActionEvent event) throws IOException {
+        alertSound.checkSounds(Sound.SUCCESS);
         lblTitle.setText("DashBoard");
         callPane("dashboardForm.fxml");
     }
 
     @FXML
     void callMedicine(ActionEvent event) throws IOException {
+        alertSound.checkSounds(Sound.SUCCESS);
         lblTitle.setText("Medicine");
         callPane("orderForm.fxml");
     }
 
     @FXML
     void callPatients(ActionEvent event) throws IOException {
+        alertSound.checkSounds(Sound.SUCCESS);
         lblTitle.setText("Patients");
         callPane("patientsForm.fxml");
     }
 
     @FXML
     void callDoctors(ActionEvent event) throws IOException {
+        alertSound.checkSounds(Sound.SUCCESS);
         lblTitle.setText("Doctors");
         callPane("doctorForm.fxml");
     }
 
     @FXML
     void callSettings(ActionEvent event) {
-
+        alertSound.checkSounds(Sound.SUCCESS);
     }
 
     @FXML
@@ -129,16 +137,19 @@ public class AdminDashboardFormController implements Initializable {
     }
 
     public void callStock(ActionEvent actionEvent) throws IOException {
+        alertSound.checkSounds(Sound.SUCCESS);
         lblTitle.setText("Medicine");
         callPane("itemForm.fxml");
     }
 
     public void callPrescription(ActionEvent actionEvent) throws IOException {
+        alertSound.checkSounds(Sound.SUCCESS);
         lblTitle.setText("Prescription");
         callPane("prescriptionForm.fxml");
     }
 
     public void callLogOut(ActionEvent event) throws IOException {
+        alertSound.checkSounds(Sound.LOGOUT);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(new Scene(FXMLLoader.load(Objects.requireNonNull(this.getClass().getResource("/view/LoginForm.fxml")))));
         stage.setTitle("Login Page");

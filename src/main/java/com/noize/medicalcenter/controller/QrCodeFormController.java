@@ -15,28 +15,24 @@ public class QrCodeFormController {
     }
     public static String readQRCodeFromFile(String filePath) {
         String responseData = null;
-        //filePath = "C:\\Users\\User_101\\Pictures\\Camera Roll\\WIN_20241023_12_16_31_Pro.jpg";
         String url = "http://api.qrserver.com/v1/read-qr-code/";
 
         try {
             File file = new File(filePath);
-            String boundary = Long.toHexString(System.currentTimeMillis()); // Unique boundary for the request
-            String CRLF = "\r\n"; // Line separator
+            String boundary = Long.toHexString(System.currentTimeMillis());
+            String CRLF = "\r\n";
 
-            // Open a connection
             HttpURLConnection connection = (HttpURLConnection) new URL(url).openConnection();
             connection.setRequestMethod("POST");
             connection.setDoOutput(true);
             connection.setRequestProperty("Content-Type", "multipart/form-data; boundary=" + boundary);
 
-            // Write the file part
             try (OutputStream output = connection.getOutputStream()) {
                 output.write(("--" + boundary + CRLF).getBytes());
                 output.write(("Content-Disposition: form-data; name=\"file\"; filename=\"" + file.getName() + "\"" + CRLF).getBytes());
-                output.write(("Content-Type: image/png" + CRLF).getBytes()); // Change based on your image type
+                output.write(("Content-Type: image/png" + CRLF).getBytes());
                 output.write(CRLF.getBytes());
 
-                // Read the file and write to output
                 try (FileInputStream input = new FileInputStream(file)) {
                     byte[] buffer = new byte[4096];
                     int bytesRead;
@@ -44,14 +40,12 @@ public class QrCodeFormController {
                         output.write(buffer, 0, bytesRead);
                     }
                 }
-                output.write(CRLF.getBytes()); // End of the file part
-                output.write(("--" + boundary + "--" + CRLF).getBytes()); // End of the request
+                output.write(CRLF.getBytes());
+                output.write(("--" + boundary + "--" + CRLF).getBytes());
             }
 
-            // Check the response code
             int responseCode = connection.getResponseCode();
             if (responseCode == HttpURLConnection.HTTP_OK) {
-                // Read the response
                 StringBuilder response = new StringBuilder();
                 try (BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()))) {
                     String inputLine;
@@ -59,7 +53,6 @@ public class QrCodeFormController {
                         response.append(inputLine);
                     }
                 }
-
                 String responseData1 = response.toString();
                 JSONArray jsonArray = new JSONArray(responseData1);
 
@@ -72,9 +65,6 @@ public class QrCodeFormController {
                 } catch (Exception e) {
                     System.out.println("Error: " + symbolObject.getString("error"));
                 }
-
-
-                // Print the extracted data
                 System.out.println("Extracted Data: " + responseData);
             } else {
                 System.out.println("Failed to read QR Code. Response Code: " + responseCode);
