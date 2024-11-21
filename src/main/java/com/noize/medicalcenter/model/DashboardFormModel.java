@@ -14,9 +14,11 @@ public class DashboardFormModel {
         String sql1 = "select count(*) as count from ";
         String sql2 = "select count(*) as count from ";
         String sql3 = "select count(*) as count from ";
+        String sql4 = "select count(*) as count from ";
+        String sql5 = "select count(*) as count from ";
 
-        String[] tables = {"patient" , "doctor" , "prescription" , "appointment"};
-        String[] sqls = {sql , sql1 , sql2 , sql3};
+        String[] tables = {"patient" , "doctor" , "prescription" , "appointment" , "orders" , "item"};
+        String[] sqls = {sql , sql1 , sql2 , sql3, sql4, sql5};
 
         try{
             for (int i = 0; i <tables.length ; i++) {

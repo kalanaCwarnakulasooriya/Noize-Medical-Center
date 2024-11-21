@@ -24,6 +24,12 @@ public class DashboardFormController implements Initializable {
     @FXML
     private Label lblPrescriptionCount;
 
+    @FXML
+    private Label lblItemCount;
+
+    @FXML
+    private Label lblOrderCount;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         HashMap<String,String> status = dashboardModel.status();
@@ -32,5 +38,7 @@ public class DashboardFormController implements Initializable {
         lblDoctorCount.setText(status.get("doctor"));
         lblPrescriptionCount.setText(status.get("prescription"));
         lblAppointmentCount.setText(status.get("appointment"));
+        lblOrderCount.setText(status.get("orders"));
+        lblItemCount.setText(status.get("item"));
     }
 }

@@ -15,7 +15,6 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-import com.noize.medicalcenter.util.alert.AlertSound;
 import com.noize.medicalcenter.util.alert.Sound;
 import java.io.IOException;
 import java.net.URL;
