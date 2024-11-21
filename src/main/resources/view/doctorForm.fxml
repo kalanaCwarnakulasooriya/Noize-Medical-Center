@@ -19,7 +19,7 @@
    <children>
       <AnchorPane layoutX="22.0" layoutY="385.0" prefHeight="292.0" prefWidth="1205.0">
          <children>
-            <TableView fx:id="tblDoctor" layoutX="9.0" layoutY="9.0" onMouseClicked="#onClickTable" prefHeight="273.0" prefWidth="1187.0" stylesheets="@../../asset/style/table.css" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="9.0">
+            <TableView fx:id="tblDoctor" layoutX="9.0" layoutY="9.0" onMouseClicked="#onClickTable" prefHeight="273.0" prefWidth="1187.0" stylesheets="@../asset/style/table.css" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="9.0">
                <columns>
                   <TableColumn fx:id="namCol" prefWidth="308.03481233119965" text="Name" />
                   <TableColumn fx:id="emailCol" prefWidth="282.9912414550781" text="Email" />
@@ -36,7 +36,7 @@
       </TextField>
       <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="44.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../asset/icon/search.png" />
+            <Image url="@../asset/icon/search.png" />
          </image>
       </ImageView>
       <HBox layoutX="516.0" layoutY="696.0" prefHeight="59.0" prefWidth="710.0">

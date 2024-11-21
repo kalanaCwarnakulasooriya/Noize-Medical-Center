@@ -167,14 +167,14 @@ public class SignupFormController implements Initializable {
 
     private void returnToLoginPage() throws IOException {
         signupPane.getChildren().clear();
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("/view/login/LoginForm.fxml"));
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("/view/LoginForm.fxml"));
         signupPane.getChildren().add(pane);
     }
 
     public void backOnClicked(MouseEvent mouseEvent) {
         signupPane.getChildren().clear();
         try {
-            AnchorPane pane = FXMLLoader.load(Objects.requireNonNull(this.getClass().getResource("/view/login/LoginForm.fxml")));
+            AnchorPane pane = FXMLLoader.load(Objects.requireNonNull(this.getClass().getResource("/view/LoginForm.fxml")));
             signupPane.getChildren().add(pane);
         } catch (IOException e) {
             e.printStackTrace();

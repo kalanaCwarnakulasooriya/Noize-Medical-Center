@@ -20,7 +20,7 @@
    <children>
       <AnchorPane layoutX="140.0" layoutY="385.0" prefHeight="292.0" prefWidth="969.0">
          <children>
-            <TableView fx:id="tblPrescription" layoutX="293.84348800803434" layoutY="9.0" onMouseClicked="#onClickTable" prefHeight="275.0" prefWidth="669.0" stylesheets="@../../asset/style/table.css" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="6.0">
+            <TableView fx:id="tblPrescription" layoutX="293.84348800803434" layoutY="9.0" onMouseClicked="#onClickTable" prefHeight="275.0" prefWidth="669.0" stylesheets="@../asset/style/table.css" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="6.0">
                <columns>
                   <TableColumn fx:id="mediDetailCol" prefWidth="480.0" text="Medicine Details" />
                   <TableColumn fx:id="dosageCol" prefWidth="470.81744384765625" text="Dosage" />
@@ -170,7 +170,7 @@
                <graphic>
                   <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
                      <image>
-                        <Image url="@../../asset/icon/refresh.png" />
+                        <Image url="@../asset/icon/refresh.png" />
                      </image>
                   </ImageView>
                </graphic>

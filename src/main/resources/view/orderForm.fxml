@@ -31,7 +31,7 @@
       </Label>
       <AnchorPane layoutX="33.0" layoutY="424.0" prefHeight="277.0" prefWidth="1191.0">
          <children>
-            <TableView fx:id="tblPlaceOrder" layoutX="7.0" layoutY="3.0" prefHeight="269.0" prefWidth="1176.0" stylesheets="@../../asset/style/table.css">
+            <TableView fx:id="tblPlaceOrder" layoutX="7.0" layoutY="3.0" prefHeight="269.0" prefWidth="1176.0" stylesheets="@../asset/style/table.css">
                <columns>
                   <TableColumn fx:id="nameCol" prefWidth="368.41737365722656" text="Name" />
                   <TableColumn fx:id="cartQtyCol" prefWidth="206.74783325195312" text="Cart Quantity" />

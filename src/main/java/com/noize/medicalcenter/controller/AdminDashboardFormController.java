@@ -1,6 +1,5 @@
 package com.noize.medicalcenter.controller;
 
-import com.noize.medicalcenter.util.AlertNotification;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
@@ -9,9 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
-import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -46,31 +43,31 @@ public class AdminDashboardFormController implements Initializable {
     @FXML
     void callAppointments(ActionEvent event) throws IOException {
         lblTitle.setText("Appointments");
-        callPane("appointment/appointmentForm.fxml");
+        callPane("appointmentForm.fxml");
     }
 
     @FXML
     void callDashboard(ActionEvent event) throws IOException {
         lblTitle.setText("DashBoard");
-        callPane("dashboard/dashboardForm.fxml");
+        callPane("dashboardForm.fxml");
     }
 
     @FXML
     void callMedicine(ActionEvent event) throws IOException {
         lblTitle.setText("Medicine");
-        callPane("transaction/orderForm.fxml");
+        callPane("orderForm.fxml");
     }
 
     @FXML
     void callPatients(ActionEvent event) throws IOException {
         lblTitle.setText("Patients");
-        callPane("patients/patientsForm.fxml");
+        callPane("patientsForm.fxml");
     }
 
     @FXML
     void callDoctors(ActionEvent event) throws IOException {
         lblTitle.setText("Doctors");
-        callPane("doctor/doctorForm.fxml");
+        callPane("doctorForm.fxml");
     }
 
     @FXML
@@ -94,7 +91,7 @@ public class AdminDashboardFormController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         lblTitle.setText("DashBoard");
         try {
-            callPane("dashboard/dashboardForm.fxml");
+            callPane("dashboardForm.fxml");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -133,17 +130,17 @@ public class AdminDashboardFormController implements Initializable {
 
     public void callStock(ActionEvent actionEvent) throws IOException {
         lblTitle.setText("Medicine");
-        callPane("transaction/itemForm.fxml");
+        callPane("itemForm.fxml");
     }
 
     public void callPrescription(ActionEvent actionEvent) throws IOException {
         lblTitle.setText("Prescription");
-        callPane("prescription/prescriptionForm.fxml");
+        callPane("prescriptionForm.fxml");
     }
 
     public void callLogOut(ActionEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setScene(new Scene(FXMLLoader.load(Objects.requireNonNull(this.getClass().getResource("/view/login/LoginForm.fxml")))));
+        stage.setScene(new Scene(FXMLLoader.load(Objects.requireNonNull(this.getClass().getResource("/view/LoginForm.fxml")))));
         stage.setTitle("Login Page");
         stage.centerOnScreen();
         stage.setResizable(false);

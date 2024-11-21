@@ -4,15 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a59df24e-a8bc-4d9f-9f9e-901765c53044" name="Changes" comment="podi podi wada tikak kara mataka ne dn">
+    <list default="true" id="a59df24e-a8bc-4d9f-9f9e-901765c53044" name="Changes" comment="Podi changes tikak kara">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/AppointmentFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/AppointmentFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/ItemFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/ItemFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/dto/AppointmentFormDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/dto/AppointmentFormDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/dto/tm/AppointmentTM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/dto/tm/AppointmentTM.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/model/AppointmentFormModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/model/AppointmentFormModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/model/DoctorFormModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/model/DoctorFormModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/appointment/appointmentForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/appointment/appointmentForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/Launcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/AdminDashboardFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/AdminDashboardFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/ForgetPasswordFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/ForgetPasswordFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/LoginFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/LoginFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/PatientsFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/PatientsFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/SignupFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/SignupFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/appointment/appointmentForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/appointmentForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/dashboard/adminDashboardForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/adminDashboardForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/dashboard/dashboardForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/dashboardForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/doctor/doctorForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/doctorForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/loading/LoadingForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/LoadingForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/login/LoginForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/LoginForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/login/forgetPasswordForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/forgetPasswordForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/patients/addPatientsForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/addPatientsForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/patients/patientsForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/patientsForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/prescription/prescriptionForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/prescriptionForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/signup/signupForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/signupForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/transaction/itemForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/itemForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/transaction/orderForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/orderForm.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,8 +133,8 @@
       <recent name="D:\Intellij Prroject\Noize-Medical-Center-master\Noize-Medical-Center-master\src\main\resources\asset\style" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Intellij Prroject\Noize-Medical-Center-master\Noize-Medical-Center-master\src\main\resources\asset\sounds" />
       <recent name="D:\Intellij Prroject\Noize-Medical-Center-master\Noize-Medical-Center-master\src\main\resources\view" />
+      <recent name="D:\Intellij Prroject\Noize-Medical-Center-master\Noize-Medical-Center-master\src\main\resources\asset\sounds" />
       <recent name="D:\Intellij Prroject\medicalCenter\src\main\resources\asset\sounds" />
       <recent name="D:\Intellij Prroject\medicalCenter\src\main\resources\asset\sounds\alertSound" />
       <recent name="D:\Intellij Prroject\medicalCenter\src\main\resources\asset\icon" />
@@ -251,7 +263,7 @@
       <workItem from="1732113549495" duration="15370000" />
       <workItem from="1732133225428" duration="1000" />
       <workItem from="1732133236812" duration="93000" />
-      <workItem from="1732160038064" duration="13182000" />
+      <workItem from="1732160038064" duration="14280000" />
     </task>
     <task id="LOCAL-00001" summary="login and signup page view">
       <option name="closed" value="true" />
@@ -381,7 +393,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732133282169</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Appointment ekath hry">
+      <option name="closed" value="true" />
+      <created>1732175618815</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1732175618815</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -414,7 +434,9 @@
     <MESSAGE value="order report file" />
     <MESSAGE value="order report eka iwarai" />
     <MESSAGE value="podi podi wada tikak kara mataka ne dn" />
-    <option name="LAST_COMMIT_MESSAGE" value="podi podi wada tikak kara mataka ne dn" />
+    <MESSAGE value="Appointment ekath hry" />
+    <MESSAGE value="Podi changes tikak kara" />
+    <option name="LAST_COMMIT_MESSAGE" value="Podi changes tikak kara" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

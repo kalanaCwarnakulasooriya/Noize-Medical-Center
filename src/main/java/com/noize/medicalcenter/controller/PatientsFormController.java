@@ -59,7 +59,7 @@ public class PatientsFormController implements Initializable {
 
     @FXML
     void addPatientClick(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/patients/addPatientsForm.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/addPatientsForm.fxml"));
         Parent root = loader.load();
         Stage windows = new Stage();
         windows.centerOnScreen();
@@ -121,7 +121,7 @@ public class PatientsFormController implements Initializable {
 
     @FXML
     public void btnUpdateOnAction(ActionEvent actionEvent) throws SQLException, IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/patients/addPatientsForm.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/addPatientsForm.fxml"));
         Parent root = loader.load();
         Stage windows = new Stage();
         windows.centerOnScreen();

@@ -122,7 +122,7 @@ public class LoginFormController {
 
         switch (role) {
             case 1:
-                loadWindow("dashboard/adminDashboardForm.fxml", true);
+                loadWindow("adminDashboardForm.fxml", true);
                 break;
             case 2:
                 //TODO: Add AdminDashboardFormController path for role 2
@@ -134,12 +134,12 @@ public class LoginFormController {
 
     @FXML
     void hyperFPwdOnAction(ActionEvent event) {
-        navigateTo("/view/login/forgetPasswordForm.fxml");
+        navigateTo("/view/forgetPasswordForm.fxml");
     }
 
     @FXML
     void hyperSignupOnAction(ActionEvent event) {
-        navigateTo("/view/signup/signupForm.fxml");
+        navigateTo("/view/signupForm.fxml");
     }
 
     public void navigateTo(String fxmlPath) {

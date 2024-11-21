@@ -31,7 +31,7 @@
                <children>
                   <ImageView fitHeight="21.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../asset/icon/patient_black.png" />
+                        <Image url="@../asset/icon/patient_black.png" />
                      </image>
                      <VBox.margin>
                         <Insets left="250.0" top="15.0" />
@@ -59,7 +59,7 @@
                <children>
                   <ImageView fitHeight="35.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../asset/icon/prescription.png" />
+                        <Image url="@../asset/icon/prescription.png" />
                      </image>
                      <VBox.margin>
                         <Insets left="250.0" top="15.0" />
@@ -87,7 +87,7 @@
                <children>
                   <ImageView fitHeight="35.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../asset/icon/appointment.png" />
+                        <Image url="@../asset/icon/appointment.png" />
                      </image>
                      <VBox.margin>
                         <Insets left="250.0" top="15.0" />
@@ -115,7 +115,7 @@
                <children>
                   <ImageView fitHeight="35.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../asset/icon/doctor.png" />
+                        <Image url="@../asset/icon/doctor.png" />
                      </image>
                      <VBox.margin>
                         <Insets left="250.0" top="15.0" />

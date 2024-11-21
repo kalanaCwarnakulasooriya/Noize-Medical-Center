@@ -27,7 +27,7 @@
       </Label>
       <AnchorPane layoutX="29.0" layoutY="377.0" prefHeight="327.0" prefWidth="1191.0">
          <children>
-            <TableView fx:id="tblItem" layoutX="8.0" layoutY="6.0" onMouseClicked="#onClickTable" prefHeight="314.0" prefWidth="1176.0" stylesheets="@../../asset/style/table.css">
+            <TableView fx:id="tblItem" layoutX="8.0" layoutY="6.0" onMouseClicked="#onClickTable" prefHeight="314.0" prefWidth="1176.0" stylesheets="@../asset/style/table.css">
                <columns>
                   <TableColumn fx:id="namCol" prefWidth="210.36526489257812" text="Name" />
                   <TableColumn fx:id="descCol" prefWidth="268.7999572753906" text="Description" />
@@ -86,7 +86,7 @@
                <graphic>
                   <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
                      <image>
-                        <Image url="@../../asset/icon/refresh.png" />
+                        <Image url="@../asset/icon/refresh.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -298,7 +298,7 @@
       </AnchorPane>
       <ImageView fx:id="back" fitHeight="38.0" fitWidth="38.0" layoutX="46.0" layoutY="35.0" onMouseClicked="#backOnClicked" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
-            <Image url="@../../asset/icon/back.png" />
+            <Image url="@../asset/icon/back.png" />
          </image>
       </ImageView>
       <TextField fx:id="lblSearch" layoutX="77.0" layoutY="78.0" onKeyReleased="#searchStock" prefHeight="34.0" prefWidth="260.0" promptText="  Search Here" style="-fx-background-radius: 30;">
@@ -308,7 +308,7 @@
       </TextField>
       <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="40.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../asset/icon/search.png" />
+            <Image url="@../asset/icon/search.png" />
          </image>
       </ImageView>
    </children>

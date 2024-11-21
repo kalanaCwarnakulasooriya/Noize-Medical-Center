@@ -22,7 +22,7 @@
    <children>
       <AnchorPane layoutX="61.0" layoutY="417.0" prefHeight="287.0" prefWidth="1136.0" AnchorPane.leftAnchor="61.0" AnchorPane.rightAnchor="52.53043854855878">
          <children>
-            <TableView fx:id="tblAppointment" layoutX="8.0" layoutY="6.0" onMouseClicked="#onClickTable" prefHeight="269.0" prefWidth="1120.0" stylesheets="@../../asset/style/table.css">
+            <TableView fx:id="tblAppointment" layoutX="8.0" layoutY="6.0" onMouseClicked="#onClickTable" prefHeight="269.0" prefWidth="1120.0" stylesheets="@../asset/style/table.css">
                <columns>
                   <TableColumn fx:id="patientNameCol" prefWidth="265.4608612060547" text="Patient Name" />
                   <TableColumn fx:id="ageCol" minWidth="0.0" prefWidth="147.756591796875" text="Age" />
@@ -80,7 +80,7 @@
                <graphic>
                   <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
                      <image>
-                        <Image url="@../../asset/icon/refresh.png" />
+                        <Image url="@../asset/icon/refresh.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -215,7 +215,7 @@
       </TextField>
       <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="34.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../asset/icon/search.png" />
+            <Image url="@../asset/icon/search.png" />
          </image>
       </ImageView>
    </children>

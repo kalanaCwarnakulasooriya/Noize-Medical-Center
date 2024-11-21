@@ -15,10 +15,10 @@
    <children>
       <ImageView fitHeight="500.0" fitWidth="1000.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../asset/image/login_page.jpeg" />
+            <Image url="@../asset/image/login_page.jpeg" />
          </image>
       </ImageView>
-      <Pane id="paneForm" focusTraversable="true" layoutX="96.0" layoutY="31.0" prefHeight="437.0" prefWidth="403.0" stylesheets="@../../asset/style/style.css">
+      <Pane id="paneForm" focusTraversable="true" layoutX="96.0" layoutY="31.0" prefHeight="437.0" prefWidth="403.0" stylesheets="@../asset/style/style.css">
          <children>
             <Label layoutX="116.0" layoutY="88.0" text="Welcome Back" textFill="#009432">
                <font>
@@ -27,19 +27,19 @@
             </Label>
             <ImageView fitHeight="38.0" fitWidth="38.0" layoutX="183.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../asset/icon/app_logo.png" />
+                  <Image url="@../asset/icon/app_logo.png" />
                </image>
             </ImageView>
             <JFXTextField fx:id="txtUname" labelFloat="true" layoutX="97.0" layoutY="192.0" onKeyReleased="#onUnameRelease" prefHeight="28.0" prefWidth="212.0" promptText="Username" />
             <JFXPasswordField fx:id="txtPwd" labelFloat="true" layoutX="96.0" layoutY="249.0" onKeyReleased="#onPwdRelease" prefHeight="28.0" prefWidth="212.0" promptText="Password" />
             <ImageView fitHeight="18.0" fitWidth="23.0" layoutX="276.0" layoutY="197.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../asset/icon/person.png" />
+                  <Image url="@../asset/icon/person.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="18.0" fitWidth="23.0" layoutX="279.0" layoutY="254.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../asset/icon/password.png" />
+                  <Image url="@../asset/icon/password.png" />
                </image>
             </ImageView>
             <Label layoutX="63.0" layoutY="129.0" text="Enter your credentials to access your account">

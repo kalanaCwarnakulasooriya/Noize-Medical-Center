@@ -155,7 +155,7 @@ public class ForgetPasswordFormController {
             String newPasswd = BCrypt.hashpw(txtNewPwd.getText(), BCrypt.gensalt());
             Boolean isChangeUserPW = ForgetPasswordFormModel.isChangedUserPassword(forgetPwdDto, newPasswd);
 
-            navigateTo("/view/login/LoginForm.fxml");
+            navigateTo("/view/LoginForm.fxml");
             alertSound.checkSounds(Sound.CONFIRM);
             new AlertNotification(
                     "Password Reset Successfully ! ",
@@ -217,7 +217,7 @@ public class ForgetPasswordFormController {
     public void backOnClicked(MouseEvent mouseEvent) {
         forgetPwdPane.getChildren().clear();
         try {
-            AnchorPane pane = FXMLLoader.load(Objects.requireNonNull(this.getClass().getResource("/view/login/LoginForm.fxml")));
+            AnchorPane pane = FXMLLoader.load(Objects.requireNonNull(this.getClass().getResource("/view/LoginForm.fxml")));
             forgetPwdPane.getChildren().add(pane);
         } catch (IOException e) {
             e.printStackTrace();

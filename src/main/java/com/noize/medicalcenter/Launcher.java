@@ -18,7 +18,7 @@ public class Launcher extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent loadingRoot = FXMLLoader.load(getClass().getResource("/view/loading/LoadingForm.fxml"));
+        Parent loadingRoot = FXMLLoader.load(getClass().getResource("/view/LoadingForm.fxml"));
         Scene loadingScene = new Scene(loadingRoot);
         stage.setTitle(" Loading...");
         stage.setResizable(false);
@@ -29,7 +29,7 @@ public class Launcher extends Application {
             @Override
             protected Scene call() throws Exception {
 //                alertSound.checkSounds(Sound.CONFIRM);
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/login/LoginForm.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/LoginForm.fxml"));
                 Parent loginRoot = fxmlLoader.load();
                 return new Scene(loginRoot);
             }

@@ -27,7 +27,7 @@
                            <graphic>
                               <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" smooth="false">
                                  <image>
-                                    <Image url="@../../asset/icon/dashboard.png" />
+                                    <Image url="@../asset/icon/dashboard.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -45,7 +45,7 @@
                            <graphic>
                               <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" smooth="false">
                                  <image>
-                                    <Image url="@../../asset/icon/patient.png" />
+                                    <Image url="@../asset/icon/patient.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -60,7 +60,7 @@
                            <graphic>
                               <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" smooth="false">
                                  <image>
-                                    <Image url="@../../asset/icon/doctor_white.png" />
+                                    <Image url="@../asset/icon/doctor_white.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -75,7 +75,7 @@
                            <graphic>
                               <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" smooth="false">
                                  <image>
-                                    <Image url="@../../asset/icon/appointments_white.png" />
+                                    <Image url="@../asset/icon/appointments_white.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -90,7 +90,7 @@
                            <graphic>
                               <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" smooth="false">
                                  <image>
-                                    <Image url="@../../asset/icon/medical_records.png" />
+                                    <Image url="@../asset/icon/medical_records.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -105,7 +105,7 @@
                            <graphic>
                               <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" smooth="false">
                                  <image>
-                                    <Image url="@../../asset/icon/medicine.png" />
+                                    <Image url="@../asset/icon/medicine.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -120,7 +120,7 @@
                            <graphic>
                               <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" smooth="false">
                                  <image>
-                                    <Image url="@../../asset/icon/stock.png" />
+                                    <Image url="@../asset/icon/stock.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -135,7 +135,7 @@
                            <graphic>
                               <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" smooth="false">
                                  <image>
-                                    <Image url="@../../asset/icon/settings.png" />
+                                    <Image url="@../asset/icon/settings.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -153,7 +153,7 @@
                            <graphic>
                               <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" smooth="false">
                                  <image>
-                                    <Image url="@../../asset/icon/logout.png" />
+                                    <Image url="@../asset/icon/logout.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -185,7 +185,7 @@
       </Label>
       <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="59.0" layoutY="13.0" pickOnBounds="true" smooth="false">
          <image>
-            <Image url="@../../asset/icon/app_logo_white.png" />
+            <Image url="@../asset/icon/app_logo_white.png" />
          </image>
       </ImageView>
       <Label fx:id="lblDate" layoutX="1446.0" layoutY="15.0" prefHeight="38.0" prefWidth="132.0" text="Date">
@@ -195,7 +195,7 @@
       </Label>
       <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="1386.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../asset/icon/date.png" />
+            <Image url="@../asset/icon/date.png" />
          </image>
       </ImageView>
       <Label fx:id="lblTime" layoutX="1448.0" layoutY="60.0" prefHeight="38.0" prefWidth="132.0" text="Time">
@@ -205,13 +205,13 @@
       </Label>
       <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="1388.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../asset/icon/time.png" />
+            <Image url="@../asset/icon/time.png" />
          </image>
       </ImageView>
       <Separator layoutX="351.0" layoutY="108.0" prefHeight="6.0" prefWidth="1247.0" />
       <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="376.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../asset/icon/dashboard2.png" />
+            <Image url="@../asset/icon/dashboard2.png" />
          </image>
       </ImageView>
       <Label fx:id="lblTitle" layoutX="438.0" layoutY="34.0" prefHeight="37.0" prefWidth="245.0">
