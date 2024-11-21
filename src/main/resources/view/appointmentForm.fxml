@@ -33,8 +33,13 @@
             </TableView>
          </children>
       </AnchorPane>
-      <HBox layoutX="386.0" layoutY="705.0" prefHeight="59.0" prefWidth="797.0">
+      <HBox layoutX="276.0" layoutY="705.0" prefHeight="59.0" prefWidth="936.0">
          <children>
+            <JFXButton fx:id="btnReport" onAction="#reportOnAction" prefHeight="37.0" prefWidth="160.0" style="-fx-background-color: #7f8c8d; -fx-background-radius: 10;" text="Report" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
             <Button fx:id="btnDeleteItem" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnDeleteItemOnAction" prefHeight="37.0" prefWidth="160.0" style="-fx-background-color: #c0392b; -fx-background-radius: 10;" text="Delete" textFill="WHITE">
                <font>
                   <Font name="Calibri Bold" size="14.0" />
@@ -42,6 +47,9 @@
                <cursor>
                   <Cursor fx:constant="CLOSED_HAND" />
                </cursor>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
             </Button>
             <Button fx:id="btnUpdateItem" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnUpdateItemOnAction" prefHeight="37.0" prefWidth="160.0" style="-fx-background-color: #3498db; -fx-background-radius: 10;" text="Update" textFill="WHITE">
                <font>
@@ -85,7 +93,7 @@
                   </ImageView>
                </graphic>
                <HBox.margin>
-                  <Insets left="20.0" />
+                  <Insets left="10.0" top="-5.0" />
                </HBox.margin>
             </JFXButton>
          </children>
