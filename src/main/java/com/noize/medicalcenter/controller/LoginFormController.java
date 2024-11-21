@@ -99,12 +99,12 @@ public class LoginFormController {
         LoginFormDto loginFormDto = new LoginFormDto(txtUname.getText(), txtPwd.getText());
         System.out.println(loginFormDto.toString());
         ResultSet resultSet = loginFormModel.btnLogin(loginFormDto);
-        System.out.println("Mee line ekt enwa");
         refeshLoginForm();
         try {
             if (resultSet == null || !BCrypt.checkpw(loginFormDto.getPassword(), resultSet.getString("Password"))) {
                 alertSound.checkSounds(Sound.INVALID);
-                new AlertNotification(" Login Failed",
+                new AlertNotification(
+                        " Login Failed",
                         "   Invalid username or password \n   please check and try again",
                         "unsuccess.png",
                         "OK"
@@ -112,7 +112,8 @@ public class LoginFormController {
             } else {
                 closeWindow(event);
                 alertSound.checkSounds(Sound.CONFIRM);
-                new AlertNotification(" Login Successful",
+                new AlertNotification(
+                        " Login Successful",
                         "   Hi, " + resultSet.getString("Name") + " Welcome back to Noize Medical Center",
                         "success.png",
                         "OK"
@@ -162,7 +163,7 @@ public class LoginFormController {
         } catch (IOException e) {
             e.printStackTrace();
             new AlertNotification(
-                    "Error",
+                    "Error Message",
                     "An error occurred while loading the form. Please try again later.",
                     "unsuccess.png",
                     "OK"

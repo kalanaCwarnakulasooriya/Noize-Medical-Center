@@ -105,7 +105,7 @@ public class DoctorFormController implements Initializable {
             DoctorTM selectedDoctor = tblDoctor.getSelectionModel().getSelectedItem();
             if (selectedDoctor == null) {
                 new AlertNotification(
-                        "Error",
+                        "Error Message",
                         "Please select a doctor to delete.",
                         "unsuccess.png",
                         "ok"
@@ -124,15 +124,15 @@ public class DoctorFormController implements Initializable {
             boolean isDeleted = doctorModel.deleteDoctor(DocName);
             if (isDeleted) {
                 new AlertNotification(
-                        "Success",
-                        "Doctor deleted...!",
+                        "Success Message",
+                        "Doctor deleted successfully !",
                         "success.png",
                         "ok"
                 ).start();
                 refreshTable();
             } else {
                 new AlertNotification(
-                        "Error",
+                        "Error Message",
                         "An error occurred while deleting the doctor. Please try again later.",
                         "unsuccess.png",
                         "ok"
@@ -140,7 +140,7 @@ public class DoctorFormController implements Initializable {
             }
         }else {
             new AlertNotification(
-                    "Error",
+                    "Error Message",
                     "You have canceled the delete operation.",
                     "unsuccess.png",
                     "ok"
@@ -182,7 +182,7 @@ public class DoctorFormController implements Initializable {
             if (isAddedDoctor) {
                 refreshTable();
                 new AlertNotification(
-                        "Success",
+                        "Success Message",
                         "Doctor added successfully",
                         "success.png",
                         "GREEN"
@@ -190,7 +190,7 @@ public class DoctorFormController implements Initializable {
                 clearFields();
             } else {
                 new AlertNotification(
-                        "Error",
+                        "Error Message",
                         "Failed to add doctor",
                         "unsuccess.png",
                         "RED"
@@ -198,7 +198,7 @@ public class DoctorFormController implements Initializable {
             }
         } else {
             new AlertNotification(
-                    "Error",
+                    "Error Message",
                     "Please fill all fields correctly",
                     "unsuccess.png",
                     "RED"
@@ -227,14 +227,14 @@ public class DoctorFormController implements Initializable {
             refreshTable();
             clearFields();
             new AlertNotification(
-                    "Success",
+                    "Success Message",
                     "Doctor updated successfully",
                     "success.png",
                     "ok"
             ).start();
         }else {
             new AlertNotification(
-                    "Error",
+                    "Error Message",
                     "Failed to update " + name + " to doctor",
                     "unsuccess.png",
                     "ok"

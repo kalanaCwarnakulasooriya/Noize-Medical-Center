@@ -234,7 +234,7 @@ public class ForgetPasswordFormController {
         } catch (IOException e) {
             e.printStackTrace();
             new AlertNotification(
-                    "Error",
+                    "Error Message",
                     "An error occurred while loading the form. Please try again later.",
                     "unsuccess.png",
                     "OK"

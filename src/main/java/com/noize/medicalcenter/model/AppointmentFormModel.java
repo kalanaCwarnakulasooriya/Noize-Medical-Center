@@ -65,7 +65,10 @@ public class AppointmentFormModel {
     }
 
     public boolean isDeleteAppointment(String name) throws SQLException {
-        return CrudUtil.execute("DELETE FROM appointment WHERE Name = ?", name);
+        return CrudUtil.execute(
+                "DELETE FROM appointment WHERE Name = ?",
+                name
+        );
     }
 
     public ArrayList<AppointmentTM> searchAppointments(String name) throws SQLException {
@@ -88,7 +91,10 @@ public class AppointmentFormModel {
     }
 
     public AppointmentTM findById(String selectName) throws SQLException {
-        ResultSet rst = CrudUtil.execute("SELECT * FROM appointment WHERE AppointmentId = ?", selectName);
+        ResultSet rst = CrudUtil.execute(
+                "SELECT * FROM appointment WHERE AppointmentId = ?",
+                selectName
+        );
 
         if (rst.next()) {
             return new AppointmentTM(

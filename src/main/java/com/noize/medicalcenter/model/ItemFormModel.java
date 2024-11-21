@@ -102,7 +102,10 @@ public class ItemFormModel {
     }
 
     public boolean deleteItem(String name) throws SQLException {
-        return CrudUtil.execute("DELETE FROM item WHERE Name = ?", name);
+        return CrudUtil.execute(
+                "DELETE FROM item WHERE Name = ?",
+                name
+        );
     }
 
     public ArrayList<ItemTM> searchStock(String name) throws SQLException {

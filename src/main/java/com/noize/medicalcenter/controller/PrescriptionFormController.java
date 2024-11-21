@@ -106,7 +106,7 @@ public class PrescriptionFormController implements Initializable {
             PrescriptionTM selectedPrescription = tblPrescription.getSelectionModel().getSelectedItem();
             if (selectedPrescription == null) {
                 new AlertNotification(
-                        "Error",
+                        "Error Message",
                         "Please select a prescription to delete.",
                         "unsuccess.png",
                         "ok"
@@ -129,15 +129,15 @@ public class PrescriptionFormController implements Initializable {
                 btnDeleteItem.setDisable(true);
                 btnReset.setDisable(false);
                 new AlertNotification(
-                        "Success",
-                        "Prescription deleted...!",
+                        "Success Message",
+                        "Prescription deleted successfully.",
                         "success.png",
                         "ok"
                 ).start();
                 refreshTable();
             } else {
                 new AlertNotification(
-                        "Error",
+                        "Error Message",
                         "An error occurred while deleting the prescription. Please try again later.",
                         "unsuccess.png",
                         "ok"
@@ -145,7 +145,7 @@ public class PrescriptionFormController implements Initializable {
             }
         } else {
             new AlertNotification(
-                    "Error",
+                    "Error Message",
                     "You have canceled the delete operation.",
                     "unsuccess.png",
                     "ok"
@@ -178,7 +178,8 @@ public class PrescriptionFormController implements Initializable {
         isDateValid = datePicker.getValue() != null;
 
         if (isDateValid && !isDosageValid && !isMediDetailsValid) {
-            new AlertNotification("Invalid input",
+            new AlertNotification(
+                    "Invalid input",
                     "Please check the input fields",
                     "unsuccess.png",
                     "ok"
@@ -190,7 +191,7 @@ public class PrescriptionFormController implements Initializable {
         if (prescriptionFormModel.isAddPrescription((String.valueOf(date)), txtMediDetails.getText(), txtDosage.getText(), "1", comboDocName.getValue())) {
             getPrescription();
             new AlertNotification(
-                    "Success",
+                    "Success Message",
                     "Prescription added successfully",
                     "success.png",
                     "ok"
@@ -200,7 +201,7 @@ public class PrescriptionFormController implements Initializable {
             refreshTable();
         } else {
             new AlertNotification(
-                    "Error",
+                    "Error Message",
                     "Failed to add to the Prescription list",
                     "unsuccess.png",
                     "ok"
@@ -230,14 +231,14 @@ public class PrescriptionFormController implements Initializable {
             refreshTable();
             clearFields();
             new AlertNotification(
-                    "Success",
+                    "Success Message",
                     "Prescription updated successfully",
                     "success.png",
                     "ok"
             ).start();
         }else {
             new AlertNotification(
-                    "Error",
+                    "Error Message",
                     "Failed to update to the Prescription list",
                     "unsuccess.png",
                     "ok"

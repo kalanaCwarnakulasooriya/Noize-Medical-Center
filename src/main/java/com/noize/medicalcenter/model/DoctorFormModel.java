@@ -74,7 +74,10 @@ public class DoctorFormModel {
     }
 
     public boolean deleteDoctor(String name) throws SQLException {
-        return CrudUtil.execute("DELETE FROM doctor WHERE Name = ?", name);
+        return CrudUtil.execute(
+                "DELETE FROM doctor WHERE Name = ?",
+                name
+        );
     }
 
     public boolean isUpdateDoctor(DoctorFormDto doctorFormDto) throws SQLException {

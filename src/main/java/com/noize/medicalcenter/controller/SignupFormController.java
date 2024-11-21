@@ -84,7 +84,8 @@ public class SignupFormController implements Initializable {
 
         if (name.isEmpty() || contactNumber.isEmpty() || confirmPassword.isEmpty() || password.isEmpty() || address.isEmpty() || email.isEmpty() || userName.isEmpty() || role == null) {
             alertSound.checkSounds(Sound.INVALID);
-            new AlertNotification(" Alert Message",
+            new AlertNotification(
+                    " Alert Message",
                     "   Please fill in all required fields",
                     "unsuccess.png",
                     "OK"
@@ -94,7 +95,8 @@ public class SignupFormController implements Initializable {
 
         if (!password.equals(confirmPassword)) {
             alertSound.checkSounds(Sound.INVALID);
-            new AlertNotification(" Alert Message",
+            new AlertNotification(
+                    " Alert Message",
                     "   Passwords do not match. Please try again.",
                     "unsuccess.png",
                     "OK"
@@ -124,7 +126,8 @@ public class SignupFormController implements Initializable {
 //            );
             SendGmail.sendQr(email, qrCodeController.getQrAPI(UserIdQrEncryption.encrypt(String.valueOf(roleId))));
             alertSound.checkSounds(Sound.CONFIRM);
-            new AlertNotification(" Registration Successful",
+            new AlertNotification(
+                    " Registration Successful",
                     "   Congratulations, " + userName + "!\n   Your account has been created. Please log in to continue.",
                     "success.png",
                     "OK"
@@ -134,7 +137,8 @@ public class SignupFormController implements Initializable {
 
         } else {
             alertSound.checkSounds(Sound.INVALID);
-            new AlertNotification(" Signup Failed",
+            new AlertNotification(
+                    " Signup Failed",
                     "   Please check your input data and try again.",
                     "unsuccess.png",
                     "OK"
@@ -154,7 +158,7 @@ public class SignupFormController implements Initializable {
         } catch (SQLException e) {
             alertSound.checkSounds(Sound.INVALID);
             new AlertNotification(
-                    "Error",
+                    "Error Message",
                     "An error occurred while loading roles. Please try again later.",
                     "unsuccess.png",
                     "OK"

@@ -49,6 +49,9 @@ public class PatientsFormController implements Initializable {
     private TableColumn<PatientsTM, String> genderCol;
 
     @FXML
+    private Button btnDelete;
+
+    @FXML
     private TextField lblSearch;
 
     @FXML
@@ -151,7 +154,7 @@ public class PatientsFormController implements Initializable {
             PatientsTM selectedPatient = tblPatient.getSelectionModel().getSelectedItem();
             if (selectedPatient == null) {
                 new AlertNotification(
-                        "Error",
+                        "Error Message",
                         "Please select a patient to delete.",
                         "unsuccess.png",
                         "ok"
@@ -168,7 +171,7 @@ public class PatientsFormController implements Initializable {
             boolean isDeleted = patientsFormModel.deletePatient(PatientName);
             if (isDeleted) {
                 new AlertNotification(
-                        "Success",
+                        "Success Message",
                         "Patient deleted...!",
                         "success.png",
                         "ok"
@@ -176,7 +179,7 @@ public class PatientsFormController implements Initializable {
                 refreshTable();
             } else {
                 new AlertNotification(
-                        "Error",
+                        "Error Message",
                         "An error occurred while deleting the patient. Please try again later.",
                         "unsuccess.png",
                         "ok"
@@ -184,7 +187,7 @@ public class PatientsFormController implements Initializable {
             }
         }else {
             new AlertNotification(
-                    "Error",
+                    "Error Message",
                     "Please select a patient to delete.",
                     "unsuccess.png",
                     "ok"
