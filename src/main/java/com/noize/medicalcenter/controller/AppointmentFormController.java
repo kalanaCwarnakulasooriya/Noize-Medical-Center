@@ -332,7 +332,7 @@ public class AppointmentFormController implements Initializable {
         comboStatus.getItems().addAll(status);
     }
 
-    public void searchPatient() throws SQLException {
+    public void searchAppointment() throws SQLException {
         ArrayList<AppointmentTM> appointments = appointmentFormModel.searchAppointments(lblName.getText());
         ObservableList<AppointmentTM> appointmentList = FXCollections.observableArrayList();
         for (AppointmentTM appointment : appointments) {

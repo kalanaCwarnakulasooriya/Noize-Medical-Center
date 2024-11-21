@@ -2,6 +2,7 @@ package com.noize.medicalcenter.model;
 
 import com.noize.medicalcenter.dto.AppointmentFormDto;
 import com.noize.medicalcenter.dto.tm.AppointmentTM;
+import com.noize.medicalcenter.dto.tm.PatientsTM;
 import com.noize.medicalcenter.util.CrudUtil;
 
 import java.sql.ResultSet;
@@ -82,6 +83,32 @@ public class AppointmentFormModel {
                     rst.getString("UserId")
             );
             appointments.add(newAppointments);
+        }
+        return appointments;
+    }
+
+    public AppointmentTM findById(String selectName) throws SQLException {
+        ResultSet rst = CrudUtil.execute("SELECT * FROM appointment WHERE AppointmentId = ?", selectName);
+
+        if (rst.next()) {
+            return new AppointmentTM(
+                    rst.getString("Name"),
+                    rst.getString("Age"),
+                    rst.getString("Status"),
+                    rst.getString("Description"),
+                    rst.getString("Date"),
+                    rst.getString("DoctorId"),
+                    rst.getString("UserId")
+            );
+        }
+        return null;
+    }
+
+    public ArrayList<String> getAppointments() throws SQLException {
+        ResultSet rst = CrudUtil.execute("SELECT AppointmentId FROM appointment");
+        ArrayList<String> appointments = new ArrayList<>();
+        while (rst.next()) {
+            appointments.add(rst.getString("AppointmentId"));
         }
         return appointments;
     }

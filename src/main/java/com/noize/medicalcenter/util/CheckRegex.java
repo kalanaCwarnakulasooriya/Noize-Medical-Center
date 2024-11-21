@@ -14,6 +14,7 @@ public class CheckRegex {
             case "qty" -> "^[0-9]+$";
             case "packSize" -> "^(?=.*[a-zA-Z])(?=.*[0-9])[a-zA-Z0-9 /]+$";
             case "desc" -> "^[a-zA-Z ]+$";
+            case "dosage" -> "^[a-zA-Z0-9 ]+$";
             case "price" -> "^\\d+(\\.\\d{1,2})?$";
             case "docName" -> "^[A-Za-z. ]{2,}$";
             default -> "";
