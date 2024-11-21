@@ -135,7 +135,7 @@ public class DoctorFormController implements Initializable {
         }else {
             new AlertNotification(
                     "Error",
-                    "Please select a doctor to delete.",
+                    "You have canceled the delete operation.",
                     "unsuccess.png",
                     "ok"
             ).start();

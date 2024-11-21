@@ -137,10 +137,10 @@ public class PrescriptionFormController implements Initializable {
                         "ok"
                 ).start();
             }
-        }else {
+        } else {
             new AlertNotification(
                     "Error",
-                    "Please select a prescription to delete.",
+                    "You have canceled the delete operation.",
                     "unsuccess.png",
                     "ok"
             ).start();

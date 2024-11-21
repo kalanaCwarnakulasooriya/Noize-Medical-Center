@@ -116,8 +116,8 @@ public class ItemFormController implements Initializable {
             ItemTM selectedItem = tblItem.getSelectionModel().getSelectedItem();
             if (selectedItem == null) {
                 new AlertNotification(
-                        "Error",
-                        "Please select a item to delete.",
+                        "Error Message",
+                        "Please select an item to delete from the table.",
                         "unsuccess.png",
                         "ok"
                 ).start();
@@ -135,16 +135,16 @@ public class ItemFormController implements Initializable {
             boolean isDeleted = itemFormModel.deleteItem(ItemName);
             if (isDeleted) {
                 new AlertNotification(
-                        "Success",
-                        "Item deleted...!",
+                        "Success Message",
+                        "Item deleted successfully !",
                         "success.png",
                         "ok"
                 ).start();
                 refreshTable();
             } else {
                 new AlertNotification(
-                        "Error",
-                        "An error occurred while deleting the item. Please try again later.",
+                        "Error Message",
+                        "An error occurred while deleting the item. Please try again later or contact support.",
                         "unsuccess.png",
                         "ok"
                 ).start();
@@ -152,7 +152,7 @@ public class ItemFormController implements Initializable {
         }else {
             new AlertNotification(
                     "Error",
-                    "Please select a item to delete.",
+                    "You have canceled the delete operation.",
                     "unsuccess.png",
                     "ok"
             ).start();
@@ -202,8 +202,9 @@ public class ItemFormController implements Initializable {
         isExpireValid = expirePicker.getValue() != null;
 
         if (isExpireValid && !isNameValid && !isPackSizeValid && !isQtyValid && !isPriceValid && !isDescValid) {
-            new AlertNotification("Invalid input",
-                    "Please check the input fields",
+            new AlertNotification(
+                    "Error Message",
+                    "Please check the input fields and try again.",
                     "unsuccess.png",
                     "ok"
             ).start();
@@ -219,8 +220,8 @@ public class ItemFormController implements Initializable {
         if (itemFormModel.isAddStock(name,description, String.valueOf(expire),packSize,price,qty)) {
             getStockQty();
             new AlertNotification(
-                    "Success",
-                    "Item added successfully",
+                    "Success Message",
+                    "Item added successfully to stock",
                     "success.png",
                     "ok"
             ).start();
@@ -229,8 +230,8 @@ public class ItemFormController implements Initializable {
             refreshTable();
         } else {
             new AlertNotification(
-                    "Error",
-                    "Failed to add " + name + " to stock",
+                    "Error Message",
+                    "Failed to add " + name + " to stock list",
                     "unsuccess.png",
                     "ok"
             ).start();
@@ -263,15 +264,15 @@ public class ItemFormController implements Initializable {
                 refreshTable();
                 clearFields();
                 new AlertNotification(
-                        "Success",
-                        "Item updated successfully",
+                        "Success Message",
+                        "Item updated successfully to stock",
                         "success.png",
                         "ok"
                 ).start();
             }else {
                 new AlertNotification(
-                        "Error",
-                        "Failed to update " + name + " to stock",
+                        "Error Message",
+                        "Failed to update " + name + " to stock list",
                         "unsuccess.png",
                         "ok"
                 ).start();

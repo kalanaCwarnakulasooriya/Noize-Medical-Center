@@ -151,7 +151,7 @@ public class AppointmentFormController implements Initializable {
         }else {
             new AlertNotification(
                     "Error",
-                    "Please select a appointment to delete.",
+                    "You have canceled the delete operation.",
                     "unsuccess.png",
                     "ok"
             ).start();

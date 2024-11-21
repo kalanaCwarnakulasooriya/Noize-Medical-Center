@@ -60,7 +60,7 @@
                   <Insets left="20.0" top="10.0" />
                </HBox.margin>
             </JFXButton>
-            <JFXButton fx:id="btnPlaceOrder" onAction="#placeOrderOnAction" prefHeight="37.0" prefWidth="160.0" style="-fx-background-color: #009432; -fx-background-radius: 10;" text="Place Order" textFill="WHITE">
+            <JFXButton fx:id="btnPlaceOrder" onAction="#placeOrderOnAction" prefHeight="37.0" prefWidth="160.0" style="-fx-background-color: #009432; -fx-background-radius: 10;" text="Payment" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
@@ -272,7 +272,7 @@
                   </ComboBox>
                </children>
             </VBox>
-            <JFXButton fx:id="btnPay" layoutX="256.0" layoutY="175.0" onAction="#paymentOnAction" prefHeight="37.0" prefWidth="160.0" style="-fx-background-color: #3498db; -fx-background-radius: 10;" text="Payment" textFill="WHITE">
+            <JFXButton fx:id="btnPay" layoutX="256.0" layoutY="175.0" onAction="#paymentOnAction" prefHeight="37.0" prefWidth="160.0" style="-fx-background-color: #3498db; -fx-background-radius: 10;" text="Pay" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>

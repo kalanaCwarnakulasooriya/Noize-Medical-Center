@@ -32,10 +32,7 @@ import java.sql.Connection;
 import java.sql.Date;
 import java.sql.SQLException;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class OrderFormController implements Initializable {
     private final OrdersFormModel orderFormModel = new OrdersFormModel();
@@ -378,52 +375,64 @@ public class OrderFormController implements Initializable {
             return;
         }
 
-        String orderId = lblOrderId.getText();
-        Date dateOfOrder = Date.valueOf(lblOrderDate.getText());
-        String patientId = comboMobile.getValue();
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Are you sure you want to Pay this Bill ?", ButtonType.YES, ButtonType.NO);
+        Optional<ButtonType> buttonType = alert.showAndWait();
 
-        ArrayList<OrderDetailsFormDto> orderDetailsDTOS = new ArrayList<>();
+        if (buttonType.get() == ButtonType.YES) {
+            String orderId = lblOrderId.getText();
+            Date dateOfOrder = Date.valueOf(lblOrderDate.getText());
+            String patientId = comboMobile.getValue();
 
-        for (OrdersTM cartTM : obList) {
+            ArrayList<OrderDetailsFormDto> orderDetailsDTOS = new ArrayList<>();
 
-            OrderDetailsFormDto orderDetailsDTO = new OrderDetailsFormDto(
+            for (OrdersTM cartTM : obList) {
+
+                OrderDetailsFormDto orderDetailsDTO = new OrderDetailsFormDto(
+                        Integer.parseInt(orderId),
+                        cartTM.getItemId(),
+                        cartTM.getCartQty(),
+                        cartTM.getUnitPrice()
+                );
+
+                orderDetailsDTOS.add(orderDetailsDTO);
+            }
+            OrdersFormDto orderDTO = new OrdersFormDto(
                     Integer.parseInt(orderId),
-                    cartTM.getItemId(),
-                    cartTM.getCartQty(),
-                    cartTM.getUnitPrice()
+                    dateOfOrder,
+                    Integer.parseInt(patientId),
+                    orderDetailsDTOS
             );
 
-            orderDetailsDTOS.add(orderDetailsDTO);
-        }
-        OrdersFormDto orderDTO = new OrdersFormDto(
-                Integer.parseInt(orderId),
-                dateOfOrder,
-                Integer.parseInt(patientId),
-                orderDetailsDTOS
-        );
+            boolean isSaved = orderFormModel.saveOrder(orderDTO);
 
-        boolean isSaved = orderFormModel.saveOrder(orderDTO);
+            if (isSaved) {
+                paymentPane.setVisible(false);
+                orderPane.setVisible(true);
+                btnPlaceOrder.setDisable(true);
+                btnAddCart.setVisible(false);
+                btnOrderReport.setDisable(false);
+                btnPay.setDisable(true);
+                refeshPage();
+                new AlertNotification(
+                        "Alert Message",
+                        "Order placed successfully",
+                        "success.png",
+                        "ok"
+                ).start();
 
-        if (isSaved) {
-            paymentPane.setVisible(false);
-            orderPane.setVisible(true);
-            btnPlaceOrder.setDisable(true);
-            btnAddCart.setVisible(false);
-            btnOrderReport.setDisable(false);
-            btnPay.setDisable(true);
-            refeshPage();
-            new AlertNotification(
-                    "Alert Message",
-                    "Order placed successfully",
-                    "success.png",
-                    "ok"
-            ).start();
-
-            refeshPage();
+                refeshPage();
+            } else {
+                new AlertNotification(
+                        "Alert Message",
+                        "Failed to place order",
+                        "unsuccess.png",
+                        "ok"
+                ).start();
+            }
         } else {
             new AlertNotification(
-                    "Alert Message",
-                    "Failed to place order",
+                    "Error",
+                    "You have cancelled the payment",
                     "unsuccess.png",
                     "ok"
             ).start();
@@ -444,7 +453,11 @@ public class OrderFormController implements Initializable {
     void loadPayments() {
         comboMethod.setStyle("-fx-font-weight: bold; -fx-font-size: 14px; -fx-text-fill: green;");
         ObservableList<String> observableList = FXCollections.observableArrayList();
-        observableList.addAll("Card", "Cash");
+        observableList.addAll(
+                "Card",
+                "Cash",
+                "Online"
+        );
         comboMethod.setItems(observableList);
     }
 
