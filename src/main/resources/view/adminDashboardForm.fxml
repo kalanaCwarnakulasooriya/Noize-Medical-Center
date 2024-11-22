@@ -128,24 +128,6 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Button>
-                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#callSettings" onMouseEntered="#mouseEnter" onMouseExited="#mouseExit" prefHeight="67.0" prefWidth="350.0" style="-fx-background-color: #1e293c;" text="   Settings" textFill="WHITE">
-                           <font>
-                              <Font name="System Bold" size="25.0" />
-                           </font>
-                           <graphic>
-                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" smooth="false">
-                                 <image>
-                                    <Image url="@../asset/icon/settings.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <VBox.margin>
-                              <Insets />
-                           </VBox.margin>
-                        </Button>
                         <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#callLogOut" onMouseEntered="#mouseEnter" onMouseExited="#mouseExit" prefHeight="67.0" prefWidth="350.0" style="-fx-background-color: #1e293c;" text="   Logout" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="25.0" />
@@ -161,7 +143,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                            <VBox.margin>
-                              <Insets top="140.0" />
+                              <Insets top="205.0" />
                            </VBox.margin>
                         </Button>
                      </children>

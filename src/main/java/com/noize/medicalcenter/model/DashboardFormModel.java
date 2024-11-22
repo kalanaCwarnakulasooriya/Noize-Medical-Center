@@ -1,6 +1,7 @@
 package com.noize.medicalcenter.model;
 
 import com.noize.medicalcenter.util.CrudUtil;
+import javafx.scene.chart.XYChart;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -31,5 +32,24 @@ public class DashboardFormModel {
             throw new RuntimeException(e);
         }
         return status;
+    }
+
+    public XYChart.Series<String, Number> getData() {
+        String sql = "SELECT i.Name, SUM(od.Quantity) AS total_quantity FROM orderdetail od JOIN item i ON od.ItemId = i.ItemId GROUP BY i.Name ORDER BY total_quantity DESC";
+
+        XYChart.Series<String, Number> series = new XYChart.Series<>();
+        try {
+            ResultSet resultSet = CrudUtil.execute(sql);
+            while (resultSet.next()) {
+                String month = resultSet.getString("Name");
+                int totalQty = resultSet.getInt("total_quantity");
+                System.out.println(month + " " + totalQty);
+                series.getData().add(new XYChart.Data<>(month, totalQty));
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return series;
     }
 }

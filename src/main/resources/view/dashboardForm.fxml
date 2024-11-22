@@ -116,10 +116,10 @@
          <children>
             <BarChart layoutX="2.5043479091593834" layoutY="4.173913181932306" prefHeight="402.0" prefWidth="640.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="3.0">
                <xAxis>
-                  <CategoryAxis side="BOTTOM" />
+                  <CategoryAxis fx:id="yAxis" label="Item Name" />
                </xAxis>
                <yAxis>
-                  <NumberAxis side="LEFT" />
+                  <NumberAxis label="Total Quantity" fx:id="xAxis" />
                </yAxis>
             </BarChart>
          </children>
