@@ -11,7 +11,7 @@ import java.util.Date;
 @ToString
 
 public class AppointmentTM {
-    private String name;
+//    private String name;
     private String age;
     private String status;
     private String description;

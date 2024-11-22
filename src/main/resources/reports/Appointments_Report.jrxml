@@ -9,11 +9,6 @@
 		<property name="com.jaspersoft.studio.field.label" value="AppointmentId"/>
 		<property name="com.jaspersoft.studio.field.tree.path" value="appointment"/>
 	</field>
-	<field name="Name" class="java.lang.String">
-		<property name="com.jaspersoft.studio.field.name" value="Name"/>
-		<property name="com.jaspersoft.studio.field.label" value="Name"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="appointment"/>
-	</field>
 	<field name="Age" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.name" value="Age"/>
 		<property name="com.jaspersoft.studio.field.label" value="Age"/>
@@ -63,34 +58,27 @@
 	</pageHeader>
 	<columnHeader height="30" splitType="Stretch">
 		<element kind="staticText" uuid="2169493a-71d1-48c8-9fd5-376b2ca16223" x="0" y="0" width="95" height="30" fontSize="14.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
-			<text><![CDATA[AppointmentId]]></text>
+			<text><![CDATA[ID]]></text>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="376474b4-90ec-42c1-8b6b-e0028104ae90"/>
 			<box>
 				<pen lineWidth="1.0"/>
 			</box>
 		</element>
-		<element kind="staticText" uuid="3c98fc93-bf19-4b0f-9e24-756e60145031" x="95" y="0" width="92" height="30" fontSize="14.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
-			<text><![CDATA[Name]]></text>
-			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="902a832a-19e0-4deb-9801-756c66bb6096"/>
-			<box>
-				<pen lineWidth="1.0"/>
-			</box>
-		</element>
-		<element kind="staticText" uuid="c46c0395-5d3a-48dc-a82b-81c09b7a1969" x="187" y="0" width="92" height="30" fontSize="14.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="staticText" uuid="c46c0395-5d3a-48dc-a82b-81c09b7a1969" x="95" y="0" width="124" height="30" fontSize="14.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
 			<text><![CDATA[Age]]></text>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3c927228-40c4-4b30-92d2-8d37b31d72c4"/>
 			<box>
 				<pen lineWidth="1.0"/>
 			</box>
 		</element>
-		<element kind="staticText" uuid="e68e0e35-aa50-4f82-9e94-5e01e7f7fad2" x="279" y="0" width="92" height="30" fontSize="14.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="staticText" uuid="e68e0e35-aa50-4f82-9e94-5e01e7f7fad2" x="219" y="0" width="131" height="30" fontSize="14.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
 			<text><![CDATA[Date]]></text>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2ba3c4e6-799b-4a0d-b256-d637aec97dba"/>
 			<box>
 				<pen lineWidth="1.0"/>
 			</box>
 		</element>
-		<element kind="staticText" uuid="dcc58802-64ef-4d4a-a7c5-6e72d903d7ac" x="371" y="0" width="92" height="30" fontSize="14.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="staticText" uuid="dcc58802-64ef-4d4a-a7c5-6e72d903d7ac" x="350" y="0" width="112" height="30" fontSize="14.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
 			<text><![CDATA[Description]]></text>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="654aca69-aeac-47bd-892f-2f8d436adaf9"/>
 			<box>
@@ -114,28 +102,21 @@
 					<pen lineWidth="0.5"/>
 				</box>
 			</element>
-			<element kind="textField" uuid="9d80b805-a729-4788-aa49-772c07e88912" x="95" y="0" width="92" height="30" fontSize="12.0" hTextAlign="Center" vTextAlign="Middle">
-				<expression><![CDATA[$F{Name}]]></expression>
-				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="902a832a-19e0-4deb-9801-756c66bb6096"/>
-				<box>
-					<pen lineWidth="0.5"/>
-				</box>
-			</element>
-			<element kind="textField" uuid="e2c05927-4ec0-484a-8f27-936f54444b48" x="187" y="0" width="92" height="30" fontSize="12.0" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" uuid="e2c05927-4ec0-484a-8f27-936f54444b48" x="95" y="0" width="124" height="30" fontSize="12.0" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{Age}]]></expression>
 				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3c927228-40c4-4b30-92d2-8d37b31d72c4"/>
 				<box>
 					<pen lineWidth="0.5"/>
 				</box>
 			</element>
-			<element kind="textField" uuid="c0f65faf-1410-4eea-a0da-ad0130af4962" x="279" y="0" width="92" height="30" fontSize="12.0" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" uuid="c0f65faf-1410-4eea-a0da-ad0130af4962" x="219" y="0" width="131" height="30" fontSize="12.0" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{Date}]]></expression>
 				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2ba3c4e6-799b-4a0d-b256-d637aec97dba"/>
 				<box>
 					<pen lineWidth="0.5"/>
 				</box>
 			</element>
-			<element kind="textField" uuid="739d5ae7-b406-456a-89a8-175cd14720f7" x="371" y="0" width="92" height="30" fontSize="12.0" hTextAlign="Center" vTextAlign="Middle">
+			<element kind="textField" uuid="739d5ae7-b406-456a-89a8-175cd14720f7" x="350" y="0" width="113" height="30" fontSize="12.0" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{Description}]]></expression>
 				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="654aca69-aeac-47bd-892f-2f8d436adaf9"/>
 				<box>

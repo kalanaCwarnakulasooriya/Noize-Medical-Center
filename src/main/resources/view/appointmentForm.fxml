@@ -24,11 +24,10 @@
          <children>
             <TableView fx:id="tblAppointment" layoutX="8.0" layoutY="6.0" onMouseClicked="#onClickTable" prefHeight="269.0" prefWidth="1120.0" stylesheets="@../asset/style/table.css">
                <columns>
-                  <TableColumn fx:id="patientNameCol" prefWidth="265.4608612060547" text="Patient Name" />
                   <TableColumn fx:id="ageCol" minWidth="0.0" prefWidth="147.756591796875" text="Age" />
-                  <TableColumn fx:id="statusCol" prefWidth="159.4434814453125" text="Status" />
-                  <TableColumn fx:id="descCol" prefWidth="357.2869873046875" text="Description" />
-                  <TableColumn fx:id="dateCol" prefWidth="185.32183837890625" text="Date" />
+                  <TableColumn fx:id="statusCol" prefWidth="266.29566955566406" text="Status" />
+                  <TableColumn fx:id="descCol" prefWidth="420.73040771484375" text="Description" />
+                  <TableColumn fx:id="dateCol" prefWidth="282.9913330078125" text="Date" />
                </columns>
             </TableView>
          </children>

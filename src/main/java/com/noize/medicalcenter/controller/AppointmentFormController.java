@@ -119,7 +119,7 @@ public class AppointmentFormController implements Initializable {
                 return;
             }
         }
-        String appointmentName = tblAppointment.getSelectionModel().getSelectedItem().getName();
+        String appointmentName = tblAppointment.getSelectionModel().getSelectedItem().getAge();
 
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Are you sure you want to delete this Appointment ?", ButtonType.YES, ButtonType.NO);
         Optional<ButtonType> buttonType = alert.showAndWait();
@@ -195,7 +195,7 @@ public class AppointmentFormController implements Initializable {
         }
         LocalDate date = datePicker.getValue();
 
-        if (appointmentFormModel.isAddAppointment(txtName.getText(), txtAge.getText(), comboStatus.getValue(), txtDescription.getText(), String.valueOf(date), comboDoctor.getValue())) {
+        if (appointmentFormModel.isAddAppointment(txtAge.getText(), comboStatus.getValue(), txtDescription.getText(), String.valueOf(date), comboDoctor.getValue())) {
             getAppointments();
             new AlertNotification(
                     "Success Message",
@@ -220,7 +220,6 @@ public class AppointmentFormController implements Initializable {
     void btnUpdateItemOnAction(ActionEvent event) throws SQLException {
         isDateValid = datePicker.getValue() != null;
 
-        String name = txtName.getText();
         String age = txtAge.getText();
         String description = txtDescription.getText();
         String status = comboStatus.getValue();
@@ -228,7 +227,6 @@ public class AppointmentFormController implements Initializable {
 
         AppointmentFormDto appointmentFormDto = new AppointmentFormDto(
                 0,
-                name,
                 age,
                 status,
                 description,
@@ -272,7 +270,6 @@ public class AppointmentFormController implements Initializable {
     void onClickTable(MouseEvent event) {
         AppointmentTM selectPatient = tblAppointment.getSelectionModel().getSelectedItem();
         if (selectPatient != null) {
-            txtName.setText(selectPatient.getName());
             txtAge.setText(String.valueOf(selectPatient.getAge()));
             comboStatus.setValue(selectPatient.getStatus());
             txtDescription.setText(selectPatient.getDescription());
@@ -305,7 +302,6 @@ public class AppointmentFormController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        patientNameCol.setCellValueFactory(new PropertyValueFactory<>("name"));
         ageCol.setCellValueFactory(new PropertyValueFactory<>("age"));
         statusCol.setCellValueFactory(new PropertyValueFactory<>("status"));
         descCol.setCellValueFactory(new PropertyValueFactory<>("description"));

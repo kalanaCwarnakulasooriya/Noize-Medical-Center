@@ -2,7 +2,6 @@ package com.noize.medicalcenter.model;
 
 import com.noize.medicalcenter.dto.AppointmentFormDto;
 import com.noize.medicalcenter.dto.tm.AppointmentTM;
-import com.noize.medicalcenter.dto.tm.PatientsTM;
 import com.noize.medicalcenter.util.CrudUtil;
 
 import java.sql.ResultSet;
@@ -18,7 +17,6 @@ public class AppointmentFormModel {
             ResultSet rst = CrudUtil.execute(sql);
             while (rst.next()) {
                 AppointmentTM appointment = new AppointmentTM(
-                        rst.getString("Name"),
                         rst.getString("Age"),
                         rst.getString("Status"),
                         rst.getString("Description"),
@@ -36,21 +34,19 @@ public class AppointmentFormModel {
 
     public Boolean isUpdateAppointment(AppointmentFormDto appointmentFormDto) throws SQLException {
         return CrudUtil.execute(
-                "UPDATE appointment SET Age = ?, Status = ?, Description = ?, Date = ? WHERE Name = ?",
-                appointmentFormDto.getAge(),
+                "UPDATE appointment SET Status = ?, Description = ?, Date = ? WHERE Age = ?",
                 appointmentFormDto.getStatus(),
                 appointmentFormDto.getDescription(),
                 appointmentFormDto.getDate(),
-                appointmentFormDto.getName()
-        );
+                appointmentFormDto.getAge()
+                );
     }
 
-    public Boolean isAddAppointment(String name, String age, String status, String description, String date, String doctorId) throws SQLException {
-        String sql = "INSERT INTO appointment(Name,Age,Status,Description,Date,DoctorId,UserId) VALUES (?,?,?,?,?,?,?)";
+    public Boolean isAddAppointment(String age, String status, String description, String date, String doctorId) throws SQLException {
+        String sql = "INSERT INTO appointment(Age,Status,Description,Date,DoctorId,UserId) VALUES (?,?,?,?,?,?)";
         try {
             return CrudUtil.execute(
                     sql,
-                    name,
                     age,
                     status,
                     description,
@@ -64,20 +60,19 @@ public class AppointmentFormModel {
         return false;
     }
 
-    public boolean isDeleteAppointment(String name) throws SQLException {
+    public boolean isDeleteAppointment(String age) throws SQLException {
         return CrudUtil.execute(
-                "DELETE FROM appointment WHERE Name = ?",
-                name
+                "DELETE FROM appointment WHERE Age = ?",
+                age
         );
     }
 
-    public ArrayList<AppointmentTM> searchAppointments(String name) throws SQLException {
-        String sql = "select * from appointment where Name like ?;";
-        ResultSet rst = CrudUtil.execute(sql, name+"%");
+    public ArrayList<AppointmentTM> searchAppointments(String age) throws SQLException {
+        String sql = "select * from appointment where Age like ?;";
+        ResultSet rst = CrudUtil.execute(sql, age + "%");
         ArrayList<AppointmentTM> appointments = new ArrayList<>();
         while (rst.next()) {
             AppointmentTM newAppointments = new AppointmentTM(
-                    rst.getString("Name"),
                     rst.getString("Age"),
                     rst.getString("Status"),
                     rst.getString("Description"),
@@ -98,7 +93,6 @@ public class AppointmentFormModel {
 
         if (rst.next()) {
             return new AppointmentTM(
-                    rst.getString("Name"),
                     rst.getString("Age"),
                     rst.getString("Status"),
                     rst.getString("Description"),
