@@ -47,9 +47,6 @@ public class AppointmentFormController implements Initializable {
     private Button btnDeleteItem;
 
     @FXML
-    private JFXTextField txtName;
-
-    @FXML
     private Button btnReset;
 
     @FXML
@@ -160,7 +157,6 @@ public class AppointmentFormController implements Initializable {
 
     @FXML
     void btnResetOnAction(ActionEvent event) throws SQLException {
-        txtName.clear();
         txtAge.clear();
         comboStatus.getSelectionModel().clearSelection();
         txtDescription.clear();
@@ -175,7 +171,6 @@ public class AppointmentFormController implements Initializable {
         btnUpdateItem.setDisable(true);
         btnSaveItem.setDisable(false);
 
-        txtName.setStyle("");
         txtAge.setStyle("");
         txtDescription.setStyle("");
     }
@@ -342,21 +337,10 @@ public class AppointmentFormController implements Initializable {
     public void clearFields(){
         txtAge.clear();
         comboStatus.getSelectionModel().clearSelection();
-        txtName.clear();
         txtDescription.clear();
         datePicker.setValue(null);
         comboDoctor.getSelectionModel().clearSelection();
         lblName.setText("");
-    }
-
-    public void nameRelease(KeyEvent keyEvent) {
-        if (CheckRegex.checkRegex("name", txtName.getText())) {
-            txtName.setStyle("-fx-text-fill: green;");
-            isNameValid = true;
-        } else {
-            txtName.setStyle("-fx-text-fill: red;");
-            isNameValid = false;
-        }
     }
 
     public void comboStatusOnAction(ActionEvent event) {

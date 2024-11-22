@@ -107,16 +107,8 @@
       </Label>
       <AnchorPane layoutX="298.0" layoutY="129.0" prefHeight="277.0" prefWidth="663.0" style="-fx-border-radius: 20; -fx-border-color: black;">
          <children>
-            <VBox layoutX="24.0" layoutY="51.0" prefHeight="215.0" prefWidth="124.0">
+            <VBox layoutX="24.0" layoutY="66.0" prefHeight="206.0" prefWidth="124.0">
                <children>
-                  <Label prefHeight="34.0" prefWidth="123.0" text="Name">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets top="5.0" />
-                     </VBox.margin>
-                  </Label>
                   <Label prefHeight="34.0" prefWidth="134.0" text="Age">
                      <font>
                         <Font size="18.0" />
@@ -146,7 +138,7 @@
                         <Font size="18.0" />
                      </font>
                      <VBox.margin>
-                        <Insets top="5.0" />
+                        <Insets top="3.0" />
                      </VBox.margin>
                   </Label>
                   <Label prefHeight="34.0" prefWidth="123.0" text="Doctor ID">
@@ -159,19 +151,11 @@
                   </Label>
                </children>
             </VBox>
-            <VBox layoutX="152.0" layoutY="52.0" prefHeight="179.0" prefWidth="472.0">
+            <VBox layoutX="152.0" layoutY="68.0" prefHeight="160.0" prefWidth="472.0">
                <children>
-                  <JFXTextField fx:id="txtName" onKeyReleased="#nameRelease" prefHeight="28.0" prefWidth="125.0">
-                     <VBox.margin>
-                        <Insets top="-5.0" />
-                     </VBox.margin>
-                     <font>
-                        <Font name="System Bold" size="14.0" />
-                     </font>
-                  </JFXTextField>
                   <JFXTextField fx:id="txtAge" onKeyReleased="#ageRelease" prefHeight="28.0" prefWidth="553.0">
                      <VBox.margin>
-                        <Insets top="5.0" />
+                        <Insets />
                      </VBox.margin>
                      <font>
                         <Font name="System Bold" size="14.0" />
@@ -202,13 +186,13 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <ComboBox fx:id="comboDoctor" layoutX="152.0" layoutY="235.0" onAction="#comboDoctorOnAction" prefHeight="28.0" prefWidth="206.0" />
-            <Label layoutX="376.0" layoutY="236.0" prefHeight="28.0" prefWidth="95.0" text="Dr. Name">
+            <ComboBox fx:id="comboDoctor" layoutX="152.0" layoutY="226.0" onAction="#comboDoctorOnAction" prefHeight="28.0" prefWidth="206.0" />
+            <Label layoutX="376.0" layoutY="227.0" prefHeight="28.0" prefWidth="95.0" text="Dr. Name">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label fx:id="lblName" layoutX="471.0" layoutY="237.0" prefHeight="28.0" prefWidth="161.0">
+            <Label fx:id="lblName" layoutX="471.0" layoutY="225.0" prefHeight="28.0" prefWidth="161.0">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
