@@ -1,0 +1,140 @@
+<!-- Created with Jaspersoft Studio version 7.0.0.final using JasperReports Library version 7.0.0-b478feaa9aab4375eba71de77b4ca138ad2f62aa  -->
+<jasperReport name="Doctors" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0ed979e7-61cb-488d-960f-bf8563c1e848">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="medicalcenter"/>
+	<parameter name="TODAY" class="java.lang.String"/>
+	<query language="SQL"><![CDATA[select * from doctor]]></query>
+	<field name="DoctorId" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="DoctorId"/>
+		<property name="com.jaspersoft.studio.field.label" value="DoctorId"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="doctor"/>
+	</field>
+	<field name="Name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Name"/>
+		<property name="com.jaspersoft.studio.field.label" value="Name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="doctor"/>
+	</field>
+	<field name="Email" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Email"/>
+		<property name="com.jaspersoft.studio.field.label" value="Email"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="doctor"/>
+	</field>
+	<field name="ContactNumber" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="ContactNumber"/>
+		<property name="com.jaspersoft.studio.field.label" value="ContactNumber"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="doctor"/>
+	</field>
+	<field name="Address" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Address"/>
+		<property name="com.jaspersoft.studio.field.label" value="Address"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="doctor"/>
+	</field>
+	<field name="UserId" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="UserId"/>
+		<property name="com.jaspersoft.studio.field.label" value="UserId"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="doctor"/>
+	</field>
+	<background splitType="Stretch"/>
+	<title height="80" splitType="Stretch">
+		<element kind="staticText" uuid="08edffd1-f9f8-4387-b005-8568eeb921e7" x="-13" y="0" width="580" height="40" fontSize="20.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Noize Health Care]]></text>
+		</element>
+		<element kind="staticText" uuid="0c574bd1-7d07-415a-b59c-59ce76ab832b" x="-13" y="40" width="580" height="20" fontSize="12.0" hTextAlign="Center" vTextAlign="Top">
+			<text><![CDATA[No: 218/1, Galle road, Colombo 07.]]></text>
+		</element>
+		<element kind="staticText" uuid="4d9cfb52-0f7d-48e4-93e0-6ced0636249f" x="-13" y="60" width="580" height="20" fontSize="12.0" hTextAlign="Center" vTextAlign="Top">
+			<text><![CDATA[071 9524213 / 078 9524213]]></text>
+		</element>
+	</title>
+	<pageHeader height="49" splitType="Stretch">
+		<element kind="textField" uuid="9470dc63-b7e1-42f9-acba-1947d78d3e12" x="444" y="19" width="100" height="30" fontSize="12.0" hTextAlign="Center" vTextAlign="Middle">
+			<expression><![CDATA[$P{TODAY}]]></expression>
+		</element>
+		<element kind="staticText" uuid="02c6607e-47b1-40e1-96ea-3c9050f0b52b" x="140" y="0" width="279" height="40" fontSize="18.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Doctors]]></text>
+		</element>
+	</pageHeader>
+	<columnHeader height="30" splitType="Stretch">
+		<element kind="staticText" uuid="0817ee93-9834-4e1b-acb3-971cb469654d" x="0" y="0" width="111" height="30" fontSize="14.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[DoctorId]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="60dec525-78a5-4c0b-9394-f8e666348810"/>
+			<box>
+				<pen lineWidth="1.0"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="e9b5bacb-bdf7-41cf-a373-4301a67f5702" x="111" y="0" width="111" height="30" fontSize="14.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Name]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4aafd9df-f261-43ce-84a4-1a8d5c1963d1"/>
+			<box>
+				<pen lineWidth="1.0"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="da4f1824-2c2e-4049-9d41-9209a3d9b2e5" x="222" y="0" width="111" height="30" fontSize="14.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Email]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e474cf05-bd17-4eb1-ad10-e05e597fcb5c"/>
+			<box>
+				<pen lineWidth="1.0"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="ae100338-bded-47fe-8251-63ee66bf3792" x="333" y="0" width="111" height="30" fontSize="14.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[ContactNumber]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a9343d7f-95de-4b62-a5a1-251d7405a1d6"/>
+			<box>
+				<pen lineWidth="1.0"/>
+			</box>
+		</element>
+		<element kind="staticText" uuid="55c0f7cf-f6fc-4d46-ad5d-0cbb0061503e" x="444" y="0" width="111" height="30" fontSize="14.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[Address]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e9cebca9-ad2b-401a-997d-cf9349e11afb"/>
+			<box>
+				<pen lineWidth="1.0"/>
+			</box>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<element kind="textField" uuid="bd0ce816-cb52-40f4-ae43-55769f7b9058" x="0" y="0" width="111" height="30" fontSize="12.0" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{DoctorId}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="60dec525-78a5-4c0b-9394-f8e666348810"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="75623f30-2f2d-45f6-95b1-ed8ce611b883" x="111" y="0" width="111" height="30" fontSize="12.0" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{Name}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4aafd9df-f261-43ce-84a4-1a8d5c1963d1"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="08d5c5ff-b70f-48a6-b715-4d3e97176b95" x="222" y="0" width="111" height="30" fontSize="12.0" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{Email}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e474cf05-bd17-4eb1-ad10-e05e597fcb5c"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="eb87f502-7c00-4bdf-9667-69b660574705" x="333" y="0" width="111" height="30" fontSize="12.0" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{ContactNumber}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a9343d7f-95de-4b62-a5a1-251d7405a1d6"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="a33a8a90-0a03-4338-bc1d-329c0ade9756" x="444" y="0" width="111" height="30" fontSize="12.0" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{Address}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e9cebca9-ad2b-401a-997d-cf9349e11afb"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+			</element>
+		</band>
+	</detail>
+	<columnFooter height="45" splitType="Stretch"/>
+	<pageFooter height="54" splitType="Stretch">
+		<element kind="staticText" uuid="81e5a84b-34a8-4eb0-bbb5-8bcab30b685a" x="-14" y="10" width="584" height="20" fontSize="12.0" hTextAlign="Center" vTextAlign="Bottom">
+			<text><![CDATA[Thank you, and we hope to see you again...!]]></text>
+		</element>
+	</pageFooter>
+	<summary height="42" splitType="Stretch"/>
+</jasperReport>

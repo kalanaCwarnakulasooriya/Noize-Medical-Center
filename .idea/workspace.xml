@@ -4,19 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a59df24e-a8bc-4d9f-9f9e-901765c53044" name="Changes" comment="Prescription report ekath hry">
+    <list default="true" id="a59df24e-a8bc-4d9f-9f9e-901765c53044" name="Changes" comment="changes tikak kara">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/AppointmentFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/AppointmentFormController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/DoctorFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/DoctorFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/ForgetPasswordFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/ForgetPasswordFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/LoginFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/LoginFormController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/PatientsFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/PatientsFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/PrescriptionFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/PrescriptionFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/SignupFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/controller/SignupFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/model/AppointmentFormModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/model/AppointmentFormModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/model/DoctorFormModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/model/DoctorFormModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/model/ItemFormModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/model/ItemFormModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/model/PatientsFormModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/noize/medicalcenter/model/PatientsFormModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/patientsForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/patientsForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/reports/Appointment_Report.jrxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/reports/Appointments_Report.jrxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/reports/Doctor_Report.jrxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/reports/Doctors_Report.jrxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/reports/Item_Report.jrxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/reports/Item_Report.jrxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/reports/Order_Report.jrxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/reports/Order_Report.jrxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/reports/Patient_Report.jrxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/reports/Patients_Report.jrxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -256,7 +253,12 @@
       <workItem from="1732133225428" duration="1000" />
       <workItem from="1732133236812" duration="93000" />
       <workItem from="1732160038064" duration="39658000" />
-      <workItem from="1732209413538" duration="6919000" />
+      <workItem from="1732209413538" duration="7142000" />
+      <workItem from="1732219155438" duration="28000" />
+      <workItem from="1732219265137" duration="32000" />
+      <workItem from="1732219327412" duration="1000" />
+      <workItem from="1732219363985" duration="6000" />
+      <workItem from="1732248165689" duration="7786000" />
     </task>
     <task id="LOCAL-00001" summary="login and signup page view">
       <option name="closed" value="true" />
@@ -490,7 +492,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732217852342</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="changes tikak kara">
+      <option name="closed" value="true" />
+      <created>1732219029137</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1732219029138</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -524,7 +534,6 @@
     <MESSAGE value="Appointment ekath hry" />
     <MESSAGE value="Podi changes tikak kara" />
     <MESSAGE value="Prescription ekath hry" />
-    <MESSAGE value="changes tikak kara" />
     <MESSAGE value="Qr code ek mail ekt yanna hduwa" />
     <MESSAGE value="Qr code eken log wenna puluwn dn" />
     <MESSAGE value="dash board eke podi update wgyk kara" />
@@ -533,7 +542,8 @@
     <MESSAGE value="Item ekt report ekk hduwa" />
     <MESSAGE value="Doctor report ekath hry" />
     <MESSAGE value="Prescription report ekath hry" />
-    <option name="LAST_COMMIT_MESSAGE" value="Prescription report ekath hry" />
+    <MESSAGE value="changes tikak kara" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes tikak kara" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

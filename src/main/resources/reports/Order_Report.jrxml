@@ -136,7 +136,7 @@ WHERE o.OrderId = (
 		</element>
 	</columnHeader>
 	<detail>
-		<band height="125" splitType="Stretch">
+		<band height="30" splitType="Stretch">
 			<element kind="textField" uuid="4e16aa09-66f8-4758-8f09-6af0f00779e5" x="0" y="0" width="111" height="30" fontSize="12.0" hTextAlign="Center" vTextAlign="Middle">
 				<expression><![CDATA[$F{OrderId}]]></expression>
 				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f9d47128-e4c7-4786-a0da-5b13dd92fe12"/>
@@ -176,7 +176,7 @@ WHERE o.OrderId = (
 	</detail>
 	<columnFooter height="45" splitType="Stretch"/>
 	<pageFooter height="54" splitType="Stretch">
-		<element kind="staticText" uuid="7c715d1f-c1fc-4ef0-ac19-b02431b509ed" x="-14" y="10" width="584" height="20" fontSize="12.0" hTextAlign="Center" vTextAlign="Top">
+		<element kind="staticText" uuid="7c715d1f-c1fc-4ef0-ac19-b02431b509ed" x="-14" y="10" width="584" height="20" fontSize="12.0" hTextAlign="Center" vTextAlign="Bottom">
 			<text><![CDATA[Thank you, and we hope to see you again...!]]></text>
 		</element>
 	</pageFooter>

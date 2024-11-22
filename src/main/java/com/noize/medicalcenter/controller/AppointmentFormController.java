@@ -400,7 +400,7 @@ public class AppointmentFormController implements Initializable {
             Map<String, Object> parameters = new HashMap<>();
             parameters.put("TODAY", LocalDate.now().toString());
             JasperReport jasperReport = JasperCompileManager.compileReport(
-                    getClass().getResourceAsStream("/reports/Appointment_Report.jrxml")
+                    getClass().getResourceAsStream("/reports/Appointments_Report.jrxml")
             );
             JasperPrint jasperPrint = JasperFillManager.fillReport(
                     jasperReport,
