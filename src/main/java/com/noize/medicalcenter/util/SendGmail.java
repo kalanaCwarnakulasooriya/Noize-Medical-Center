@@ -191,7 +191,6 @@ public class SendGmail {
                 .build();
 
         CreateEmailResponse data = resend.emails().send(params);
-        System.out.println(data.getId());
-        //QrController.deleteQrCode(qrFilePath);
+//        System.out.println(data.getId());
     }
 }

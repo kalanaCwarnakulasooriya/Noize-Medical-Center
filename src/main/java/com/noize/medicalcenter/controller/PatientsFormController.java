@@ -86,11 +86,6 @@ public class PatientsFormController implements Initializable {
     }
 
     @FXML
-    void addOrderClick(ActionEvent event) throws IOException {
-
-    }
-
-    @FXML
     void refreshTable() throws SQLException {
         tblPatient.getItems().clear();
         ArrayList<PatientsTM> allStaff = patientsFormModel.getAllPatients();
@@ -172,7 +167,7 @@ public class PatientsFormController implements Initializable {
             if (isDeleted) {
                 new AlertNotification(
                         "Success Message",
-                        "Patient deleted...!",
+                        "Patient deleted successfully !",
                         "success.png",
                         "ok"
                 ).start();
@@ -214,10 +209,20 @@ public class PatientsFormController implements Initializable {
             JasperViewer.viewReport(jasperPrint, false);
 
         } catch (JRException e) {
-            new Alert(Alert.AlertType.ERROR, "Fail to load report..!");
+            new AlertNotification(
+                    "Error Message",
+                    "An error occurred while loading the report. Please try again later.",
+                    "unsuccess.png",
+                    "OK"
+            ).start();
             e.printStackTrace();
         } catch (SQLException e) {
-            new Alert(Alert.AlertType.ERROR, "Data empty..!");
+            new AlertNotification(
+                    "Error Message",
+                    "Data empty. Please try again later.",
+                    "unsuccess.png",
+                    "OK"
+            ).start();
             e.printStackTrace();
         }
     }

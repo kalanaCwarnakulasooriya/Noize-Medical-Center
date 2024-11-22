@@ -136,7 +136,7 @@ public class OrderFormController implements Initializable {
         if (selectMobile == null) {
             new AlertNotification(
                     "Alert Message",
-                    "Please select Mobile Number",
+                    "Please select ID of Patient",
                     "unsuccess.png",
                     "ok"
             ).start();
@@ -146,7 +146,7 @@ public class OrderFormController implements Initializable {
         if (txtQty.getText().isEmpty()) {
             new AlertNotification(
                     "Alert Message",
-                    "Please enter quantity",
+                    "Please enter quantity of medicine",
                     "unsuccess.png",
                     "ok"
             ).start();
@@ -156,7 +156,7 @@ public class OrderFormController implements Initializable {
         if (!isQtyValid) {
             new AlertNotification(
                     "Alert Message",
-                    "Invalid quantity",
+                    "Invalid quantity please enter valid quantity",
                     "unsuccess.png",
                     "ok"
             ).start();
@@ -431,7 +431,7 @@ public class OrderFormController implements Initializable {
             }
         } else {
             new AlertNotification(
-                    "Error",
+                    "Error Message",
                     "You have cancelled the payment",
                     "unsuccess.png",
                     "ok"
@@ -480,10 +480,20 @@ public class OrderFormController implements Initializable {
             JasperViewer.viewReport(jasperPrint, false);
 
         } catch (JRException e) {
-            new Alert(Alert.AlertType.ERROR, "Fail to load report..!");
+            new AlertNotification(
+                    "Error Message",
+                    "An error occurred while loading the report. Please try again later.",
+                    "unsuccess.png",
+                    "OK"
+            ).start();
             e.printStackTrace();
         } catch (SQLException e) {
-            new Alert(Alert.AlertType.ERROR, "Data empty..!");
+            new AlertNotification(
+                    "Error Message",
+                    "Data empty. Please try again later.",
+                    "unsuccess.png",
+                    "OK"
+            ).start();
             e.printStackTrace();
         }
     }

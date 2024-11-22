@@ -97,7 +97,7 @@ public class ForgetPasswordFormController {
         if (forgetPwdDto == null) {
             new AlertNotification(
                     "User Not Found ! ",
-                    "Please enter a valid username",
+                    "Please enter a valid username and try again",
                     "unsuccess.png",
                     "OK"
             ).start();
@@ -122,9 +122,6 @@ public class ForgetPasswordFormController {
             txtOTP.setText(String.valueOf(otp));
             System.out.println(otp);
             forgetPwdDto.setOtp(otp);
-
-            System.out.println(forgetPwdDto.toString());
-            System.out.println("otp eka yawwa");
 
             SendGmail.sendEmail(txtFEmail.getText(), String.valueOf(forgetPwdDto.getOtp()));
 
@@ -207,7 +204,7 @@ public class ForgetPasswordFormController {
         }else {
             new AlertNotification(
                     "Invalid OTP ! ",
-                    "Please enter a valid OTP",
+                    "Please enter a valid OTP and try again",
                     "unsuccess.png",
                     "OK"
             ).start();

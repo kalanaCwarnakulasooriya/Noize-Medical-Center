@@ -4,10 +4,8 @@ import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import com.noize.medicalcenter.db.DBConnection;
 import com.noize.medicalcenter.dto.AppointmentFormDto;
-import com.noize.medicalcenter.dto.ItemFormDto;
 import com.noize.medicalcenter.dto.tm.AppointmentTM;
 import com.noize.medicalcenter.dto.tm.DoctorTM;
-import com.noize.medicalcenter.dto.tm.PatientsTM;
 import com.noize.medicalcenter.model.AppointmentFormModel;
 import com.noize.medicalcenter.model.DoctorFormModel;
 import com.noize.medicalcenter.util.AlertNotification;
@@ -113,7 +111,7 @@ public class AppointmentFormController implements Initializable {
             AppointmentTM selectedAppointment = tblAppointment.getSelectionModel().getSelectedItem();
             if (selectedAppointment == null) {
                 new AlertNotification(
-                        "Error",
+                        "Error Message",
                         "Please select a appointment to delete.",
                         "unsuccess.png",
                         "ok"
@@ -136,15 +134,15 @@ public class AppointmentFormController implements Initializable {
                 btnDeleteItem.setDisable(true);
                 btnReset.setDisable(false);
                 new AlertNotification(
-                        "Success",
-                        "Appointment deleted...!",
+                        "Success Message",
+                        "Appointment deleted successfully.",
                         "success.png",
                         "ok"
                 ).start();
                 refreshTable();
             } else {
                 new AlertNotification(
-                        "Error",
+                        "Error Message",
                         "An error occurred while deleting the appointment. Please try again later.",
                         "unsuccess.png",
                         "ok"
@@ -152,8 +150,8 @@ public class AppointmentFormController implements Initializable {
             }
         }else {
             new AlertNotification(
-                    "Error",
-                    "You have canceled the delete operation.",
+                    "Error Message",
+                    "You have canceled the delete operation for this appointment.",
                     "unsuccess.png",
                     "ok"
             ).start();
@@ -187,8 +185,9 @@ public class AppointmentFormController implements Initializable {
         isDateValid = datePicker.getValue() != null;
 
         if (isDateValid && !isNameValid && !isAgeValid && !isDescriptionValid) {
-            new AlertNotification("Invalid input",
-                    "Please check the input fields",
+            new AlertNotification(
+                    "Invalid input",
+                    "Please check the input fields and try again.",
                     "unsuccess.png",
                     "ok"
             ).start();
@@ -199,8 +198,8 @@ public class AppointmentFormController implements Initializable {
         if (appointmentFormModel.isAddAppointment(txtName.getText(), txtAge.getText(), comboStatus.getValue(), txtDescription.getText(), String.valueOf(date), comboDoctor.getValue())) {
             getAppointments();
             new AlertNotification(
-                    "Success",
-                    "Appointment added successfully",
+                    "Success Message",
+                    "Appointment added successfully to the list",
                     "success.png",
                     "ok"
             ).start();
@@ -209,8 +208,8 @@ public class AppointmentFormController implements Initializable {
             refreshTable();
         } else {
             new AlertNotification(
-                    "Error",
-                    "Failed to add " + txtName.getText() + " to the appointment list",
+                    "Error Message",
+                    "Failed to add to the appointment list",
                     "unsuccess.png",
                     "ok"
             ).start();
@@ -243,15 +242,15 @@ public class AppointmentFormController implements Initializable {
             refreshTable();
             clearFields();
             new AlertNotification(
-                    "Success",
-                    "Appointment updated successfully",
+                    "Success Message",
+                    "Appointment updated successfully to the list",
                     "success.png",
                     "ok"
             ).start();
         }else {
             new AlertNotification(
-                    "Error",
-                    "Failed to update " + name + " to the appointment list",
+                    "Error Message",
+                    "Failed to update to the appointment list",
                     "unsuccess.png",
                     "ok"
             ).start();
@@ -410,10 +409,20 @@ public class AppointmentFormController implements Initializable {
             JasperViewer.viewReport(jasperPrint, false);
 
         } catch (JRException e) {
-            new Alert(Alert.AlertType.ERROR, "Fail to load report..!");
+            new AlertNotification(
+                    "Error Message",
+                    "An error occurred while loading the report. Please try again later.",
+                    "unsuccess.png",
+                    "OK"
+            ).start();
             e.printStackTrace();
         } catch (SQLException e) {
-            new Alert(Alert.AlertType.ERROR, "Data empty..!");
+            new AlertNotification(
+                    "Error Message",
+                    "Data empty. Please try again later.",
+                    "unsuccess.png",
+                    "OK"
+            ).start();
             e.printStackTrace();
         }
     }

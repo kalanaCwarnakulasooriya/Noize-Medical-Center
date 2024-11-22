@@ -83,9 +83,6 @@ public class PrescriptionFormController implements Initializable {
     private Label lblPName;
 
     @FXML
-    private TextField lblSearch;
-
-    @FXML
     private TableColumn<?, ?> mediDetailCol;
 
     @FXML
@@ -405,10 +402,20 @@ public class PrescriptionFormController implements Initializable {
             JasperViewer.viewReport(jasperPrint, false);
 
         } catch (JRException e) {
-            new Alert(Alert.AlertType.ERROR, "Fail to load report..!");
+            new AlertNotification(
+                    "Error Message",
+                    "An error occurred while loading the report. Please try again later.",
+                    "unsuccess.png",
+                    "OK"
+            ).start();
             e.printStackTrace();
         } catch (SQLException e) {
-            new Alert(Alert.AlertType.ERROR, "Data empty..!");
+            new AlertNotification(
+                    "Error Message",
+                    "Data empty. Please try again later.",
+                    "unsuccess.png",
+                    "OK"
+            ).start();
             e.printStackTrace();
         }
     }

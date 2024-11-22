@@ -225,7 +225,7 @@ public class ItemFormController implements Initializable {
             getStockQty();
             new AlertNotification(
                     "Success Message",
-                    "Item added successfully to stock",
+                    "Item added successfully to item list",
                     "success.png",
                     "ok"
             ).start();
@@ -235,7 +235,7 @@ public class ItemFormController implements Initializable {
         } else {
             new AlertNotification(
                     "Error Message",
-                    "Failed to add " + name + " to stock list",
+                    "Failed to add to item list",
                     "unsuccess.png",
                     "ok"
             ).start();
@@ -269,14 +269,14 @@ public class ItemFormController implements Initializable {
                 clearFields();
                 new AlertNotification(
                         "Success Message",
-                        "Item updated successfully to stock",
+                        "Item updated successfully to item list",
                         "success.png",
                         "ok"
                 ).start();
             }else {
                 new AlertNotification(
                         "Error Message",
-                        "Failed to update " + name + " to stock list",
+                        "Failed to update to item list",
                         "unsuccess.png",
                         "ok"
                 ).start();
@@ -447,10 +447,20 @@ public class ItemFormController implements Initializable {
             JasperViewer.viewReport(jasperPrint, false);
 
         } catch (JRException e) {
-            new Alert(Alert.AlertType.ERROR, "Fail to load report..!");
+            new AlertNotification(
+                    "Error Message",
+                    "An error occurred while loading the report. Please try again later.",
+                    "unsuccess.png",
+                    "OK"
+            ).start();
             e.printStackTrace();
         } catch (SQLException e) {
-            new Alert(Alert.AlertType.ERROR, "Data empty..!");
+            new AlertNotification(
+                    "Error Message",
+                    "Data empty. Please try again later.",
+                    "unsuccess.png",
+                    "OK"
+            ).start();
             e.printStackTrace();
         }
     }

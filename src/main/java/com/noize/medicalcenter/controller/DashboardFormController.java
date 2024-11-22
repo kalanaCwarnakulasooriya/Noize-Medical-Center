@@ -1,7 +1,6 @@
 package com.noize.medicalcenter.controller;
 
 import com.noize.medicalcenter.model.DashboardFormModel;
-import com.noize.medicalcenter.util.CrudUtil;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.BarChart;
@@ -11,7 +10,6 @@ import javafx.scene.chart.XYChart;
 import javafx.scene.control.Label;
 
 import java.net.URL;
-import java.sql.ResultSet;
 import java.util.HashMap;
 import java.util.ResourceBundle;
 
@@ -55,6 +53,8 @@ public class DashboardFormController implements Initializable {
         lblAppointmentCount.setText(status.get("appointment"));
         lblOrderCount.setText(status.get("orders"));
         lblItemCount.setText(status.get("item"));
+
+//        loadTable();
     }
 
     void loadTable() {

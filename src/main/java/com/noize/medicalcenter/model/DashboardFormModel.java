@@ -22,7 +22,7 @@ public class DashboardFormModel {
         String[] sqls = {sql , sql1 , sql2 , sql3, sql4, sql5};
 
         try{
-            for (int i = 0; i <tables.length ; i++) {
+            for (int i = 0; i < tables.length ; i++) {
                 ResultSet rst = CrudUtil.execute(sqls[i] + tables[i]);
                 if (rst.next()){
                     status.put(tables[i], rst.getString(1));
@@ -41,10 +41,10 @@ public class DashboardFormModel {
         try {
             ResultSet resultSet = CrudUtil.execute(sql);
             while (resultSet.next()) {
-                String month = resultSet.getString("Name");
+                String name = resultSet.getString("Name");
                 int totalQty = resultSet.getInt("total_quantity");
-                System.out.println(month + " " + totalQty);
-                series.getData().add(new XYChart.Data<>(month, totalQty));
+                System.out.println(name + " " + totalQty);
+                series.getData().add(new XYChart.Data<>(name, totalQty));
             }
 
         } catch (SQLException e) {

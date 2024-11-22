@@ -78,11 +78,6 @@ public class AdminDashboardFormController implements Initializable {
     }
 
     @FXML
-    void callSettings(ActionEvent event) {
-        alertSound.checkSounds(Sound.SUCCESS);
-    }
-
-    @FXML
     void mouseEnter(MouseEvent event) {
         Button button = (Button) event.getSource();
         button.setStyle("-fx-background-color: #1dd1a1; -fx-text-fill: white;");

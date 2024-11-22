@@ -183,7 +183,7 @@ public class DoctorFormController implements Initializable {
                 refreshTable();
                 new AlertNotification(
                         "Success Message",
-                        "Doctor added successfully",
+                        "Doctor added successfully to the list",
                         "success.png",
                         "GREEN"
                 ).start();
@@ -191,7 +191,7 @@ public class DoctorFormController implements Initializable {
             } else {
                 new AlertNotification(
                         "Error Message",
-                        "Failed to add doctor",
+                        "Failed to add doctor to the list",
                         "unsuccess.png",
                         "RED"
                 ).start();
@@ -199,7 +199,7 @@ public class DoctorFormController implements Initializable {
         } else {
             new AlertNotification(
                     "Error Message",
-                    "Please fill all fields correctly",
+                    "Please fill all fields correctly and try again",
                     "unsuccess.png",
                     "RED"
             ).start();
@@ -228,14 +228,14 @@ public class DoctorFormController implements Initializable {
             clearFields();
             new AlertNotification(
                     "Success Message",
-                    "Doctor updated successfully",
+                    "Doctor updated successfully to the list",
                     "success.png",
                     "ok"
             ).start();
         }else {
             new AlertNotification(
                     "Error Message",
-                    "Failed to update " + name + " to doctor",
+                    "Failed to update to doctor Please try again",
                     "unsuccess.png",
                     "ok"
             ).start();
@@ -345,10 +345,20 @@ public class DoctorFormController implements Initializable {
             JasperViewer.viewReport(jasperPrint, false);
 
         } catch (JRException e) {
-            new Alert(Alert.AlertType.ERROR, "Fail to load report..!");
+            new AlertNotification(
+                    "Error Message",
+                    "An error occurred while loading the report. Please try again later.",
+                    "unsuccess.png",
+                    "OK"
+            ).start();
             e.printStackTrace();
         } catch (SQLException e) {
-            new Alert(Alert.AlertType.ERROR, "Data empty..!");
+            new AlertNotification(
+                    "Error Message",
+                    "Data empty. Please try again later.",
+                    "unsuccess.png",
+                    "OK"
+            ).start();
             e.printStackTrace();
         }
     }

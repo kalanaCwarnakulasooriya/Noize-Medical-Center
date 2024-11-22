@@ -3,7 +3,6 @@ package com.noize.medicalcenter.controller;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
 import com.noize.medicalcenter.dto.AddPatientFormDto;
-import com.noize.medicalcenter.dto.tm.PatientsTM;
 import com.noize.medicalcenter.model.AddPatientsFormModel;
 import com.noize.medicalcenter.util.AlertNotification;
 import com.noize.medicalcenter.util.CheckRegex;
@@ -22,7 +21,7 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class AddPatientsFormController implements Initializable {
-    private final AddPatientsFormModel addPatientsFormModel = new AddPatientsFormModel();
+    private final AddPatientsFormModel ADDPATIENTMODEL = new AddPatientsFormModel();
 
     private Boolean isEmailValid = false;
     private Boolean isNameValid = false;
@@ -69,11 +68,11 @@ public class AddPatientsFormController implements Initializable {
         isRegDateValid = regDatePicker.getValue() != null;
 
         if (isEmailValid && isNameValid && isAddressValid && isDobValid && isCoNumValid && isRegDateValid) {
-            int genderId = addPatientsFormModel.getGenderIdByDescription(comboGender.getValue());
+            int genderId = ADDPATIENTMODEL.getGenderIdByDescription(comboGender.getValue());
             LocalDate dob = dobDatePicker.getValue();
             LocalDate regDate = regDatePicker.getValue();
 
-            Boolean isAddedPatient = addPatientsFormModel.savePatient(
+            Boolean isAddedPatient = ADDPATIENTMODEL.savePatient(
                     new AddPatientFormDto(
                             0,
                             txtName.getText(),
@@ -90,7 +89,7 @@ public class AddPatientsFormController implements Initializable {
 
             if (isAddedPatient) {
                 new AlertNotification(
-                        "Success",
+                        "Success Message",
                         "Patient added successfully",
                         "success.png",
                         "GREEN"
@@ -98,16 +97,16 @@ public class AddPatientsFormController implements Initializable {
                 clearFields();
             } else {
                 new AlertNotification(
-                        "Error",
-                        "Failed to add patient",
+                        "Error Message",
+                        "Failed to add patient to the list",
                         "unsuccess.png",
                         "RED"
                 ).start();
             }
         } else {
             new AlertNotification(
-                    "Error",
-                    "Please fill all fields correctly",
+                    "Error Message",
+                    "Please fill all fields correctly and try again",
                     "unsuccess.png",
                     "RED"
             ).start();
@@ -162,7 +161,7 @@ public class AddPatientsFormController implements Initializable {
     private void loadGender() throws SQLException {
         comboGender.setStyle("-fx-font-weight: bold; -fx-font-size: 14px; -fx-text-fill: green;");
         comboGender.getItems().clear();
-        ArrayList<String> genders = addPatientsFormModel.getAllGenders();
+        ArrayList<String> genders = ADDPATIENTMODEL.getAllGenders();
         ObservableList<String> obl = FXCollections.observableArrayList(genders);
         comboGender.setItems(obl);
     }
