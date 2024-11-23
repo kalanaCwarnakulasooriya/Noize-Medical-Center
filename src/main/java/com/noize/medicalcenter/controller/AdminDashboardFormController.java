@@ -9,7 +9,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -22,6 +24,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class AdminDashboardFormController implements Initializable {
@@ -143,13 +146,17 @@ public class AdminDashboardFormController implements Initializable {
     }
 
     public void callLogOut(ActionEvent event) throws IOException {
-        alertSound.checkSounds(Sound.LOGOUT);
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setScene(new Scene(FXMLLoader.load(Objects.requireNonNull(this.getClass().getResource("/view/LoginForm.fxml")))));
-        stage.setTitle("Login Page");
-        stage.centerOnScreen();
-        stage.setResizable(false);
-        stage.show();
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Are you sure you want to log out ?", ButtonType.YES, ButtonType.NO);
+        Optional<ButtonType> buttonType = alert.showAndWait();
+        if (buttonType.isPresent() && buttonType.get() == ButtonType.YES) {
+            alertSound.checkSounds(Sound.SUCCESS);
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(FXMLLoader.load(Objects.requireNonNull(this.getClass().getResource("/view/LoginForm.fxml")))));
+            stage.setTitle("Login Page");
+            stage.centerOnScreen();
+            stage.setResizable(false);
+            stage.show();
+        }
     }
 
 }

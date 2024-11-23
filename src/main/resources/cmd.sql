@@ -146,9 +146,9 @@ CREATE TABLE Role (
 );
 
 CREATE TABLE Gender (
-                      GenderId INT AUTO_INCREMENT PRIMARY KEY,
-                      Gender VARCHAR(50) NOT NULL UNIQUE,
-                      Description TEXT
+    GenderId INT AUTO_INCREMENT PRIMARY KEY,
+    Gender VARCHAR(50) NOT NULL UNIQUE,
+    Description TEXT
 );
 
 INSERT INTO doctor (Name, Email, ContactNumber, Address, UserId) VALUES
